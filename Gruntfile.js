@@ -2,14 +2,35 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+
+    concurrent: {
+      targetWatch: ['watch:styleWatch', 'watch:jsWatch'],
+      targetWatchDev: ['watch:HtmlWatchDev', 'watch:styleWatchDev', 'watch:jsWatchDev'],
+      options: {
+        logConcurrentOutput: true,
+      },
+    },
+
     watch: {
       styleWatch: {
-        files: ['source/less/**/*.less'],
-        tasks: ['less'],
+        files: ['source/stylus/**/*.styl'],
+        tasks: ['stylus'],
       },
       jsWatch: {
-        files: ['source/js/js-file/*.js'],
+        files: ['source/js/*/*.js'],
         tasks: ['concat'],
+      },
+      HtmlWatchDev: {
+        files: ['source/*.html'],
+        tasks: ['clean:buildCleanHtmlDev', 'copy:buildHtmlCopy'],
+      },
+      styleWatchDev: {
+        files: ['source/less/**/*.less'],
+        tasks: ['stylus', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'csso'],
+      },
+      jsWatchDev: {
+        files: ['source/js/*/*.js'],
+        tasks: ['concat', 'clean:buildCleanJsDev', 'copy:buildJsCopy', 'uglify'],
       },
     },
 
@@ -23,17 +44,27 @@ module.exports = function (grunt) {
           watchTask: true,
         },
       },
-    },
-
-    less: {
-      styleLess: {
-        options: {
-          relativeUrls: true,
+      serverSyncDev: {
+        bsFiles: {
+          src: ['build/*.html', 'build/css/*.css', 'build/js/*.js'],
         },
-        files: {
-          'source/css/style.css': 'source/less/style.less',
+        options: {
+          server: 'build/',
+          watchTask: true,
         },
       },
+    },
+
+    stylus: {
+      compile: {
+        options: {
+          compress: false,
+          'resolve url': true,
+        },
+        files: {
+          'source/css/style.css': 'source/stylus/style.styl',
+        }
+      }
     },
 
     postcss: {
@@ -43,7 +74,7 @@ module.exports = function (grunt) {
             require('autoprefixer')(),
           ],
         },
-        src: 'source/css/style.css',
+        src: 'build/css/style.css',
       },
     },
 
@@ -62,14 +93,13 @@ module.exports = function (grunt) {
     concat: {
       options: {
         separator: '\n',
+        stripBanners: true,
+        banner: "'use strict'\n\n",
       },
       dist: {
-        src: ['source/js/default/strict.js', 'source/js/default/*.js'],
-        dest: 'source/js/scripts-default.js',
-      },
-      dist2: {
-        src: ['source/js/index/strict.js', 'source/js/index/*.js'],
-        dest: 'source/js/scripts-index.js',
+        files: {
+          'source/js/index.js': ['source/js/index/*.js'],
+        },
       },
     },
 
@@ -143,6 +173,15 @@ module.exports = function (grunt) {
       buildClean: {
         src: ['build/'],
       },
+      buildCleanStyleDev: {
+        src: ['build/css/'],
+      },
+      buildCleanJsDev: {
+        src: ['build/js/'],
+      },
+      buildCleanHtmlDev: {
+        src: ['build/*.html'],
+      },
     },
 
     copy: {
@@ -152,10 +191,40 @@ module.exports = function (grunt) {
           cwd: 'source',
           src: [
             '*.html',
-            'fonts/**/*.{woff2}',
+            'fonts/woff2/*',
             'image/min/*',
             'css/style.css',
             'js/*.js',
+          ],
+          dest: 'build/',
+        }],
+      },
+      buildStyleCopy: {
+        files: [{
+          expand: true,
+          cwd: 'source',
+          src: [
+            'css/style.css',
+          ],
+          dest: 'build/',
+        }],
+      },
+      buildJsCopy: {
+        files: [{
+          expand: true,
+          cwd: 'source',
+          src: [
+            'js/*.js',
+          ],
+          dest: 'build/',
+        }],
+      },
+      buildHtmlCopy: {
+        files: [{
+          expand: true,
+          cwd: 'source',
+          src: [
+            '*.html',
           ],
           dest: 'build/',
         }],
@@ -164,10 +233,22 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('serve', [
-    'less',
+    'stylus',
     'concat',
-    'browserSync',
-    'watch',
+    'browserSync:serverSync',
+    'concurrent:targetWatch',
+  ]);
+
+  grunt.registerTask('serveDev', [
+    'stylus',
+    'concat',
+    'clean:buildClean',
+    'copy:buildCopy',
+    'postcss',
+    'csso',
+    'uglify',
+    'browserSync:serverSyncDev',
+    'concurrent:targetWatchDev',
   ]);
 
   grunt.registerTask('imgpress', [
@@ -177,10 +258,10 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'less',
+    'stylus',
     'concat',
-    'clean',
-    'copy',
+    'clean:buildClean',
+    'copy:buildCopy',
     'postcss',
     'csso',
     'uglify',

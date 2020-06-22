@@ -1,0 +1,62 @@
+html
+body
+  margin 0
+  padding 0
+
+html
+  box-sizing border-box
+  scroll-behavior smooth
+
+*
+*::before
+*::after
+  box-sizing inherit
+
+
+body
+  min-width mobileWidth
+
+  font-family 'Lora', serif
+  font-style normal
+  font-size var(--sizeFontM)
+  font-weight var(--weightFontXxxs)
+  font-variation-settings: var(--wghtFontXxxs)
+  line-height 1.5em
+  color var(--colorFontBlack)
+
+
+.visually-hidden
+  position absolute
+
+  width 1px
+  height 1px
+  margin -1px
+  padding 0
+
+  border 0
+
+  clip rect(0, 0, 0, 0)
+  overflow hidden
+
+
+.js-focus-visible focus:not(.focus-visible)
+  outline none
+
+
+.js-focus-visible .focus-visible
+  outline-focus(#000000)
+
+
+.skip-link
+  position absolute
+  top -100%
+  left 0
+  background-color #000000
+  color #ffffff
+  padding 10px
+  z-index 100
+
+
+.skip-link:focus
+  top 0
+

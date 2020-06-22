@@ -1,0 +1,45 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "my blog and portfolio",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GurovDmitriy/MyProject.git"
+  },
+  "author": "Gurov Dmitriy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GurovDmitriy/MyProject/issues"
+  },
+  "homepage": "https://github.com/GurovDmitriy/MyProject#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "eslint": "^7.3.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "grunt": "^1.1.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-concurrent": "^3.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-csso": "^2.2.4",
+    "grunt-cwebp": "^2.1.1",
+    "grunt-image": "^6.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-svgstore": "^2.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "standard": "^14.3.4"
+  }
+}

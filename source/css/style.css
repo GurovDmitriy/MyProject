@@ -162,10 +162,6 @@ template {
   font-display: swap;
 }
 :root {
-/*переменные вьюпорта*/
-  --mobileWidth: 320px;
-  --tabletWidth: 600px;
-  --desktopWidth: 900px;
 /*переменные размера шрифта*/
   --sizeFontXxxs: 10px;
   --sizeFontXxs: 12px;
@@ -215,13 +211,13 @@ html {
   box-sizing: inherit;
 }
 body {
-  min-width: var(--mobileWidth);
+  min-width: 320px;
   font-family: 'Lora', serif;
   font-style: normal;
   font-size: var(--sizeFontM);
   font-weight: var(--weightFontXxxs);
   font-variation-settings: var(--wghtFontXxxs);
-  line-height: 1.5em;
+  line-height: 1.4em;
   color: var(--colorFontBlack);
 }
 .visually-hidden {
@@ -244,18 +240,11 @@ body {
   position: absolute;
   top: -100%;
   left: 0;
-  background: #000;
+  background-color: #000;
   color: #fff;
-  padding: 8px;
+  padding: 10px;
   z-index: 100;
 }
 .skip-link:focus {
   top: 0;
-}
-h1 {
-  font-family: 'Special-Elite', monospace;
-  font-style: normal;
-  font-size: var(--sizeFontXxxl);
-  font-weight: var(--weightFontXxxs);
-  color: var(--colorFontBlack);
 }

@@ -10,26 +10,93 @@
   <meta name="googlebot" content="">
   <meta name="google-site-verification" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="preload" href="" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="fonts/woff2/SpecialElite-Regular.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="fonts/woff2/Lora-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="preload" href="css/style.css" as="style"/>
   <link rel="preload" href="js/modernizr-custom.js" as="script"/>
   <link rel="preload" href="js/picturefill.js" as="script"/>
   <link rel="preload" href="js/lazysizes.js" as="script"/>
   <link rel="stylesheet" href="css/style.css" type="text/css"/>
-  <link rel="icon" href="" type="image/svg+xml">
+  <link rel="icon" href="#" type="image/svg+xml">
   <script src="js/modernizr-custom.js" async></script>
   <script>document.createElement("picture");</script>
   <script src="js/picturefill.js" async></script>
   <script src="js/lazysizes.js" async></script>
 </head>
-<body>
+<body class="body">
   <div style="display: none">svgsprite</div>
-  <header>
-    <h1>My project start</h1>
+  <header class="header">
+    <a class="logo logo__header">Logo</a>
+    <h1 class="header__caption">Главный заголовок, о сайте...</h1>
     <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+    <nav class="nav header__nav">
+      <ul class="menu nav__menu">
+        <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Обучение</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <img class="header__image" src="image/origin/placeholder.png" width="300" height="200" alt="Печатная машинка">
+    <p class="header__text">Описание сайта кратко, текст который вмещается в 100% высоту экрана с изображением. Описание сайта кратко, текст который вмещается в 100% высоту экрана с изображением. Описание сайта кратко, текст который вмещается в 100% высоту экрана с изображением.</p>
   </header>
-  <main id="main"></main>
-  <footer></footer>
+  <main class="main" id="main">
+    <section class="main__section">
+      <h2 class="main__caption">Заголовок раздела меню</h2>
+      <p class="main__text">Описание раздела из меню. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#">Ссылка на раздел</a>
+    </section>
+    <section class="main__section">
+      <h2 class="main__caption">Заголовок раздела меню</h2>
+      <p class="main__text">Описание раздела из меню. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#">Ссылка на раздел</a>
+    </section>
+    <section class="main__section">
+      <h2 class="main__caption">Заголовок раздела меню</h2>
+      <p class="main__text">Описание раздела из меню. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#">Ссылка на раздел</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="footer__section">
+      <h2 class="footer__caption">Разделы</h2>
+      <ul class="menu footer__menu">
+        <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Обучение</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      </ul>
+    </section>
+    <section class="footer__section">
+      <h2 class="footer__caption">Контакты</h2>
+      <ul class="contacts footer__contacts">
+        <li class="contacts__item"><a class="contacts__link" href="#">Github</a></li>
+        <li class="contacts__item"><a class="contacts__link" href="#">+7(888)-888-88-88</a></li>
+        <li class="contacts__item"><a class="contacts__link" href="#">example@gmail.com</a></li>
+      </ul>
+    </section>
+    <section class="copyright">
+      <h2 class="footer__caption">Автор</h2>
+      <a class="logo footer__logo">Logo</a>
+      <strong>Гуров Дмитрий</strong>
+      <span class="footer__date">2020</span>
+    </section>
+  </footer>
   <script src="js/default.js" async></script>
   <script src="js/index.js" async></script>
   <script src="js/focus-visible.js" async></script>

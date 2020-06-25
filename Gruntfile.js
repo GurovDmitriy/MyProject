@@ -13,8 +13,8 @@ module.exports = function (grunt) {
 
     watch: {
       styleWatch: {
-        files: ['source/stylus/**/*.styl'],
-        tasks: ['stylus'],
+        files: ['source/less/**/*.less'],
+        tasks: ['less'],
       },
       jsWatch: {
         files: ['source/js/*/*.js'],
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
       },
       styleWatchDev: {
         files: ['source/less/**/*.less'],
-        tasks: ['stylus', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'csso'],
+        tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'csso'],
       },
       jsWatchDev: {
         files: ['source/js/*/*.js'],
@@ -55,16 +55,15 @@ module.exports = function (grunt) {
       },
     },
 
-    stylus: {
-      compile: {
+    less: {
+      lessCompil: {
         options: {
-          compress: false,
-          'resolve url': true,
+          relativeUrls: true,
         },
         files: {
-          'source/css/style.css': 'source/stylus/style.styl',
+          'source/css/style.css': 'source/less/style.less'
         }
-      }
+      },
     },
 
     postcss: {
@@ -233,14 +232,14 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('serve', [
-    'stylus',
+    'less',
     'concat',
     'browserSync:serverSync',
     'concurrent:targetWatch',
   ]);
 
   grunt.registerTask('serveDev', [
-    'stylus',
+    'less',
     'concat',
     'clean:buildClean',
     'copy:buildCopy',
@@ -258,7 +257,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'stylus',
+    'less',
     'concat',
     'clean:buildClean',
     'copy:buildCopy',

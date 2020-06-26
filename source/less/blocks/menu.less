@@ -5,10 +5,34 @@
   margin-bottom: 0;
 
   list-style: none;
+
+  @media (min-width: @tabletWidth) {
+    display: flex;
+  }
+
+  @media (min-width: @desktopWidth) {
+    justify-content: flex-end;
+  }
 }
 
 .menu--open {
   display: block;
+
+  @media (min-width: @tabletWidth) {
+    display: flex;
+  }
+}
+
+.menu__item {
+  @media (min-width: @tabletWidth) {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    @media (min-width: @tabletWidth) {
+      margin-right: 0;
+    }
+  }
 }
 
 .menu__link {

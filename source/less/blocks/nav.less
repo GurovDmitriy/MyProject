@@ -1,4 +1,12 @@
 .nav {
-  .container(90%);
+  .container(@mobileContainer);
   margin-bottom: 40px;
+
+  @media (min-width: @tabletWidth) {
+    .container(@tabletContainer);
+  }
+
+  @media (min-width: @desktopWidth) {
+    flex-basis: 70%;
+  }
 }

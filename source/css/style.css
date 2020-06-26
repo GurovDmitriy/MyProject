@@ -413,16 +413,38 @@ body {
   position: relative;
   padding-top: 40px;
 }
+@media (min-width: 900px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .header__wrapper-logo {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
 }
+@media (min-width: 600px) {
+  .header__wrapper-logo {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 900px) {
+  .header__wrapper-logo {
+    flex-basis: 30%;
+  }
+}
 .header__caption {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: var(--sizeFont4);
+  font-size: var(--sizeFont3);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
   font-variation-settings: var(--wghtFont3);
@@ -434,12 +456,33 @@ body {
   margin-bottom: 40px;
   line-height: 0;
 }
+@media (min-width: 900px) {
+  .header__image {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .header__text {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .header__text {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 900px) {
+  .header__text {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .logo {
   font-family: 'Special-Elite', 'Arial', sans-serif;
@@ -453,9 +496,21 @@ body {
   margin-right: auto;
   margin-bottom: 40px;
 }
+@media (min-width: 600px) {
+  .nav {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 900px) {
+  .nav {
+    flex-basis: 70%;
+  }
+}
 .burger {
   position: absolute;
-  top: 44px;
+  top: 42px;
   right: 5%;
   display: block;
   width: 75px;
@@ -484,6 +539,11 @@ body {
   right: 0;
   width: 50%;
 }
+@media (min-width: 600px) {
+  .burger {
+    display: none;
+  }
+}
 .menu {
   display: none;
   padding: 0;
@@ -491,8 +551,33 @@ body {
   margin-bottom: 0;
   list-style: none;
 }
+@media (min-width: 600px) {
+  .menu {
+    display: flex;
+  }
+}
+@media (min-width: 900px) {
+  .menu {
+    justify-content: flex-end;
+  }
+}
 .menu--open {
   display: block;
+}
+@media (min-width: 600px) {
+  .menu--open {
+    display: flex;
+  }
+}
+@media (min-width: 600px) {
+  .menu__item {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 600px) {
+  .menu__item:last-child {
+    margin-right: 0;
+  }
 }
 .menu__link {
   display: block;

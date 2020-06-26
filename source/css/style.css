@@ -438,7 +438,9 @@ body {
 }
 @media (min-width: 900px) {
   .header__wrapper-logo {
-    flex-basis: 30%;
+    width: 40%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .header__caption {
@@ -505,7 +507,9 @@ body {
 }
 @media (min-width: 900px) {
   .nav {
-    flex-basis: 70%;
+    width: 60%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .burger {
@@ -559,6 +563,8 @@ body {
 @media (min-width: 900px) {
   .menu {
     justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
   }
 }
 .menu--open {
@@ -585,4 +591,10 @@ body {
   padding-bottom: 10px;
   color: var(--colorFontBlack);
   text-decoration: none;
+}
+@media (min-width: 600px) {
+  .menu__link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

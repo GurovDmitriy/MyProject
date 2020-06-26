@@ -12,6 +12,9 @@
 
   @media (min-width: @desktopWidth) {
     justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 100%;
   }
 }
 
@@ -42,4 +45,9 @@
 
   color: var(--colorFontBlack);
   text-decoration: none;
+
+  @media (min-width: @tabletWidth) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

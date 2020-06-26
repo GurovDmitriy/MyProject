@@ -17,15 +17,61 @@ html {
 }
 
 body {
-  min-width: @mobileWidth;
+  min-width: 280px;
 
-  font-family: 'Lora', 'Georgia', serif;
-  font-size: var(--sizeFont4);
+  font-family: 'Lora', 'Arial', sans-serif;
+  font-size: var(--sizeFont3);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont1);
   font-variation-settings: var(--wghtFont1);
   font-style: normal;
   color: var(--colorFontBlack);
+
+  @media (min-width: @tabletWidth) {
+    font-size: var(--sizeFont4);
+  }
+
+  @media (min-width: @desktopWidth) {
+    font-size: var(--sizeFont5);
+  }
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: var(--sizeFont2);
+  line-height: var(--lineHeightFont);
+  font-weight: var(--weightFont1);
+  font-variation-settings: var(--wghtFont1);
+
+  @media (min-width: @tabletWidth) {
+    font-size: var(--sizeFont3);
+  }
+
+  @media (min-width: @desktopWidth) {
+    font-size: var(--sizeFont4);
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  list-style: none;
+}
+
+img {
+  line-height: 0;
 }
 
 .visually-hidden {

@@ -1,6 +1,14 @@
 .logo {
   font-family: 'Special-Elite', 'Arial', sans-serif;
-  font-size: var(--sizeFont6);
+  font-size: var(--sizeFont7);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont1);
+
+  @media (min-width: @tabletWidth) {
+    font-size: var(--sizeFont8);
+  }
+
+  @media (min-width: @desktopWidth) {
+    font-size: var(--sizeFont9);
+  }
 }

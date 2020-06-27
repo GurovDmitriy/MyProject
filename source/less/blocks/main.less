@@ -1,0 +1,41 @@
+.main {
+  margin-bottom: 40px;
+
+  @media (min-width: @desktopWidth) {
+    .container(@desktopContainer);
+  }
+}
+
+.main__section {
+  margin-bottom: 40px;
+
+  &::last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main__caption {
+  .container(@mobileContainer);
+
+  @media (min-width: @tabletWidth) {
+    .container(@tabletContainer);
+  }
+
+  @media (min-width: @desktopWidth) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.main__text {
+  &:extend(.main__caption);
+}
+
+.main__link {
+  &:extend(.main__caption);
+
+  display: block;
+
+  text-decoration: none;
+}

@@ -1,26 +1,24 @@
-.main {
+.footer {
   .container(@mobileContainer);
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
   }
 
   @media (min-width: @desktopWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     .container(@desktopContainer);
   }
 }
 
-.main__section {
+.footer__section {
   margin-bottom: 40px;
 
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.main__link {
-  display: block;
-
-  text-decoration: none;
 }

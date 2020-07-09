@@ -19,13 +19,12 @@ html {
 body {
   min-width: 280px;
 
-  font-family: 'Lora', 'Arial', sans-serif;
+  font-family: 'Open-Sans', 'Arial', sans-serif;
   font-size: var(--sizeFont3);
   line-height: var(--lineHeightFont);
-  font-weight: var(--weightFont1);
-  font-variation-settings: var(--wghtFont1);
+  font-weight: 400;
   font-style: normal;
-  color: var(--colorFontBlack);
+  color: var(--colorFontBlack2);
 
   @media (min-width: @tabletWidth) {
     font-size: var(--sizeFont4);
@@ -40,10 +39,11 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
 
-  font-size: var(--sizeFont3);
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-size: var(--sizeFont2);
   line-height: var(--lineHeightFont);
-  font-weight: var(--weightFont1);
-  font-variation-settings: var(--wghtFont1);
+  font-weight: var(--weightFont3);
+  text-transform: lowercase;
 
   @media (min-width: @tabletWidth) {
     font-size: var(--sizeFont4);
@@ -58,17 +58,18 @@ h2 {
   margin-top: 0;
   margin-bottom: 20px;
 
-  font-size: var(--sizeFont3);
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-size: var(--sizeFont4);
   line-height: var(--lineHeightFont);
-  font-weight: var(--weightFont1);
-  font-variation-settings: var(--wghtFont1);
+  font-weight: var(--weightFont5);
+  text-transform: uppercase;
 
   @media (min-width: @tabletWidth) {
-    font-size: var(--sizeFont4);
+    font-size: var(--sizeFont6);
   }
 
   @media (min-width: @desktopWidth) {
-    font-size: var(--sizeFont5);
+    font-size: var(--sizeFont7);
   }
 }
 

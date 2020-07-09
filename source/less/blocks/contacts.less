@@ -2,8 +2,28 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-size: var(--sizeFont3);
+  line-height: var(--lineHeightFont);
+  font-weight: var(--weightFont3);
 }
 
 .contacts__link {
+  position: relative;
+
+  margin-bottom: 40px;
+
   text-decoration: none;
+}
+
+.contacts__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+
+  transform: translateY(-50%);
 }

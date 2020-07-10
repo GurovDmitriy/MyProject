@@ -344,7 +344,7 @@ template {
   --sizeFont8: 42px;
   --sizeFont9: 52px;
   /*переменные интерлиньяж шрифта*/
-  --lineHeightFont: 1.4em;
+  --lineHeightFont: 1.5em;
   /*переменные жирности шрифта*/
   --weightFont1: 100;
   --weightFont2: 200;
@@ -412,7 +412,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont2);
+  font-size: var(--sizeFont3);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
   text-transform: lowercase;
@@ -431,7 +431,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 20px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont4);
+  font-size: var(--sizeFont5);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont5);
   text-transform: uppercase;
@@ -493,7 +493,7 @@ img {
 .header {
   position: relative;
   margin-bottom: 80px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 @media (min-width: 1100px) {
   .header {
@@ -559,9 +559,11 @@ img {
   }
 }
 .logo {
+  position: relative;
+  padding-left: 50px;
   font-family: 'Special-Elite', 'Arial', sans-serif;
   font-size: var(--sizeFont7);
-  line-height: var(--lineHeightFont);
+  line-height: 1em;
   font-weight: 400;
 }
 @media (min-width: 600px) {
@@ -575,6 +577,9 @@ img {
   }
 }
 .logo__icon {
+  position: absolute;
+  bottom: 26%;
+  left: 0;
   width: 47px;
   height: 60px;
 }
@@ -600,7 +605,7 @@ img {
 }
 .burger {
   position: absolute;
-  top: 72px;
+  top: 53px;
   right: 5%;
   display: block;
   width: 55px;
@@ -673,7 +678,7 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont4);
+  font-size: var(--sizeFont5);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
   text-transform: uppercase;
@@ -715,8 +720,6 @@ img {
   display: block;
   margin-top: 0;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont2);
-  line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
   text-transform: lowercase;
   text-decoration: none;
@@ -755,13 +758,12 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont3);
-  line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
 }
 .contacts__link {
   position: relative;
   margin-bottom: 40px;
+  padding-right: 60px;
   text-decoration: none;
 }
 .contacts__icon {
@@ -779,8 +781,6 @@ img {
 }
 .copyright__date {
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont2);
-  line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
 }
 .skills {

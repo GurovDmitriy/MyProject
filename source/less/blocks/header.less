@@ -2,7 +2,7 @@
   position: relative;
 
   margin-bottom: 80px;
-  padding-top: 60px;
+  padding-top: 67px;
 
   @media (min-width: @desktopWidth) {
     display: flex;
@@ -28,11 +28,32 @@
   }
 }
 
+.header__caption {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-size: var(--sizeFont3);
+  line-height: var(--lineHeightFont);
+  font-weight: var(--weightFont3);
+  text-transform: lowercase;
+
+  @media (min-width: @tabletWidth) {
+    font-size: var(--sizeFont4);
+  }
+
+  @media (min-width: @desktopWidth) {
+    font-size: var(--sizeFont5);
+  }
+}
+
 .header__image {
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+
+  background-color: var(--colorBlack2);
 
   @media (min-width: @desktopWidth) {
     width: 100%;

@@ -8,6 +8,22 @@
   line-height: 1em;
   font-weight: 400;
 
+  &:hover {
+    color: var(--colorGrey2);
+  }
+
+  &:hover .logo__icon {
+    fill: var(--colorGrey2);
+  }
+
+  &:active {
+    color: var(--colorGrey3);
+  }
+
+  &:active .logo__icon {
+    fill: var(--colorGrey3);
+  }
+
   @media (min-width: @tabletWidth) {
     font-size: var(--sizeFont8);
   }

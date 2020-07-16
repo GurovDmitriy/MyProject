@@ -66,6 +66,27 @@
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
   text-transform: lowercase;
+
+  &:hover {
+    font-weight: var(--weightFont5);
+  }
+
+  &:active {
+    color: var(--colorGrey3);
+  }
+
+  &:hover .main__link-icon {
+    transform: translateY(-60%);
+
+    box-shadow: 0 6px 6px 0 var(--colorBlack2);
+  }
+
+  &:active .main__link-icon {
+    transform: translateY(-55%);
+
+    box-shadow: 0 3px 3px 0 var(--colorBlack2);
+    fill: var(--colorGrey);
+  }
 }
 
 
@@ -76,6 +97,10 @@
 
   width: 20px;
   height: 20px;
+
+  border-radius: 50%;
+
+  fill: var(--colorBlack2);
 
   transform: translateY(-50%);
 }

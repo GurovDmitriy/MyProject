@@ -24,7 +24,7 @@ body {
   line-height: var(--lineHeightFont);
   font-weight: 400;
   font-style: normal;
-  color: var(--colorFontBlack2);
+  color: var(--colorBlack2);
 
   @media (min-width: @tabletWidth) {
     font-size: var(--sizeFont4);
@@ -43,6 +43,10 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 ul {
@@ -71,13 +75,28 @@ img {
   overflow: hidden;
 }
 
-.js-focus-visible focus:not(.focus-visible) {
+button:hover {
+  cursor: pointer;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
 
+button:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .js-focus-visible .focus-visible {
-  .outline-focus(#000000);
+  .outline-focus(var(--colorBlack2));
+}
+
+.js-focus-visible button.focus-visible {
+  outline-offset: 2px;
+}
+
+.js-focus-visible .footer *.focus-visible {
+  outline-color: var(--colorWhite2);
 }
 
 .skip-link {

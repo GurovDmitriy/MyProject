@@ -57,12 +57,37 @@
       <button class="burger" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link">Главная</a></li>
-        <li class="menu__item"><a class="menu__link" href="education.html">Обучение</a></li>
-        <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
-        <li class="menu__item"><a class="menu__link" href="other.html">Разное</a></li>
-        <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+      <ul class="menu menu--open">
+        <li class="menu__item">
+          <a class="menu__link menu__link--active">Главная
+          <svg class="menu__link-icon" width="20" height="20">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="education.html">Обучение
+          <svg class="menu__link-icon" width="20" height="20">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="blog.html">Блог
+          <svg class="menu__link-icon" width="20" height="20">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="other.html">Разное
+          <svg class="menu__link-icon" width="20" height="20">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="contacts.html">Контакты
+            <svg class="menu__link-icon" width="20" height="20">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg></a>
+        </li>
       </ul>
     </nav>
 
@@ -161,8 +186,8 @@
 
     <section class="copyright footer__section">
       <h2 class="visually-hidden">Автор</h2>
-      <a class="logo">
-        <svg class="logo__icon copyright__logo-icon" width="47" height="60">
+      <a class="logo footer-logo">
+        <svg class="logo__icon footer__logo-icon" width="47" height="60">
           <use xlink:href="#icon-typewriter"></use>
         </svg>Logo</a>
       <strong class="copyright__date">&copy;

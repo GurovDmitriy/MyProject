@@ -2,7 +2,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  color: var(--colorWhite);
+  color: var(--colorWhite2);
 
   background-color: var(--colorBlack2);
 
@@ -28,4 +28,26 @@
   @media (min-width: @desktopWidth) {
     .container(@desktopContainer);
   }
+}
+
+.footer-logo {
+  &:hover {
+    color: var(--colorGrey2);
+  }
+
+  &:active {
+    color: var(--colorGrey);
+  }
+
+  &:hover .footer__logo-icon {
+    fill: var(--colorGrey2);
+  }
+
+  &:active .footer__logo-icon {
+    fill: var(--colorGrey);
+  }
+}
+
+.footer__logo-icon {
+  fill: var(--colorWhite2);
 }

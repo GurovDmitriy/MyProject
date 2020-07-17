@@ -168,7 +168,7 @@
   right: 5%;
 
   display: block;
-  width: 55px;
+  width: 54px;
   height: 30px;
   padding: 0;
 
@@ -177,6 +177,8 @@
   border-right: none;
   border-bottom: 2px solid var(--colorBlack2);
   background-color: transparent;
+
+  transition: border-color 0.2s;
 
   &::before,
   &::after {
@@ -187,6 +189,8 @@
     height: 2px;
 
     background-color: var(--colorBlack2);
+
+    transition: background-color 0.2s;
   }
 
   &::before {
@@ -201,6 +205,24 @@
     right: 0;
 
     width: 50%;
+  }
+
+  &:hover {
+    border-color: var(--colorGrey2);
+  }
+
+  &:active {
+    border-color: var(--colorGrey3);
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: var(--colorGrey2);
+  }
+
+  &:active::after,
+  &:active::before {
+    background-color: var(--colorGrey3);
   }
 
   @media (min-width: @tabletWidth) {

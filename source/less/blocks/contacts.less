@@ -11,9 +11,11 @@
   position: relative;
 
   margin-bottom: 20px;
-  padding-right: 60px;
+  padding-right: 54px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  transition: font-weight 0.2s, color 0.2s;
 
   &:last-child {
     margin-bottom: 0;
@@ -21,12 +23,13 @@
 
   &:hover {
     font-weight: var(--weightFont5);
+    color: var(--colorGrey2);
   }
 
   &:hover .contacts__icon {
-    transform: translateY(-60%);
+    transform: translate(50%, -50% - 5px);
 
-    box-shadow: 0 6px 6px 0 var(--colorBlack);
+    box-shadow: -1px 4px 4px 0 #000000;
     fill: var(--colorGrey2);
   }
 
@@ -35,9 +38,9 @@
   }
 
   &:active .contacts__icon {
-    transform: translateY(-55%);
+    transform: translate(50%, -50% - 3px);
 
-    box-shadow: 0 3px 3px 0 var(--colorBlack);
+    box-shadow: 0 2px 2px 0 #000000;
     fill: var(--colorGrey);
   }
 }
@@ -45,13 +48,15 @@
 .contacts__icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 27px;
 
   width: 40px;
   height: 40px;
 
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
 
   border-radius: 50%;
   fill: var(--colorWhite2);
+
+  transition: fill 0.2s;
 }

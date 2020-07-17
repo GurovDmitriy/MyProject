@@ -362,9 +362,7 @@ template {
   --wghtFont6: 600;
   --wghtFont7: 700;
   /*переменные цвета*/
-  --colorBlack: #000000;
   --colorBlack2: #1e1e1f;
-  --colorWhite: #ffffff;
   --colorWhite2: #cbc9cf;
   --colorGrey: #3c3b3d;
   --colorGrey2: #6d6c70;
@@ -563,6 +561,7 @@ button:focus:not(:focus-visible) {
   font-size: var(--sizeFont7);
   line-height: 1em;
   font-weight: 400;
+  transition: color 0.2s;
 }
 .logo:hover {
   color: var(--colorGrey2);
@@ -593,6 +592,7 @@ button:focus:not(:focus-visible) {
   width: 47px;
   height: 60px;
   fill: var(--colorBlack2);
+  transition: fill 0.2s;
 }
 .nav {
   width: 90%;
@@ -751,7 +751,7 @@ button:focus:not(:focus-visible) {
   top: 60px;
   right: 5%;
   display: block;
-  width: 55px;
+  width: 54px;
   height: 30px;
   padding: 0;
   border-top: none;
@@ -759,6 +759,7 @@ button:focus:not(:focus-visible) {
   border-right: none;
   border-bottom: 2px solid var(--colorBlack2);
   background-color: transparent;
+  transition: border-color 0.2s;
 }
 .burger::before,
 .burger::after {
@@ -767,6 +768,7 @@ button:focus:not(:focus-visible) {
   display: block;
   height: 2px;
   background-color: var(--colorBlack2);
+  transition: background-color 0.2s;
 }
 .burger::before {
   top: 0;
@@ -777,6 +779,20 @@ button:focus:not(:focus-visible) {
   top: 50%;
   right: 0;
   width: 50%;
+}
+.burger:hover {
+  border-color: var(--colorGrey2);
+}
+.burger:active {
+  border-color: var(--colorGrey3);
+}
+.burger:hover::after,
+.burger:hover::before {
+  background-color: var(--colorGrey2);
+}
+.burger:active::after,
+.burger:active::before {
+  background-color: var(--colorGrey3);
 }
 @media (min-width: 600px) {
   .burger {
@@ -864,23 +880,25 @@ button:focus:not(:focus-visible) {
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 54px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-size: var(--sizeFont5);
   line-height: var(--lineHeightFont);
   font-weight: var(--weightFont3);
   text-transform: uppercase;
+  transition: font-weight 0.2s;
 }
 .menu__link:hover {
   font-weight: var(--weightFont5);
 }
 .menu__link:hover .menu__link-icon {
-  transform: translateY(-60%);
-  box-shadow: 0 6px 6px 0 var(--colorBlack2);
+  transform: translate(50%, -55%);
+  box-shadow: -1px 4px 4px 0 #000000;
   fill: var(--colorBlack2);
 }
 .menu__link:active .menu__link-icon {
-  transform: translateY(-55%);
-  box-shadow: 0 3px 3px 0 var(--colorBlack2);
+  transform: translate(50%, -53%);
+  box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
 }
 @media (min-width: 600px) {
@@ -895,12 +913,13 @@ button:focus:not(:focus-visible) {
 .menu__link-icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 27px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   fill: var(--colorGrey3);
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
+  transition: box-shadow 0.2s, fill 0.2s;
 }
 .main {
   width: 90%;
@@ -945,7 +964,7 @@ button:focus:not(:focus-visible) {
   top: 50%;
   left: 0;
   display: block;
-  width: 28px;
+  width: 27px;
   height: 2px;
   transform: translateY(-50%);
   background-color: var(--colorBlack2);
@@ -964,9 +983,11 @@ button:focus:not(:focus-visible) {
   position: relative;
   display: block;
   margin-top: 0;
+  padding-right: 54px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
   text-transform: lowercase;
+  transition: font-weight 0.2s;
 }
 .main__link:hover {
   font-weight: var(--weightFont5);
@@ -975,23 +996,24 @@ button:focus:not(:focus-visible) {
   color: var(--colorGrey3);
 }
 .main__link:hover .main__link-icon {
-  transform: translateY(-60%);
-  box-shadow: 0 6px 6px 0 var(--colorBlack2);
+  transform: translate(50%, -55%);
+  box-shadow: -1px 4px 4px 0 #000000;
 }
 .main__link:active .main__link-icon {
-  transform: translateY(-55%);
-  box-shadow: 0 3px 3px 0 var(--colorBlack2);
+  transform: translate(50%, -53%);
+  box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
 }
 .main__link-icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 27px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   fill: var(--colorBlack2);
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
+  transition: box-shadow 0.2s, fill 0.2s;
 }
 .footer {
   padding-top: 40px;
@@ -1054,38 +1076,41 @@ button:focus:not(:focus-visible) {
 .contacts__link {
   position: relative;
   margin-bottom: 20px;
-  padding-right: 60px;
+  padding-right: 54px;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: font-weight 0.2s, color 0.2s;
 }
 .contacts__link:last-child {
   margin-bottom: 0;
 }
 .contacts__link:hover {
   font-weight: var(--weightFont5);
+  color: var(--colorGrey2);
 }
 .contacts__link:hover .contacts__icon {
-  transform: translateY(-60%);
-  box-shadow: 0 6px 6px 0 var(--colorBlack);
+  transform: translate(50%, -55%);
+  box-shadow: -1px 4px 4px 0 #000000;
   fill: var(--colorGrey2);
 }
 .contacts__link:active {
   color: var(--colorGrey);
 }
 .contacts__link:active .contacts__icon {
-  transform: translateY(-55%);
-  box-shadow: 0 3px 3px 0 var(--colorBlack);
+  transform: translate(50%, -53%);
+  box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
 }
 .contacts__icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 27px;
   width: 40px;
   height: 40px;
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
   border-radius: 50%;
   fill: var(--colorWhite2);
+  transition: fill 0.2s;
 }
 .copyright {
   display: flex;

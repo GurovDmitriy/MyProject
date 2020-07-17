@@ -39,7 +39,7 @@
     left: 0;
 
     display: block;
-    width: 28px;
+    width: 27px;
     height: 2px;
 
     transform: translateY(-50%);
@@ -62,10 +62,13 @@
   display: block;
 
   margin-top: 0;
+  padding-right: 54px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
   text-transform: lowercase;
+
+  transition: font-weight 0.2s;
 
   &:hover {
     font-weight: var(--weightFont5);
@@ -76,15 +79,15 @@
   }
 
   &:hover .main__link-icon {
-    transform: translateY(-60%);
+    transform: translate(50%, -50% - 5px);
 
-    box-shadow: 0 6px 6px 0 var(--colorBlack2);
+    box-shadow: -1px 4px 4px 0 #000000;
   }
 
   &:active .main__link-icon {
-    transform: translateY(-55%);
+    transform: translate(50%, -50% - 3px);
 
-    box-shadow: 0 3px 3px 0 var(--colorBlack2);
+    box-shadow: 0 2px 2px 0 #000000;
     fill: var(--colorGrey);
   }
 }
@@ -93,7 +96,7 @@
 .main__link-icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 27px;
 
   width: 20px;
   height: 20px;
@@ -102,5 +105,7 @@
 
   fill: var(--colorBlack2);
 
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
+
+  transition: box-shadow 0.2s, fill 0.2s;
 }

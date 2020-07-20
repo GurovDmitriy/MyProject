@@ -1,3 +1,119 @@
+.burger {
+  position: absolute;
+  top: 60px;
+  right: 5%;
+
+  display: block;
+  width: 54px;
+  height: 30px;
+  padding: 0;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--colorBlack2);
+  background-color: transparent;
+
+  transition: border-color 0.2s;
+
+  &::before,
+  &::after {
+    position: absolute;
+
+    content: '';
+    display: block;
+    height: 2px;
+
+    background-color: var(--colorBlack2);
+
+    transition: background-color 0.2s;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    width: 100%;
+  }
+
+  &::after {
+    top: 50%;
+    right: 0;
+
+    width: 50%;
+  }
+
+  &:hover {
+    border-color: var(--colorGrey2);
+  }
+
+  &:active {
+    border-color: var(--colorGrey3);
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: var(--colorGrey2);
+  }
+
+  &:active::after,
+  &:active::before {
+    background-color: var(--colorGrey3);
+  }
+
+  @media (min-width: @tabletWidth) {
+    display: none;
+  }
+}
+
+.burger--open {
+  animation-name: burgerOpen;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+
+  &::after {
+    animation-name: burgerAfterOpen;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  &::before {
+    animation-name: burgerBeforeOpen;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.burger--close {
+  animation-name: burgerClose;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+
+  &::after {
+    animation-name: burgerAfterClose;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  &::before {
+    animation-name: burgerBeforeClose;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+  }
+}
+
 @keyframes burgerOpen {
   0% {
     border-bottom: 2px solid var(--colorBlack2);
@@ -161,121 +277,3 @@
     transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
   }
 }
-
-.burger {
-  position: absolute;
-  top: 60px;
-  right: 5%;
-
-  display: block;
-  width: 54px;
-  height: 30px;
-  padding: 0;
-
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid var(--colorBlack2);
-  background-color: transparent;
-
-  transition: border-color 0.2s;
-
-  &::before,
-  &::after {
-    position: absolute;
-
-    content: '';
-    display: block;
-    height: 2px;
-
-    background-color: var(--colorBlack2);
-
-    transition: background-color 0.2s;
-  }
-
-  &::before {
-    top: 0;
-    left: 0;
-
-    width: 100%;
-  }
-
-  &::after {
-    top: 50%;
-    right: 0;
-
-    width: 50%;
-  }
-
-  &:hover {
-    border-color: var(--colorGrey2);
-  }
-
-  &:active {
-    border-color: var(--colorGrey3);
-  }
-
-  &:hover::after,
-  &:hover::before {
-    background-color: var(--colorGrey2);
-  }
-
-  &:active::after,
-  &:active::before {
-    background-color: var(--colorGrey3);
-  }
-
-  @media (min-width: @tabletWidth) {
-    display: none;
-  }
-}
-
-.burger--open {
-  animation-name: burgerOpen;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-
-  &::after {
-    animation-name: burgerAfterOpen;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-
-  &::before {
-    animation-name: burgerBeforeOpen;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-}
-
-.burger--close {
-  animation-name: burgerClose;
-  animation-duration: 0.5s;
-  animation-delay: 1s;
-  animation-direction: reverse;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-
-  &::after {
-    animation-name: burgerAfterClose;
-    animation-duration: 1s;
-    animation-direction: reverse;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
-  }
-
-  &::before {
-    animation-name: burgerBeforeClose;
-    animation-duration: 1s;
-    animation-direction: reverse;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
-  }
-}
-
-

@@ -6,6 +6,11 @@
 
   background-color: var(--colorBlack2);
 
+  @media (min-width: @tabletWidth) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   @media (min-width: @desktopWidth) {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +20,7 @@
 
 .footer__section {
   .container(@mobileContainer);
-  margin-bottom: 80px;
+  margin-bottom: 107px;
 
   &:last-child {
     margin-bottom: 0;
@@ -23,6 +28,7 @@
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
+    margin-bottom: 177px;
   }
 
   @media (min-width: @desktopWidth) {

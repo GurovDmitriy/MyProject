@@ -43,6 +43,18 @@
     box-shadow: 0 2px 2px 0 #000000;
     fill: var(--colorGrey);
   }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 30px;
+
+    &:hover .contacts__icon {
+      transform: translate(0, -50% - 5px);
+    }
+
+    &:active .contacts__icon {
+      transform: translate(0, -50% - 3px);
+    }
+  }
 }
 
 .contacts__icon {
@@ -59,4 +71,13 @@
   fill: var(--colorWhite2);
 
   transition: fill 0.2s;
+
+  @media (min-width: @tabletWidth) {
+    right: 0;
+
+    width: 46px;
+    height: 46px;
+
+    transform: translate(0, -50%);
+  }
 }

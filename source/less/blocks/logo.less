@@ -27,6 +27,8 @@
   }
 
   @media (min-width: @tabletWidth) {
+    padding-left: 94px;
+
     font-size: var(--sizeFont8);
   }
 
@@ -41,9 +43,14 @@
   left: 0;
 
   width: 47px;
-  height: 60px;
+  height: 59px;
 
   fill: var(--colorBlack2);
 
   transition: fill 0.2s;
+
+  @media (min-width: @tabletWidth) {
+    width: 94px;
+    height: 119px;
+  }
 }

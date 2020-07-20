@@ -4,6 +4,11 @@
   margin-bottom: 80px;
   padding-top: 67px;
 
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 100px;
+    padding-top: 127px;
+  }
+
   @media (min-width: @desktopWidth) {
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +24,7 @@
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktopWidth) {
@@ -52,6 +58,10 @@
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: @desktopWidth) {
     width: 100%;

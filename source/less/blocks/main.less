@@ -1,9 +1,10 @@
 .main {
   .container(@mobileContainer);
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktopWidth) {
@@ -16,6 +17,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 100px;
   }
 }
 
@@ -48,11 +53,15 @@
   }
 
   @media (min-width: @tabletWidth) {
-    font-size: var(--sizeFont6);
+    margin-bottom: 30px;
   }
+}
 
-  @media (min-width: @desktopWidth) {
-    font-size: var(--sizeFont7);
+.main__text {
+  margin-bottom: 20px;
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 30px;
   }
 }
 
@@ -102,10 +111,15 @@
   height: 20px;
 
   border-radius: 50%;
-
   fill: var(--colorBlack2);
 
   transform: translate(50%, -50%);
-
   transition: box-shadow 0.2s, fill 0.2s;
+
+  @media (min-width: @tabletWidth) {
+    right: 23px;
+
+    width: 26px;
+    height: 26px;
+  }
 }

@@ -20,18 +20,17 @@ body {
   min-width: 280px;
 
   font-family: 'Open-Sans', 'Arial', sans-serif;
-  font-size: var(--sizeFont3);
-  line-height: var(--lineHeightFont);
+  .fontTextMobile();
   font-weight: 400;
   font-style: normal;
   color: var(--colorBlack2);
 
   @media (min-width: @tabletWidth) {
-    font-size: var(--sizeFont4);
+
   }
 
   @media (min-width: @desktopWidth) {
-    font-size: var(--sizeFont5);
+
   }
 }
 
@@ -87,7 +86,7 @@ button:focus:not(:focus-visible) {
 }
 
 .js-focus-visible .focus-visible {
-  .outline-focus(var(--colorBlack2));
+  .focusCustom(var(--colorBlack2));
 }
 
 .js-focus-visible button.focus-visible {

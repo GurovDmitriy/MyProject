@@ -1,10 +1,11 @@
 .logo {
   position: relative;
 
+  padding-top: 20px;
   padding-left: 50px;
 
   font-family: 'Special-Elite', 'Arial', sans-serif;
-  font-size: var(--sizeFont7);
+  .fontTitleMobile();
   line-height: 1em;
   font-weight: 400;
 
@@ -28,22 +29,20 @@
 
   @media (min-width: @tabletWidth) {
     padding-left: 94px;
-
-    font-size: var(--sizeFont8);
   }
 
   @media (min-width: @desktopWidth) {
-    font-size: var(--sizeFont9);
+
   }
 }
 
 .logo__icon {
   position: absolute;
-  bottom: 26%;
+  bottom: 11px;
   left: 0;
 
-  width: 47px;
-  height: 59px;
+  width: 40px;
+  height: 51px;
 
   fill: var(--colorBlack2);
 

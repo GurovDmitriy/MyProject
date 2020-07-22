@@ -1,11 +1,45 @@
-/*центровщик контента*/
+/* центровщик контента */
+
 .container(@width) {
   width: @width;
   margin-left: auto;
   margin-right: auto;
 }
 
-/*кастомный фокус*/
-.outline-focus(@color) {
+/* кастомный фокус */
+
+.focusCustom(@color) {
   outline: 2px solid @color;
+}
+
+/* параметры текста */
+
+.fontTitleMobile() {
+  font-size: 42px;
+  line-height: 64px;
+}
+
+.fontH1Mobile() {
+  font-size: 33px;
+  line-height: 51px;
+}
+
+.fontH2Mobile() {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.fontH3Mobile() {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.fontTextMobile() {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fontTextSmallMobile() {
+  font-size: 13px;
+  line-height: 21px;
 }

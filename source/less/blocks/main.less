@@ -1,6 +1,7 @@
 .main {
   .container(@mobileContainer);
-  margin-bottom: 40px;
+  padding-top: 34px;
+  padding-bottom: 35px;
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
@@ -13,7 +14,7 @@
 }
 
 .main__section {
-  margin-bottom: 80px;
+  margin-bottom: 69px;
 
   &:last-child {
     margin-bottom: 0;
@@ -28,12 +29,11 @@
   position: relative;
 
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   padding-left: 38px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont5);
-  line-height: var(--lineHeightFont);
+  .fontH3Mobile();
   font-weight: var(--weightFont5);
   text-transform: uppercase;
 
@@ -44,7 +44,7 @@
     left: 0;
 
     display: block;
-    width: 27px;
+    width: 26px;
     height: 2px;
 
     transform: translateY(-50%);
@@ -58,7 +58,7 @@
 }
 
 .main__text {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @media (min-width: @tabletWidth) {
     margin-bottom: 30px;
@@ -105,7 +105,7 @@
 .main__link-icon {
   position: absolute;
   top: 50%;
-  right: 27px;
+  right: 26px;
 
   width: 20px;
   height: 20px;

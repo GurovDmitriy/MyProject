@@ -331,21 +331,9 @@ template {
   font-style: normal;
   font-display: swap;
 }
-/*переменные css*/
+/* переменные css */
 :root {
-  /*переменные размера шрифта*/
-  --sizeFont1: 12px;
-  --sizeFont2: 14px;
-  --sizeFont3: 16px;
-  --sizeFont4: 18px;
-  --sizeFont5: 20px;
-  --sizeFont6: 26px;
-  --sizeFont7: 32px;
-  --sizeFont8: 42px;
-  --sizeFont9: 52px;
-  /*переменные интерлиньяж шрифта*/
-  --lineHeightFont: 1.52em;
-  /*переменные жирности шрифта*/
+  /* переменные жирности шрифта */
   --weightFont1: 100;
   --weightFont2: 200;
   --weightFont3: 300;
@@ -353,27 +341,20 @@ template {
   --weightFont5: 500;
   --weightFont6: 600;
   --weightFont7: 700;
-  /*переменные жирности шрифта wght*/
-  --wghtFont1: 100;
-  --wghtFont2: 200;
-  --wghtFont3: 300;
-  --wghtFont4: 400;
-  --wghtFont5: 500;
-  --wghtFont6: 600;
-  --wghtFont7: 700;
-  /*переменные цвета*/
+  /* переменные цвета */
   --colorBlack2: #1e1e1f;
   --colorWhite2: #cbc9cf;
   --colorGrey: #3c3b3d;
   --colorGrey2: #6d6c70;
   --colorGrey3: #a2a1a6;
 }
-/*переменные less*/
-/*переменные вьюпорта*/
-/*переменные центровщика*/
-/*переменные плотности экрана*/
-/*центровщик контента*/
-/*кастомный фокус*/
+/* переменные less */
+/* переменные вьюпорта */
+/* переменные центровщика */
+/* переменные плотности экрана */
+/* центровщик контента */
+/* кастомный фокус */
+/* параметры текста */
 html,
 body {
   margin: 0;
@@ -391,21 +372,11 @@ html {
 body {
   min-width: 280px;
   font-family: 'Open-Sans', 'Arial', sans-serif;
-  font-size: var(--sizeFont3);
-  line-height: var(--lineHeightFont);
+  font-size: 16px;
+  line-height: 26px;
   font-weight: 400;
   font-style: normal;
   color: var(--colorBlack2);
-}
-@media (min-width: 600px) {
-  body {
-    font-size: var(--sizeFont4);
-  }
-}
-@media (min-width: 1100px) {
-  body {
-    font-size: var(--sizeFont5);
-  }
 }
 p {
   margin-top: 0;
@@ -468,8 +439,8 @@ button:focus:not(:focus-visible) {
 }
 .header {
   position: relative;
-  margin-bottom: 80px;
-  padding-top: 67px;
+  padding-top: 40px;
+  padding-bottom: 35px;
 }
 @media (min-width: 600px) {
   .header {
@@ -491,7 +462,7 @@ button:focus:not(:focus-visible) {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media (min-width: 600px) {
   .header__wrapper-logo {
@@ -503,7 +474,7 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 1100px) {
   .header__wrapper-logo {
-    width: 30%;
+    width: 35%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -512,26 +483,16 @@ button:focus:not(:focus-visible) {
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont3);
-  line-height: var(--lineHeightFont);
+  font-size: 16px;
+  line-height: 26px;
   font-weight: var(--weightFont3);
   text-transform: lowercase;
-}
-@media (min-width: 600px) {
-  .header__caption {
-    font-size: var(--sizeFont4);
-  }
-}
-@media (min-width: 1100px) {
-  .header__caption {
-    font-size: var(--sizeFont5);
-  }
 }
 .header__image {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media (min-width: 600px) {
   .header__image {
@@ -567,9 +528,11 @@ button:focus:not(:focus-visible) {
 }
 .logo {
   position: relative;
+  padding-top: 20px;
   padding-left: 50px;
   font-family: 'Special-Elite', 'Arial', sans-serif;
-  font-size: var(--sizeFont7);
+  font-size: 42px;
+  line-height: 64px;
   line-height: 1em;
   font-weight: 400;
   transition: color 0.2s;
@@ -589,20 +552,14 @@ button:focus:not(:focus-visible) {
 @media (min-width: 600px) {
   .logo {
     padding-left: 94px;
-    font-size: var(--sizeFont8);
-  }
-}
-@media (min-width: 1100px) {
-  .logo {
-    font-size: var(--sizeFont9);
   }
 }
 .logo__icon {
   position: absolute;
-  bottom: 26%;
+  bottom: 11px;
   left: 0;
-  width: 47px;
-  height: 59px;
+  width: 40px;
+  height: 51px;
   fill: var(--colorBlack2);
   transition: fill 0.2s;
 }
@@ -616,7 +573,7 @@ button:focus:not(:focus-visible) {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media (min-width: 600px) {
   .nav {
@@ -635,11 +592,11 @@ button:focus:not(:focus-visible) {
 }
 .burger {
   position: absolute;
-  top: 60px;
+  top: 40px;
   right: 5%;
   display: block;
-  width: 54px;
-  height: 30px;
+  width: 52px;
+  height: 31px;
   padding: 0;
   border-top: none;
   border-left: none;
@@ -901,8 +858,8 @@ button:focus:not(:focus-visible) {
   padding-bottom: 10px;
   padding-right: 54px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont5);
-  line-height: var(--lineHeightFont);
+  font-size: 20px;
+  line-height: 32px;
   font-weight: var(--weightFont3);
   text-transform: uppercase;
   transition: font-weight 0.2s;
@@ -993,7 +950,7 @@ button:focus:not(:focus-visible) {
 .menu__link-icon {
   position: absolute;
   top: 50%;
-  right: 27px;
+  right: 26px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -1010,7 +967,8 @@ button:focus:not(:focus-visible) {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  padding-top: 34px;
+  padding-bottom: 35px;
 }
 @media (min-width: 600px) {
   .main {
@@ -1028,7 +986,7 @@ button:focus:not(:focus-visible) {
   }
 }
 .main__section {
-  margin-bottom: 80px;
+  margin-bottom: 69px;
 }
 .main__section:last-child {
   margin-bottom: 0;
@@ -1041,11 +999,11 @@ button:focus:not(:focus-visible) {
 .main__caption {
   position: relative;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   padding-left: 38px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont5);
-  line-height: var(--lineHeightFont);
+  font-size: 20px;
+  line-height: 32px;
   font-weight: var(--weightFont5);
   text-transform: uppercase;
 }
@@ -1055,7 +1013,7 @@ button:focus:not(:focus-visible) {
   top: 50%;
   left: 0;
   display: block;
-  width: 27px;
+  width: 26px;
   height: 2px;
   transform: translateY(-50%);
   background-color: var(--colorBlack2);
@@ -1066,7 +1024,7 @@ button:focus:not(:focus-visible) {
   }
 }
 .main__text {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 @media (min-width: 600px) {
   .main__text {
@@ -1101,7 +1059,7 @@ button:focus:not(:focus-visible) {
 .main__link-icon {
   position: absolute;
   top: 50%;
-  right: 27px;
+  right: 26px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -1117,8 +1075,8 @@ button:focus:not(:focus-visible) {
   }
 }
 .footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 28px;
+  padding-bottom: 36px;
   color: var(--colorWhite2);
   background-color: var(--colorBlack2);
 }
@@ -1139,7 +1097,7 @@ button:focus:not(:focus-visible) {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 107px;
+  margin-bottom: 75px;
 }
 .footer__section:last-child {
   margin-bottom: 0;
@@ -1183,10 +1141,10 @@ button:focus:not(:focus-visible) {
 }
 .contacts__link {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-right: 54px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   transition: font-weight 0.2s, color 0.2s;
 }
 .contacts__link:last-child {
@@ -1223,7 +1181,7 @@ button:focus:not(:focus-visible) {
 .contacts__icon {
   position: absolute;
   top: 50%;
-  right: 27px;
+  right: 26px;
   width: 40px;
   height: 40px;
   transform: translate(50%, -50%);
@@ -1247,13 +1205,9 @@ button:focus:not(:focus-visible) {
 }
 .copyright__date {
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont2);
+  font-size: 13px;
+  line-height: 21px;
   font-weight: var(--weightFont3);
-}
-@media (min-width: 600px) {
-  .copyright__date {
-    font-size: var(--sizeFont3);
-  }
 }
 .skills {
   display: grid;
@@ -1267,8 +1221,6 @@ button:focus:not(:focus-visible) {
 .skills__item {
   padding: 10px;
   font-family: 'Special-Elite', 'Arial', sans-serif;
-  font-size: var(--sizeFont4);
-  line-height: var(--lineHeightFont);
   font-weight: 400;
   border: 2px solid var(--colorBlack);
 }

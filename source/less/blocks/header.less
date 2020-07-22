@@ -1,12 +1,12 @@
 .header {
   position: relative;
 
-  margin-bottom: 80px;
-  padding-top: 67px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+
 
   @media (min-width: @tabletWidth) {
-    margin-bottom: 100px;
-    padding-top: 127px;
+    padding-top: 80px;
   }
 
   @media (min-width: @desktopWidth) {
@@ -20,15 +20,15 @@
 
 .header__wrapper-logo {
   .container(@mobileContainer);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktopWidth) {
-    width: 30%;
+    width: 35%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -39,17 +39,16 @@
   margin-bottom: 0;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-size: var(--sizeFont3);
-  line-height: var(--lineHeightFont);
+  .fontTextMobile();
   font-weight: var(--weightFont3);
   text-transform: lowercase;
 
   @media (min-width: @tabletWidth) {
-    font-size: var(--sizeFont4);
+    .fontTextTablet();
   }
 
   @media (min-width: @desktopWidth) {
-    font-size: var(--sizeFont5);
+
   }
 }
 
@@ -57,7 +56,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @media (min-width: @tabletWidth) {
     margin-bottom: 30px;

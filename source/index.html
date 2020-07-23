@@ -168,33 +168,42 @@
 
   <footer class="footer">
 
-    <section class="contacts footer__section">
-      <h2 class="visually-hidden">Контакты</h2>
-      <a class="contacts__link" href="#">Гуров Дмитрий
-        <svg class="contacts__icon" width="40" height="40">
-          <use xlink:href="#icon-github"></use>
-        </svg></a>
-      <a class="contacts__link" href="#">+7(888)-888-88-88
-        <svg class="contacts__icon" width="40" height="40">
-          <use xlink:href="#icon-phone"></use>
-        </svg></a>
-      <a class="contacts__link" href="#">example@gmail.com
-        <svg class="contacts__icon" width="40" height="40">
-          <use xlink:href="#icon-mailbox"></use>
-        </svg></a>
-    </section>
+    <h2 class="visually-hidden">Контакты</h2>
 
-    <section class="copyright footer__section">
-      <h2 class="visually-hidden">Автор</h2>
-      <a class="logo footer-logo" tabindex="0">
-        <svg class="logo__icon footer__logo-icon" width="47" height="59">
-          <use xlink:href="#icon-typewriter"></use>
-        </svg>Logo</a>
+    <ul class="contacts footer__item">
+      <li class="contacts__item">
+        <a class="contacts__link" href="#">
+          <span class="visually-hidden">Гуров Дмитрий</span>
+          <svg class="contacts__icon" width="40" height="40">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link" href="#">
+          <span class="visually-hidden">+7(888)-888-88-88</span>
+          <svg class="contacts__icon" width="40" height="40">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link" href="#">
+          <span class="visually-hidden">example@gmail.com</span>
+          <svg class="contacts__icon" width="40" height="40">
+            <use xlink:href="#icon-mailbox"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="copyright footer__item">
       <strong class="copyright__date">&copy;
+        <a class="copyright__link" tabindex="0">Logo</a>
         <time datetime="2020-06-15 13:31">2020</time>
         Гуров Дмитрий
       </strong>
-    </section>
+    </div>
 
   </footer>
 

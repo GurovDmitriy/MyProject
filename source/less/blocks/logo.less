@@ -1,8 +1,7 @@
 .logo {
   position: relative;
 
-  padding-top: 20px;
-  padding-left: 50px;
+  display: inline-block;
 
   font-family: 'Special-Elite', 'Arial', sans-serif;
   .fontTitleMobile();
@@ -28,9 +27,6 @@
   }
 
   @media (min-width: @tabletWidth) {
-    padding-top: 67px;
-    padding-left: 84px;
-
     .fontTitleTablet();
     line-height: 1em;
   }
@@ -41,12 +37,9 @@
 }
 
 .logo__icon {
-  position: absolute;
-  bottom: 11px;
-  left: 0;
-
   width: 40px;
   height: 51px;
+  margin-right: 10px;
 
   fill: var(--colorBlack2);
 
@@ -55,7 +48,7 @@
   @media (min-width: @tabletWidth) {
     bottom: 13px;
 
-    width: 80px;
-    height: 101px;
+    width: 70px;
+    height: 89px;
   }
 }

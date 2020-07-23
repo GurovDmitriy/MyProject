@@ -451,7 +451,8 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .header {
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 54px;
   }
 }
 @media (min-width: 1100px) {
@@ -475,7 +476,7 @@ button:focus:not(:focus-visible) {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 26px;
+    margin-bottom: 46px;
   }
 }
 @media (min-width: 1100px) {
@@ -508,7 +509,7 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .header__image {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
   }
 }
 @media (min-width: 1100px) {
@@ -540,8 +541,7 @@ button:focus:not(:focus-visible) {
 }
 .logo {
   position: relative;
-  padding-top: 20px;
-  padding-left: 50px;
+  display: inline-block;
   font-family: 'Special-Elite', 'Arial', sans-serif;
   font-size: 42px;
   line-height: 64px;
@@ -563,27 +563,23 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .logo {
-    padding-top: 67px;
-    padding-left: 84px;
     font-size: 47px;
     line-height: 73px;
     line-height: 1em;
   }
 }
 .logo__icon {
-  position: absolute;
-  bottom: 11px;
-  left: 0;
   width: 40px;
   height: 51px;
+  margin-right: 10px;
   fill: var(--colorBlack2);
   transition: fill 0.2s;
 }
 @media (min-width: 600px) {
   .logo__icon {
     bottom: 13px;
-    width: 80px;
-    height: 101px;
+    width: 70px;
+    height: 89px;
   }
 }
 .nav {
@@ -596,7 +592,7 @@ button:focus:not(:focus-visible) {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
   }
 }
 @media (min-width: 1100px) {
@@ -608,7 +604,7 @@ button:focus:not(:focus-visible) {
 }
 .burger {
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: 5%;
   display: block;
   width: 52px;
@@ -997,7 +993,8 @@ button:focus:not(:focus-visible) {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    padding-top: 52px;
+    padding-bottom: 54px;
   }
 }
 @media (min-width: 1100px) {
@@ -1015,7 +1012,7 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .main__section {
-    margin-bottom: 100px;
+    margin-bottom: 106px;
   }
 }
 .main__caption {
@@ -1042,7 +1039,7 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .main__caption {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 23px;
     line-height: 39px;
   }
@@ -1052,7 +1049,7 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .main__text {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
   }
 }
 .main__link {
@@ -1080,6 +1077,11 @@ button:focus:not(:focus-visible) {
   box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
 }
+@media (min-width: 600px) {
+  .main__link {
+    padding-right: 72px;
+  }
+}
 .main__link-icon {
   position: absolute;
   top: 50%;
@@ -1093,9 +1095,9 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .main__link-icon {
-    right: 23px;
-    width: 26px;
-    height: 26px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
   }
 }
 .footer {
@@ -1106,8 +1108,8 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 44px;
+    padding-bottom: 54px;
   }
 }
 @media (min-width: 1100px) {
@@ -1121,7 +1123,7 @@ button:focus:not(:focus-visible) {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 75px;
 }
 .footer__section:last-child {
   margin-bottom: 0;
@@ -1131,7 +1133,7 @@ button:focus:not(:focus-visible) {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 177px;
+    margin-bottom: 104px;
   }
 }
 @media (min-width: 1100px) {
@@ -1193,7 +1195,10 @@ button:focus:not(:focus-visible) {
 }
 @media (min-width: 600px) {
   .contacts__link {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 72px;
   }
   .contacts__link:hover .contacts__icon {
     transform: translate(0, -55%);
@@ -1216,8 +1221,8 @@ button:focus:not(:focus-visible) {
 @media (min-width: 600px) {
   .contacts__icon {
     right: 0;
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
     transform: translate(0, -50%);
   }
 }
@@ -1232,6 +1237,12 @@ button:focus:not(:focus-visible) {
   font-size: 13px;
   line-height: 21px;
   font-weight: var(--weightFont3);
+}
+@media (min-width: 600px) {
+  .copyright__date {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .skills {
   display: grid;

@@ -110,6 +110,10 @@
     transform: translate(50%, -50% - 5px);
 
     box-shadow: -1px 4px 4px 0 #000000;
+
+    @media (min-width: @tabletWidth) {
+      transform: translate(0, -50% - 5px);
+    }
   }
 
   &:active .main__link-icon {
@@ -117,6 +121,10 @@
 
     box-shadow: 0 2px 2px 0 #000000;
     fill: var(--colorGrey);
+
+    @media (min-width: @tabletWidth) {
+      transform: translate(0, -50% - 3px);
+    }
   }
 
   @media (min-width: @tabletWidth) {

@@ -1121,10 +1121,20 @@ button:focus:not(:focus-visible) {
   transform: translate(50%, -55%);
   box-shadow: -1px 4px 4px 0 #000000;
 }
+@media (min-width: 600px) {
+  .main__link:hover .main__link-icon {
+    transform: translate(0, -55%);
+  }
+}
 .main__link:active .main__link-icon {
   transform: translate(50%, -53%);
   box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
+}
+@media (min-width: 600px) {
+  .main__link:active .main__link-icon {
+    transform: translate(0, -53%);
+  }
 }
 @media (min-width: 600px) {
   .main__link {

@@ -372,7 +372,10 @@ html {
   box-sizing: inherit;
 }
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 280px;
+  min-height: 100vh;
   font-family: 'Open-Sans', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -1063,6 +1066,9 @@ button:focus:not(:focus-visible) {
   font-weight: var(--weightFont5);
   text-transform: uppercase;
 }
+.main__caption:last-child {
+  margin-bottom: 0;
+}
 .main__caption::after {
   position: absolute;
   content: '';
@@ -1164,6 +1170,7 @@ button:focus:not(:focus-visible) {
   }
 }
 .footer {
+  flex-grow: 1;
   padding-top: 40px;
   padding-bottom: 36px;
   color: var(--colorWhite2);

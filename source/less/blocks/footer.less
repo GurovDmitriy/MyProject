@@ -7,16 +7,13 @@
   background-color: var(--colorBlack2);
 
   @media (min-width: @tabletWidth) {
-    padding-top: 44px;
+    padding-top: 60px;
     padding-bottom: 54px;
   }
 
   @media (min-width: @desktopWidth) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .container(@desktopContainer);
+    padding-top: 80px;
+    padding-bottom: 72px;
   }
 }
 
@@ -30,13 +27,12 @@
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
-    margin-bottom: 104px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktopWidth) {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
+    .container(@desktopContainer);
+    margin-bottom: 72px;
   }
 }
 

@@ -11,6 +11,8 @@
 
   @media (min-width: @desktopWidth) {
     .container(@desktopContainer);
+    padding-top: 70px;
+    padding-bottom: 72px;
   }
 }
 
@@ -22,7 +24,11 @@
   }
 
   @media (min-width: @tabletWidth) {
-    margin-bottom: 106px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    margin-bottom: 62px;
   }
 }
 
@@ -60,7 +66,7 @@
   }
 
   @media (min-width: @desktopWidth) {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
 
     .fontH3Desktop();
   }
@@ -71,6 +77,10 @@
 
   @media (min-width: @tabletWidth) {
     margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    margin-bottom: 24px;
   }
 }
 
@@ -130,9 +140,11 @@
   transition: box-shadow 0.2s, fill 0.2s;
 
   @media (min-width: @tabletWidth) {
-    right: 25px;
+    right: 0;
 
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+
+    transform: translate(0, -50%);
   }
 }

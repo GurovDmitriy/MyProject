@@ -1091,6 +1091,9 @@ button:focus:not(:focus-visible) {
 .main__text {
   margin-bottom: 10px;
 }
+.main__text:last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 600px) {
   .main__text {
     margin-bottom: 18px;
@@ -1305,6 +1308,15 @@ button:focus:not(:focus-visible) {
     font-size: 16px;
     line-height: 32px;
   }
+}
+.links__item {
+  margin-bottom: 10px;
+}
+.links__item:last-child {
+  margin-bottom: 0;
+}
+.links-list__link:hover {
+  text-decoration: underline;
 }
 .skills {
   display: grid;

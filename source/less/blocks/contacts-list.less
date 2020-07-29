@@ -1,0 +1,28 @@
+.contacts-list__item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    margin-bottom: 24px;
+  }
+}
+
+.contacts-list__text {
+  font-family: 'Special-Elite', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.contacts-list__link {
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-weight: var(--weightFont3);
+}

@@ -1265,7 +1265,7 @@ button:focus:not(:focus-visible) {
 .footer__logo-icon {
   fill: var(--colorWhite2);
 }
-.contacts {
+.social-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1274,46 +1274,46 @@ button:focus:not(:focus-visible) {
   font-weight: var(--weightFont3);
 }
 @media (min-width: 1100px) {
-  .contacts {
+  .social-list {
     width: 60%;
   }
 }
-.contacts__item {
+.social-list__item {
   margin-right: 20px;
 }
-.contacts__item:last-child {
+.social-list__item:last-child {
   margin-right: 0;
 }
 @media (min-width: 600px) {
-  .contacts__item {
+  .social-list__item {
     margin-right: 26px;
   }
 }
-.contacts__link {
+.social-list__link {
   display: block;
   transition: font-weight 0.2s, color 0.2s;
 }
-.contacts__link:last-child {
+.social-list__link:last-child {
   margin-bottom: 0;
 }
-.contacts__link:hover {
+.social-list__link:hover {
   font-weight: var(--weightFont5);
   color: var(--colorGrey2);
 }
-.contacts__link:hover .contacts__icon {
+.social-list__link:hover .social-list__icon {
   transform: translate(0, -2px);
   box-shadow: -1px 4px 4px 0 #000000;
   fill: var(--colorGrey2);
 }
-.contacts__link:active {
+.social-list__link:active {
   color: var(--colorGrey);
 }
-.contacts__link:active .contacts__icon {
+.social-list__link:active .social-list__icon {
   transform: translate(0, -1px);
   box-shadow: 0 2px 2px 0 #000000;
   fill: var(--colorGrey);
 }
-.contacts__icon {
+.social-list__icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1321,7 +1321,7 @@ button:focus:not(:focus-visible) {
   transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
 }
 @media (min-width: 600px) {
-  .contacts__icon {
+  .social-list__icon {
     width: 46px;
     height: 46px;
   }
@@ -1446,4 +1446,30 @@ button:focus:not(:focus-visible) {
 .skills-list__text {
   color: var(--colorWhite2);
   mix-blend-mode: difference;
+}
+.contacts-list__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.contacts-list__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .contacts-list__item {
+    margin-bottom: 18px;
+  }
+}
+@media (min-width: 1100px) {
+  .contacts-list__item {
+    margin-bottom: 24px;
+  }
+}
+.contacts-list__text {
+  font-family: 'Special-Elite', 'Arial', sans-serif;
+  font-weight: 400;
+}
+.contacts-list__link {
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-weight: var(--weightFont3);
 }

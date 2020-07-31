@@ -53,10 +53,13 @@
     <a class="skip-link" href="#main">Перейти к основному содержанию</a>
 
     <nav class="nav">
+
       <h2 class="visually-hidden">Главная навигация</h2>
+
       <button class="burger" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
+
       <ul class="menu">
         <li class="menu__item">
           <a class="menu__link" href="index.html">Главная
@@ -65,7 +68,7 @@
           </svg></a>
         </li>
         <li class="menu__item">
-          <a class="menu__link">Обучение
+          <a class="menu__link" href="education.html">Обучение
           <svg class="menu__link-icon" width="20" height="20">
             <use xlink:href="#icon-right-arrow"></use>
           </svg></a>
@@ -83,7 +86,7 @@
           </svg></a>
         </li>
         <li class="menu__item">
-          <a class="menu__link menu__link--active" href="contacts.html" tabindex="0">Автор
+          <a class="menu__link menu__link--active" tabindex="0">Автор
             <svg class="menu__link-icon" width="20" height="20">
             <use xlink:href="#icon-right-arrow"></use>
           </svg></a>
@@ -125,7 +128,7 @@
       <img class="header__image"
            src="image/min/img-phone-mobile.jpg"
            width="480" height="270"
-           alt="Клавиатура старой печатной машинки">
+           alt="Старый проводной телефон, черно-белая фотография ">
     </picture>
 
     <p class="header__text">Logo - это веб-сайт на котором собраны ссылки на ресурсы для бесплатного обучения таким языкам веб-разработки, как HTML , CSS , JavaScript и многое другое.</p>
@@ -134,13 +137,15 @@
 
   <main class="main" id="main">
 
+    <h2 class="visually-hidden">Об авторе</h2>
+
     <section class="main__section">
-      <h2 class="main__caption">Автор</h2>
+      <h3 class="main__caption" tabindex="0">Автор</h3>
       <p class="main__text">Описание раздела из меню. Lorem Ipsum Dolor Sit Amet, Concetetur Adipiscing Elit, Sed Tempor и жизненной силы, так что труд и горе, некоторые важные вещи, чтобы сделать eiusmod. С годами я приеду, кто будет ностальгировать по ней аликивным преимуществом от физических упражнений, чтобы стимулировать усилия, если в школьном округе и долголетие.</p>
     </section>
 
     <section class="main__section main__section-works">
-      <h3 class="main__caption main__caption-works">Примеры работ</h3>
+      <h3 class="main__caption main__caption-works" tabindex="0">Примеры работ</h3>
 
       <div class="works-list">
         <figure class="works-list__item">
@@ -302,52 +307,88 @@
     </section>
 
     <section class="main__section main__section-skills">
-      <h3 class="main__caption main__caption-skills">Навыки</h3>
+      <h3 class="main__caption main__caption-skills" tabindex="0">Навыки</h3>
       <ul class="skills-list">
         <li class="skills-list__item skills-list__item-html">
           <span class="skills-list__text">Html</span>
+          <div class="visually-hidden">
+            <label for="html">Навыки Html</label>
+            <progress id="html" value="70" max="100">70%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-css">
           <span class="skills-list__text">Css</span>
+          <div class="visually-hidden">
+            <label for="css">Навыки Css</label>
+            <progress id="css" value="70" max="100">70%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-js">
           <span class="skills-list__text">Js</span>
+          <div class="visually-hidden">
+            <label for="js">Навыки JavaScript</label>
+            <progress id="js" value="10" max="100">10%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-git">
           <span class="skills-list__text">Git</span>
+          <div class="visually-hidden">
+            <label for="git">Навыки Git</label>
+            <progress id="git" value="20" max="100">20%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-grunt">
           <span class="skills-list__text">Grunt</span>
+          <div class="visually-hidden">
+            <label for="grunt">Навыки Grunt</label>
+            <progress id="grunt" value="20" max="100">20%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-less">
           <span class="skills-list__text">Less</span>
+          <div class="visually-hidden">
+            <label for="less">Навыки Less</label>
+            <progress id="less" value="50" max="100">50%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-sass">
           <span class="skills-list__text">Sass</span>
+          <div class="visually-hidden">
+            <label for="sass">Навыки Sass</label>
+            <progress id="sass" value="10" max="100">10%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-stylus">
           <span class="skills-list__text">Stylus</span>
+          <div class="visually-hidden">
+            <label for="stylus">Навыки Stylus</label>
+            <progress id="stylus" value="10" max="100">10%</progress>
+          </div>
         </li>
         <li class="skills-list__item skills-list__item-bootstrap">
           <span class="skills-list__text">Bootstrap</span>
+          <div class="visually-hidden">
+            <label for="bootstrap">Навыки Bootstrap</label>
+            <progress id="bootstrap" value="50" max="100">50%</progress>
+          </div>
         </li>
       </ul>
     </section>
 
     <section class="main__section">
-      <h3 class="main__caption">Контакты</h3>
+      <h3 class="main__caption" tabindex="0">Контакты</h3>
       <ul class="contacts-list">
         <li class="contacts-list__item">
           <span class="contacts-list__text">Github:</span>
           <a class="contacts-list__link" href="https://github.com/GurovDmitriy">github.com/GurovDmitriy</a>
         </li>
         <li class="contacts-list__item">
-          <span class="contacts-list__text">E-mail:</span>
-          <a class="contacts-list__link" href="mailto:gurovdmitriy1991@gmail.com">gurovdmitriy1991@gmail.com</a>
-        </li>
-        <li class="contacts-list__item">
           <span class="contacts-list__text">Phone:</span>
           <a class="contacts-list__link" href="tel:+79887646888">+7(988)-764-68-88</a>
+        </li>
+        <li class="contacts-list__item">
+          <span class="contacts-list__text">E-mail:</span>
+          <a class="contacts-list__link" href="mailto:gurovdmitriy1991@gmail.com">gurovdmitriy1991@gmail.com</a>
         </li>
       </ul>
     </section>
@@ -361,7 +402,7 @@
     <ul class="social-list footer__item">
       <li class="social-list__item">
         <a class="social-list__link" href="#">
-          <span class="visually-hidden">Гуров Дмитрий</span>
+          <span class="visually-hidden">Github: github.com/GurovDmitriy</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-github"></use>
           </svg>
@@ -369,7 +410,7 @@
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="#">
-          <span class="visually-hidden">+7(888)-888-88-88</span>
+          <span class="visually-hidden">Phone: +7(888)-888-88-88</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-phone"></use>
           </svg>
@@ -377,7 +418,7 @@
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="#">
-          <span class="visually-hidden">example@gmail.com</span>
+          <span class="visually-hidden">E-mail: example@gmail.com</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-mailbox"></use>
           </svg>
@@ -387,8 +428,8 @@
 
     <div class="copyright footer__item">
       <strong class="copyright__date">&copy;
-        <a class="copyright__link" tabindex="0">Logo</a>
         <time datetime="2020-06-15 13:31">2020</time>
+        <a class="copyright__link" href="index.html">Logo</a>
         Гуров Дмитрий
       </strong>
     </div>

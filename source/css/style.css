@@ -1425,6 +1425,10 @@ button:focus:not(:focus-visible) {
 .works-list__img {
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
+}
+.works-list__img:hover {
+  filter: grayscale(0);
 }
 .skills-list {
   display: grid;
@@ -1495,6 +1499,7 @@ button:focus:not(:focus-visible) {
 .contacts-list__item {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 .contacts-list__item:last-child {
@@ -1517,4 +1522,12 @@ button:focus:not(:focus-visible) {
 .contacts-list__link {
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
+  transition: font-weight 0.2s, color 0.2s;
+}
+.contacts-list__link:hover {
+  font-weight: var(--weightFont5);
+  text-decoration: underline;
+}
+.contacts-list__link:active {
+  color: var(--colorGrey3);
 }

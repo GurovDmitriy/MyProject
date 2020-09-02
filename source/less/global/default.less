@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  min-width: 280px;
+  min-width: @mobileWidth;
   min-height: 100vh;
 
   font-family: 'Open-Sans', 'Arial', sans-serif;
@@ -116,9 +116,9 @@ button:focus:not(:focus-visible) {
 
   padding: 10px;
 
-  color: #ffffff;
+  color: var(--colorWhite2);
 
-  background-color: #000000;
+  background-color: var(--colorBlack2);
 }
 
 .skip-link:focus {

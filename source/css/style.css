@@ -453,8 +453,8 @@ button:focus:not(:focus-visible) {
   left: 0;
   z-index: 100;
   padding: 10px;
-  color: #ffffff;
-  background-color: #000000;
+  color: var(--colorWhite2);
+  background-color: var(--colorBlack2);
 }
 .skip-link:focus {
   top: 0;

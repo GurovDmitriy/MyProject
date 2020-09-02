@@ -1517,31 +1517,40 @@ footer ::selection {
   border: 2px solid var(--colorGrey);
 }
 .skills-list__item-html {
-  background-image: linear-gradient(90deg, var(--colorGrey) 70%, #ffffff 70%);
+  --skill-html: 70%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-html), #ffffff var(--skill-html));
 }
 .skills-list__item-css {
-  background-image: linear-gradient(90deg, var(--colorGrey) 70%, #ffffff 70%);
+  --skill-css: 70%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-css), #ffffff var(--skill-css));
 }
 .skills-list__item-js {
-  background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+  --skill-js: 10%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), #ffffff var(--skill-js));
 }
 .skills-list__item-git {
-  background-image: linear-gradient(90deg, var(--colorGrey) 20%, #ffffff 20%);
+  --skill-git: 20%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), #ffffff var(--skill-git));
 }
 .skills-list__item-grunt {
-  background-image: linear-gradient(90deg, var(--colorGrey) 20%, #ffffff 20%);
+  --skill-grunt: 20%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), #ffffff var(--skill-grunt));
 }
 .skills-list__item-less {
-  background-image: linear-gradient(90deg, var(--colorGrey) 50%, #ffffff 50%);
+  --skill-less: 50%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-less), #ffffff var(--skill-less));
 }
 .skills-list__item-sass {
-  background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+  --skill-sass: 10%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sass), #ffffff var(--skill-sass));
 }
 .skills-list__item-stylus {
-  background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+  --skill-stylus: 10%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), #ffffff var(--skill-stylus));
 }
 .skills-list__item-bootstrap {
-  background-image: linear-gradient(90deg, var(--colorGrey) 50%, #ffffff 50%);
+  --skill-bootstrap: 50%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
 }
 @media (min-width: 600px) {
   .skills-list__item {

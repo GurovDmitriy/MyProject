@@ -26,39 +26,48 @@
   border: 2px solid var(--colorGrey);
 
   &-html {
-    background-image: linear-gradient(90deg, var(--colorGrey) 70%, #ffffff 70%);
+    --skill-html: 70%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-html), #ffffff var(--skill-html));
   }
 
   &-css {
-    background-image: linear-gradient(90deg, var(--colorGrey) 70%, #ffffff 70%);
+    --skill-css: 70%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-css), #ffffff var(--skill-css));
   }
 
   &-js {
-    background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+    --skill-js: 10%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), #ffffff var(--skill-js));
   }
 
   &-git {
-    background-image: linear-gradient(90deg, var(--colorGrey) 20%, #ffffff 20%);
+    --skill-git: 20%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), #ffffff var(--skill-git));
   }
 
   &-grunt {
-    background-image: linear-gradient(90deg, var(--colorGrey) 20%, #ffffff 20%);
+    --skill-grunt: 20%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), #ffffff var(--skill-grunt));
   }
 
   &-less {
-    background-image: linear-gradient(90deg, var(--colorGrey) 50%, #ffffff 50%);
+    --skill-less: 50%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-less), #ffffff var(--skill-less));
   }
 
   &-sass {
-    background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+    --skill-sass: 10%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sass), #ffffff var(--skill-sass));
   }
 
   &-stylus {
-    background-image: linear-gradient(90deg, var(--colorGrey) 10%, #ffffff 10%);
+    --skill-stylus: 10%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), #ffffff var(--skill-stylus));
   }
 
   &-bootstrap {
-    background-image: linear-gradient(90deg, var(--colorGrey) 50%, #ffffff 50%);
+    --skill-bootstrap: 50%;
+    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
   }
 
   @media (min-width: @tabletWidth) {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
   <meta charset="utf-8">
   <title>Title</title>
 
@@ -13,25 +14,26 @@
   <meta name="googlebot"                content="">
   <meta name="google-site-verification" content="">
 
-  <link rel="preload" href="fonts/woff2/specialelite-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/woff2/robotomono_wght.woff2"      as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/woff2/opensans-regular.woff2"     as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/woff2/opensans-light.woff2"       as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/woff2/specialelite-regular.woff2" as="font"    type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/woff2/robotomono_wght.woff2"      as="font"    type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/woff2/opensans-regular.woff2"     as="font"    type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/woff2/opensans-light.woff2"       as="font"    type="font/woff2" crossorigin>
 
   <link rel="preload" href="css/style.css"                          as="style">
 
-  <link rel="preload" href="js/modernizr-custom.js"                 as="script">
+  <link rel="preload" href="js/webp.js"                             as="script">
   <link rel="preload" href="js/picturefill.js"                      as="script">
   <link rel="preload" href="js/lazysizes.js"                        as="script">
 
   <link rel="stylesheet" href="css/style.css"             type="text/css">
+
   <link rel="icon"       href="image/min/typewriter2.svg" type="image/svg+xml">
 
   <script>document.createElement("picture");</script>
 
-  <script src="js/modernizr-custom.js" async></script>
-  <script src="js/picturefill.js"      async></script>
-  <script src="js/lazysizes.js"        async></script>
+  <script src="js/webp.js"        async></script>
+  <script src="js/picturefill.js" async></script>
+  <script src="js/lazysizes.js"   async></script>
 
 </head>
 
@@ -186,8 +188,10 @@
   <!-- -Main -->
   <main class="main" id="main">
 
+    <h2 class="visually-hidden">Основные разделы</h2>
+
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0">Обучение</h2>
+      <h3 class="main__caption" tabindex="0">Обучение</h3>
       <p class="main__text">В разделе собрана информация для изучения HTML, CSS, JavaScript, PHP, SQL, Bootstrap, jQuery, React, Angular и другие. Представленные ресурсы являются полностью бесплатными. Вы можете узнать как научиться делать сайты с нуля или освежить свои знания в той или иной области программирования. Возможно для кого-то это станет хорошим стартом на пути к получению новых знаний, интересной и увлекательной удаленной работы со свободным графиком.</p>
       <a class="main__link" href="education.html">Перейти в раздел
         <svg class="main__link-icon" width="20" height="20">
@@ -197,7 +201,7 @@
     </section>
 
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0">Блог</h2>
+      <h3 class="main__caption" tabindex="0">Блог</h3>
       <p class="main__text">В блоге описаны наиболее распространенные задачи по верстке того или иного элемента и варианты их решения. Обзор языков веб-программирования, примеры возможностей редакторов кода, какие есть обязательные критерии верстки сайтов, какими инструментами можно автоматизировать процессы верстки сайта - обо всем об этом коротко.</p>
       <a class="main__link" href="blog.html">Перейти в раздел
         <svg class="main__link-icon" width="20" height="20">
@@ -207,7 +211,7 @@
     </section>
 
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0">Разное</h2>
+      <h3 class="main__caption" tabindex="0">Разное</h3>
       <p class="main__text">В разделе собраны ссылки на бесплатные веб-ресурсы, программы и книги, которые не касаются веб-разработки или касаются ее косвенно. Изучение английского языка, навык слепого набора текста на клавиатуре, развивающие игры, все то что помогает нам при выполнении ежедневных задач на компьютере или дает нам возможность разнообразить отдых от длительной работы и провести это время с пользой.</p>
       <a class="main__link" href="other.html">Перейти в раздел
         <svg class="main__link-icon" width="20" height="20">
@@ -271,7 +275,6 @@
   <!-- Footer -->
 
   <script src="js/default.js"       async></script>
-  <script src="js/index.js"         async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>

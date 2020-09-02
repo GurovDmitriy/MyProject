@@ -362,6 +362,7 @@ body {
   margin: 0;
   padding: 0;
 }
+/*Box model*/
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -371,6 +372,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/*Body*/
 body {
   display: flex;
   flex-direction: column;
@@ -395,6 +397,7 @@ body {
     line-height: 36px;
   }
 }
+/*Tag*/
 p {
   margin-top: 0;
 }
@@ -419,6 +422,10 @@ figure {
   margin: 0;
   line-height: 0;
 }
+button:hover {
+  cursor: pointer;
+}
+/*Only sr*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -429,9 +436,7 @@ figure {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
-button:hover {
-  cursor: pointer;
-}
+/*Focus custom*/
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -447,6 +452,7 @@ button:focus:not(:focus-visible) {
 .js-focus-visible .footer *.focus-visible {
   outline-color: var(--colorWhite2);
 }
+/*Skip link*/
 .skip-link {
   position: fixed;
   top: -100%;
@@ -458,6 +464,19 @@ button:focus:not(:focus-visible) {
 }
 .skip-link:focus {
   top: 0;
+}
+/*User select*/
+::selection {
+  background-color: var(--colorBlack2);
+  color: var(--colorWhite2);
+}
+footer ::selection {
+  background-color: var(--colorWhite2);
+  color: var(--colorBlack2);
+}
+.skills-list ::selection {
+  background-color: #ffffff;
+  color: #000000;
 }
 .header {
   position: relative;

@@ -1527,6 +1527,7 @@ footer ::selection {
   font-weight: 400;
   text-align: center;
   border: 2px solid var(--colorGrey);
+  background-color: #ffffff;
 }
 .skills-list__item-html {
   --skill-html: 70%;
@@ -1540,13 +1541,13 @@ footer ::selection {
   --skill-js: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), #ffffff var(--skill-js));
 }
-.skills-list__item-git {
-  --skill-git: 20%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), #ffffff var(--skill-git));
+.skills-list__item-bootstrap {
+  --skill-bootstrap: 50%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
 }
-.skills-list__item-grunt {
-  --skill-grunt: 20%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), #ffffff var(--skill-grunt));
+.skills-list__item-w3css {
+  --skill-bootstrap: 50%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
 }
 .skills-list__item-less {
   --skill-less: 50%;
@@ -1560,9 +1561,13 @@ footer ::selection {
   --skill-stylus: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), #ffffff var(--skill-stylus));
 }
-.skills-list__item-bootstrap {
-  --skill-bootstrap: 50%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
+.skills-list__item-git {
+  --skill-git: 30%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), #ffffff var(--skill-git));
+}
+.skills-list__item-grunt {
+  --skill-grunt: 30%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), #ffffff var(--skill-grunt));
 }
 @media (min-width: 600px) {
   .skills-list__item {

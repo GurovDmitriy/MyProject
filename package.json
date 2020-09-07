@@ -37,6 +37,7 @@
     "grunt-image": "^6.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-prettify": "^0.4.0",
+    "grunt-real-favicon": "^0.2.4",
     "grunt-svgstore": "^2.0.0",
     "grunt-ttf2woff2": "^1.0.1",
     "load-grunt-tasks": "^5.1.0",

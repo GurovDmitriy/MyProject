@@ -9,3 +9,4 @@ node_modules/
 source/css/
 build/
 Thumbs.db
+/.gtm/

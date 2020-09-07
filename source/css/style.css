@@ -305,28 +305,21 @@ template {
 }
 @font-face {
   font-family: 'Special-Elite';
-  src: url('../fonts/woff2/specialelite-regular.woff2') format('woff2');
+  src: url('../fonts/woff2/SpecialElite-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Open-Sans';
-  src: url('../fonts/woff2/opensans-regular.woff2') format('woff2');
+  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Open-Sans';
-  src: url('../fonts/woff2/opensans-light.woff2') format('woff2');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Roboto-Mono';
-  src: url('../fonts/woff2/robotomono_wght.woff2') format('woff2-variations');
+  src: url('../fonts/woff2/RobotoMono-VariableFont_wght.woff2') format('woff2-variations');
   font-weight: 100 700;
   font-style: normal;
   font-display: swap;
@@ -451,6 +444,25 @@ button:focus:not(:focus-visible) {
 }
 .js-focus-visible .footer *.focus-visible {
   outline-color: var(--colorWhite2);
+}
+/*scroll custom*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--colorBlack2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorGrey2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--colorGrey3);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--colorWhite2);
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--colorBlack2);
 }
 /*Skip link*/
 .skip-link {

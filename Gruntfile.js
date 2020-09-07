@@ -280,7 +280,7 @@ module.exports = function (grunt) {
           }
         }
       }
-    }
+    },
 
     copy: {
       buildCopy: {

@@ -118,6 +118,32 @@ button:focus:not(:focus-visible) {
   outline-color: var(--colorWhite2);
 }
 
+/*scroll custom*/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--colorBlack2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorGrey2);
+
+  &:hover {
+    background-color: var(--colorGrey3);
+  }
+
+  &:active {
+    background-color: var(--colorWhite2);
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--colorBlack2);
+}
+
 /*Skip link*/
 
 .skip-link {

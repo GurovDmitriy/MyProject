@@ -1527,7 +1527,6 @@ footer ::selection {
   font-weight: 400;
   text-align: center;
   border: 2px solid var(--colorGrey);
-  background-color: #ffffff;
 }
 .skills-list__item-html {
   --skill-html: 70%;

@@ -107,18 +107,18 @@
   &:hover .menu__link-icon {
     transform: translate(50%, -50% - 5px);
 
-    box-shadow: -1px 4px 4px 0 #000000;
+    .customShadowHover();
     fill: var(--colorBlack2);
   }
 
   &:active {
-    color: var(--colorGrey3);;
+    color: var(--colorGrey3);
   }
 
   &:active .menu__link-icon {
     transform: translate(50%, -50% - 3px);
 
-    box-shadow: 0 2px 2px 0 #000000;
+    .customShadowActive();
     fill: var(--colorGrey);
   }
 

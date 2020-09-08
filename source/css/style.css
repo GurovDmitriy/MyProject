@@ -335,6 +335,8 @@ template {
   --weightFont6: 600;
   --weightFont7: 700;
   /* переменные цвета */
+  --colorBlack: #000000;
+  --colorWhite: #ffffff;
   --colorBlack2: #1e1e1f;
   --colorWhite2: #cbc9cf;
   --colorGrey: #3c3b3d;
@@ -347,6 +349,7 @@ template {
 /* переменные плотности экрана */
 /* центровщик контента */
 /* кастомный фокус */
+/*тень*/
 /* параметры текста для mobile*/
 /* параметры текста для tablet*/
 /* параметры текста для desktop*/
@@ -487,8 +490,8 @@ footer ::selection {
   color: var(--colorBlack2);
 }
 .skills-list ::selection {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--colorWhite);
+  color: var(--colorBlack);
 }
 .header {
   position: relative;
@@ -985,7 +988,7 @@ footer ::selection {
 }
 .menu__link:hover .menu__link-icon {
   transform: translate(50%, -55%);
-  box-shadow: -1px 4px 4px 0 #000000;
+  box-shadow: -1px 4px 4px 0 var(--colorBlack);
   fill: var(--colorBlack2);
 }
 .menu__link:active {
@@ -993,7 +996,7 @@ footer ::selection {
 }
 .menu__link:active .menu__link-icon {
   transform: translate(50%, -53%);
-  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
   fill: var(--colorGrey);
 }
 @media (min-width: 600px) {
@@ -1197,7 +1200,7 @@ footer ::selection {
 }
 .main__link:hover .main__link-icon {
   transform: translate(50%, -55%);
-  box-shadow: -1px 4px 4px 0 #000000;
+  box-shadow: -1px 4px 4px 0 var(--colorBlack);
 }
 @media (min-width: 600px) {
   .main__link:hover .main__link-icon {
@@ -1206,7 +1209,7 @@ footer ::selection {
 }
 .main__link:active .main__link-icon {
   transform: translate(50%, -53%);
-  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
   fill: var(--colorGrey);
 }
 @media (min-width: 600px) {
@@ -1334,7 +1337,7 @@ footer ::selection {
 }
 .social-list__link:hover .social-list__icon {
   transform: translate(0, -2px);
-  box-shadow: -1px 4px 4px 0 #000000;
+  box-shadow: -1px 4px 4px 0 var(--colorBlack);
   fill: var(--colorGrey2);
 }
 .social-list__link:active {
@@ -1342,7 +1345,7 @@ footer ::selection {
 }
 .social-list__link:active .social-list__icon {
   transform: translate(0, -1px);
-  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
   fill: var(--colorGrey);
 }
 .social-list__icon {
@@ -1384,6 +1387,16 @@ footer ::selection {
     font-size: 16px;
     line-height: 32px;
   }
+}
+.copyright__link {
+  transition: font-weight 0.2s, color 0.2s;
+}
+.copyright__link:hover {
+  font-weight: var(--weightFont5);
+  color: var(--colorGrey2);
+}
+.copyright__link:active {
+  color: var(--colorGrey);
 }
 .links-list {
   display: grid;
@@ -1463,7 +1476,7 @@ footer ::selection {
 }
 .works-list__link:hover {
   transform: translate(0, -2px);
-  box-shadow: -1px 4px 4px 0 #000000;
+  box-shadow: -1px 4px 4px 0 var(--colorBlack);
   filter: grayscale(0);
 }
 .works-list__link:hover .works-list__link-caption {
@@ -1472,7 +1485,7 @@ footer ::selection {
 }
 .works-list__link:active {
   transform: translate(0, -1px);
-  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
 }
 .works-list__link-caption {
   position: absolute;
@@ -1536,43 +1549,43 @@ footer ::selection {
 }
 .skills-list__item-html {
   --skill-html: 70%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-html), #ffffff var(--skill-html));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-html), var(--colorWhite) var(--skill-html));
 }
 .skills-list__item-css {
   --skill-css: 70%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-css), #ffffff var(--skill-css));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-css), var(--colorWhite) var(--skill-css));
 }
 .skills-list__item-js {
   --skill-js: 10%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), #ffffff var(--skill-js));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), var(--colorWhite) var(--skill-js));
 }
 .skills-list__item-bootstrap {
   --skill-bootstrap: 50%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
 }
 .skills-list__item-w3css {
   --skill-bootstrap: 50%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), #ffffff var(--skill-bootstrap));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
 }
 .skills-list__item-less {
   --skill-less: 50%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-less), #ffffff var(--skill-less));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-less), var(--colorWhite) var(--skill-less));
 }
 .skills-list__item-sass {
   --skill-sass: 10%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sass), #ffffff var(--skill-sass));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sass), var(--colorWhite) var(--skill-sass));
 }
 .skills-list__item-stylus {
   --skill-stylus: 10%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), #ffffff var(--skill-stylus));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), var(--colorWhite) var(--skill-stylus));
 }
 .skills-list__item-git {
   --skill-git: 30%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), #ffffff var(--skill-git));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), var(--colorWhite) var(--skill-git));
 }
 .skills-list__item-grunt {
   --skill-grunt: 30%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), #ffffff var(--skill-grunt));
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), var(--colorWhite) var(--skill-grunt));
 }
 @media (min-width: 600px) {
   .skills-list__item {

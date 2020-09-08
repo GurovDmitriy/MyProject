@@ -17,41 +17,11 @@
   position: relative;
 
   display: block;
+  overflow: hidden;
 
   filter: grayscale(100%);
 
   transition: transform 0.2s, box-shadow 0.2s;
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: 'Перейти на сайт';
-
-    display: block;
-
-    width: 100%;
-    padding: 5px 20px;
-
-    font-family: 'Roboto-Mono', 'Arial', sans-serif;
-    font-weight: var(--weightFont3);
-    text-align: center;
-    color: var(--colorWhite2);
-
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-
-    transition: opacity 0.5s;
-    transition-delay: 0.5s;
-
-    @media (min-width: @tabletWidth) {
-      padding: 9px 30px;
-    }
-
-    @media (min-width: @desktopWidth) {
-      padding: 12px 40px;
-    }
-  }
 
   &:hover {
     transform: translate(0, -2px);
@@ -61,7 +31,9 @@
     filter: grayscale(0);
   }
 
-  &:hover::after {
+  &:hover .works-list__link-caption {
+    transform: translateY(-100%);
+
     opacity: 1;
   }
 
@@ -69,6 +41,40 @@
     transform: translate(0, -1px);
 
     box-shadow: 0 2px 2px 0 #000000;
+  }
+}
+
+.works-list__link-caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  padding: 5px 20px;
+
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-weight: var(--weightFont3);
+  .fontTextMobile();
+  text-align: center;
+  color: var(--colorWhite2);
+
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  transition: opacity 1s, transform 0.4s;
+
+  @media (min-width: @tabletWidth) {
+    padding: 9px 30px;
+
+    .fontTextTablet();
+  }
+
+  @media (min-width: @desktopWidth) {
+    padding: 12px 40px;
+
+    .fontTextDesktop();
   }
 }
 

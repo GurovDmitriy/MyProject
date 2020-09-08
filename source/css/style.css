@@ -1457,47 +1457,53 @@ footer ::selection {
 .works-list__link {
   position: relative;
   display: block;
+  overflow: hidden;
   filter: grayscale(100%);
   transition: transform 0.2s, box-shadow 0.2s;
-}
-.works-list__link::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: 'Перейти на сайт';
-  display: block;
-  width: 100%;
-  padding: 5px 20px;
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: var(--weightFont3);
-  text-align: center;
-  color: var(--colorWhite2);
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.5s;
-  transition-delay: 0.5s;
-}
-@media (min-width: 600px) {
-  .works-list__link::after {
-    padding: 9px 30px;
-  }
-}
-@media (min-width: 1100px) {
-  .works-list__link::after {
-    padding: 12px 40px;
-  }
 }
 .works-list__link:hover {
   transform: translate(0, -2px);
   box-shadow: -1px 4px 4px 0 #000000;
   filter: grayscale(0);
 }
-.works-list__link:hover::after {
+.works-list__link:hover .works-list__link-caption {
+  transform: translateY(-100%);
   opacity: 1;
 }
 .works-list__link:active {
   transform: translate(0, -1px);
   box-shadow: 0 2px 2px 0 #000000;
+}
+.works-list__link-caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 5px 20px;
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-weight: var(--weightFont3);
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--colorWhite2);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 1s, transform 0.4s;
+}
+@media (min-width: 600px) {
+  .works-list__link-caption {
+    padding: 9px 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .works-list__link-caption {
+    padding: 12px 40px;
+    font-size: 20px;
+    line-height: 36px;
+  }
 }
 .works-list__img {
   width: 100%;

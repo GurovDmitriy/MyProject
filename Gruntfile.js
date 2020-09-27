@@ -16,21 +16,17 @@ module.exports = function (grunt) {
         files: ['source/less/**/*.less'],
         tasks: ['less'],
       },
-      jsWatch: {
-        files: ['source/js/*/*.js'],
-        tasks: ['concat'],
-      },
       HtmlWatchDev: {
         files: ['source/*.html'],
         tasks: ['clean:buildCleanHtmlDev', 'copy:buildHtmlCopy', 'htmlmin'],
       },
       styleWatchDev: {
         files: ['source/less/**/*.less'],
-        tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'csso'],
+        tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'cssmin'],
       },
       jsWatchDev: {
-        files: ['source/js/*/*.js'],
-        tasks: ['concat', 'clean:buildCleanJsDev', 'copy:buildJsCopy', 'uglify'],
+        files: ['source/js/**/*.js'],
+        tasks: ['clean:buildCleanJsDev', 'copy:buildJsCopy', 'uglify'],
       },
     },
 
@@ -77,29 +73,15 @@ module.exports = function (grunt) {
       },
     },
 
-    csso: {
-      styleMin: {
-        options: {
-          report: 'gzip',
-        },
-        expand: true,
-        cwd: 'build/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'build/css/',
-      },
-    },
-
-    concat: {
-      options: {
-        separator: '\n',
-        stripBanners: true,
-        banner: "'use strict';\n\n",
-      },
-      dist: {
-        files: {
-          'source/js/index.js': ['source/js/index/*.js'],
-        },
-      },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'build/css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'build/css/',
+        }]
+      }
     },
 
     uglify: {
@@ -136,7 +118,7 @@ module.exports = function (grunt) {
     cwebp: {
       imagesWebp: {
         options: {
-          q: 90,
+          q: 70,
         },
         files: [{
           expand: true,
@@ -196,6 +178,13 @@ module.exports = function (grunt) {
       },
     },
 
+    ttf2woff2: {
+      default: {
+        src: ['source/fonts/ttf/*.ttf'],
+        dest: 'source/fonts/woff2/',
+      },
+    },
+
     clean: {
       buildClean: {
         src: ['build/'],
@@ -211,86 +200,17 @@ module.exports = function (grunt) {
       },
     },
 
-    ttf2woff2: {
-      default: {
-        src: ['source/fonts/ttf/*.ttf'],
-        dest: 'source/fonts/woff2/',
-      },
-    },
-
-    realFavicon: {
-      favicons: {
-        src: 'TODO: Path to your master picture',
-        dest: 'TODO: Path to the directory where to store the icons',
-        options: {
-          iconsPath: '/',
-          html: [ 'TODO: List of the HTML files where to inject favicon markups' ],
-          design: {
-            ios: {
-              pictureAspect: 'noChange',
-              assets: {
-                ios6AndPriorIcons: true,
-                ios7AndLaterIcons: true,
-                precomposedIcons: true,
-                declareOnlyDefaultIcon: true
-              }
-            },
-            desktopBrowser: {
-              design: 'raw'
-            },
-            windows: {
-              pictureAspect: 'noChange',
-              backgroundColor: '#da532c',
-              onConflict: 'override',
-              assets: {
-                windows80Ie10Tile: false,
-                windows10Ie11EdgeTiles: {
-                  small: true,
-                  medium: true,
-                  big: true,
-                  rectangle: true
-                }
-              }
-            },
-            androidChrome: {
-              pictureAspect: 'noChange',
-              themeColor: '#ffffff',
-              manifest: {
-                display: 'standalone',
-                orientation: 'notSet',
-                onConflict: 'override',
-                declared: true
-              },
-              assets: {
-                legacyIcon: false,
-                lowResolutionIcons: false
-              }
-            },
-            safariPinnedTab: {
-              pictureAspect: 'silhouette',
-              themeColor: '#5bbad5'
-            }
-          },
-          settings: {
-            scalingAlgorithm: 'Mitchell',
-            errorOnImageTooSmall: false,
-            readmeFile: false,
-            htmlCodeFile: true,
-            usePathAsIs: false
-          }
-        }
-      }
-    },
-
     copy: {
       buildCopy: {
         files: [{
           expand: true,
           cwd: 'source',
           src: [
+            '*.xml',
             '*.html',
             'fonts/woff2/*',
             'image/min/*',
+            'image/favicon/*',
             'css/style.css',
             'js/*.js',
           ],
@@ -332,18 +252,16 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'less',
-    'concat',
     'browserSync:serverSync',
     'concurrent:targetWatch',
   ]);
 
   grunt.registerTask('serveDev', [
     'less',
-    'concat',
     'clean:buildClean',
     'copy:buildCopy',
     'postcss',
-    'csso',
+    'cssmin',
     'uglify',
     'htmlmin',
     'browserSync:serverSyncDev',
@@ -358,11 +276,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'less',
-    'concat',
     'clean:buildClean',
     'copy:buildCopy',
     'postcss',
-    'csso',
+    'cssmin',
     'uglify',
     'htmlmin',
   ]);

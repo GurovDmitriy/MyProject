@@ -677,12 +677,10 @@ footer ::selection {
   width: 52px;
   height: 31px;
   padding: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid var(--colorBlack2);
+  border: none;
+  box-shadow: inset 0 -2px 0 0 var(--colorBlack2);
   background-color: transparent;
-  transition: border-color 0.2s;
+  transition: box-shadow 0.2s;
 }
 .burger::before,
 .burger::after {
@@ -702,6 +700,7 @@ footer ::selection {
   top: 50%;
   right: 0;
   width: 50%;
+  transform: translate(0, -50%);
 }
 .burger:hover {
   border-color: var(--colorGrey2);
@@ -766,10 +765,10 @@ footer ::selection {
 }
 @keyframes burgerOpen {
   0% {
-    border-bottom: 2px solid var(--colorBlack2);
+    box-shadow: inset 0 -2px 0 0 var(--colorBlack2);
   }
   100% {
-    border-bottom: 2px solid transparent;
+    box-shadow: inset 0 -2px 0 0 transparent;
   }
 }
 @keyframes burgerAfterOpen {
@@ -778,27 +777,27 @@ footer ::selection {
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeOpen {
@@ -832,10 +831,10 @@ footer ::selection {
 }
 @keyframes burgerClose {
   0% {
-    border-bottom: 2px solid var(--colorBlack2);
+    box-shadow: inset 0 -2px 0 0 var(--colorBlack2);
   }
   100% {
-    border-bottom: 2px solid transparent;
+    box-shadow: inset 0 -2px 0 0 transparent;
   }
 }
 @keyframes burgerAfterClose {
@@ -844,27 +843,27 @@ footer ::selection {
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeClose {

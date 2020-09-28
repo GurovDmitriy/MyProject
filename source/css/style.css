@@ -1471,15 +1471,19 @@ footer ::selection {
   position: relative;
   display: block;
   overflow: hidden;
-  filter: grayscale(100%);
+  background-color: var(--colorGrey3);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .works-list__link:hover {
   transform: translate(0, -2px);
   box-shadow: -1px 4px 4px 0 var(--colorBlack);
+}
+.works-list__link:hover .works-list__img,
+.works-list__link:focus .works-list__img {
   filter: grayscale(0);
 }
-.works-list__link:hover .works-list__link-caption {
+.works-list__link:hover .works-list__link-caption,
+.works-list__link:focus .works-list__link-caption {
   transform: translateY(-100%);
   opacity: 1;
 }
@@ -1521,6 +1525,7 @@ footer ::selection {
 .works-list__img {
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
 }
 .skills-list {
   display: grid;
@@ -1559,13 +1564,41 @@ footer ::selection {
   --skill-js: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), var(--colorWhite) var(--skill-js));
 }
+.skills-list__item-php {
+  --skill-php: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-php), var(--colorWhite) var(--skill-php));
+}
+.skills-list__item-sql {
+  --skill-sql: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sql), var(--colorWhite) var(--skill-sql));
+}
+.skills-list__item-xml {
+  --skill-xml: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-xml), var(--colorWhite) var(--skill-xml));
+}
+.skills-list__item-nodejs {
+  --skill-nodejs: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-nodejs), var(--colorWhite) var(--skill-nodejs));
+}
 .skills-list__item-bootstrap {
   --skill-bootstrap: 50%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
 }
 .skills-list__item-w3css {
-  --skill-bootstrap: 50%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
+  --skill-w3css: 50%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-w3css), var(--colorWhite) var(--skill-w3css));
+}
+.skills-list__item-jquery {
+  --skill-jquery: 10%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-jquery), var(--colorWhite) var(--skill-jquery));
+}
+.skills-list__item-react {
+  --skill-react: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-react), var(--colorWhite) var(--skill-react));
+}
+.skills-list__item-asp {
+  --skill-asp: 1%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-asp), var(--colorWhite) var(--skill-asp));
 }
 .skills-list__item-less {
   --skill-less: 50%;
@@ -1579,13 +1612,13 @@ footer ::selection {
   --skill-stylus: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), var(--colorWhite) var(--skill-stylus));
 }
-.skills-list__item-git {
-  --skill-git: 30%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), var(--colorWhite) var(--skill-git));
-}
 .skills-list__item-grunt {
   --skill-grunt: 30%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), var(--colorWhite) var(--skill-grunt));
+}
+.skills-list__item-git {
+  --skill-git: 30%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), var(--colorWhite) var(--skill-git));
 }
 @media (min-width: 600px) {
   .skills-list__item {

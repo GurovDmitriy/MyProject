@@ -19,7 +19,7 @@
   display: block;
   overflow: hidden;
 
-  filter: grayscale(100%);
+  background-color: var(--colorGrey3);
 
   transition: transform 0.2s, box-shadow 0.2s;
 
@@ -27,11 +27,15 @@
     transform: translate(0, -2px);
 
     .customShadowHover();
+  }
 
+  &:hover .works-list__img,
+  &:focus .works-list__img {
     filter: grayscale(0);
   }
 
-  &:hover .works-list__link-caption {
+  &:hover .works-list__link-caption,
+  &:focus .works-list__link-caption {
     transform: translateY(-100%);
 
     opacity: 1;
@@ -81,4 +85,6 @@
 .works-list__img {
   width: 100%;
   height: auto;
+
+  filter: grayscale(100%);
 }

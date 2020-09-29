@@ -1,0 +1,53 @@
+.btn-up {
+  position: relative;
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  @media (min-width: @tabletWidth) {
+    width: 46px;
+    height: 46px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid var(--colorBlack2);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+
+    transform: translate(-50%, -25%) rotate(45deg);
+
+    @media (min-width: @tabletWidth) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &:hover {
+    transform: translate(0, -2px);
+
+    .customShadowHover();
+  }
+
+  &:active {
+    transform: translate(0, -1px);
+
+    .customShadowActive();
+  }
+}

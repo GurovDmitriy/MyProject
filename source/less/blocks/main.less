@@ -19,6 +19,18 @@
 .main__section {
   margin-bottom: 29px;
 
+  &:last-of-type {
+    margin-bottom: 35px;
+
+    @media (min-width: @tabletWidth) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktopWidth) {
+      margin-bottom: 72px;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }

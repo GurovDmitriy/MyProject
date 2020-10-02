@@ -46,7 +46,7 @@
   display: block;
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-right: 52px;
+  padding-right: 48px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   .fontH3Mobile();
@@ -105,7 +105,7 @@
   }
 
   &:hover .menu__link-icon {
-    transform: translate(50%, -50% - 5px);
+    transform: translate(50%, -50% - 2px);
 
     .customShadowHover();
     fill: var(--colorBlack2);
@@ -116,7 +116,7 @@
   }
 
   &:active .menu__link-icon {
-    transform: translate(50%, -50% - 3px);
+    transform: translate(50%, -50%);
 
     .customShadowActive();
     fill: var(--colorGrey);
@@ -133,6 +133,26 @@
   @media (min-width: @desktopWidth) {
     .fontH3Desktop();
   }
+}
+
+.menu__link--active {
+  font-weight: var(--weightFont5);
+
+  &:active {
+    color: inherit;
+  }
+}
+
+.menu__link--active .menu__link-icon {
+  transform: translate(50%, -50% - 2px);
+  .customShadowHover();
+  fill: var(--colorBlack2);
+}
+
+.menu__link--active:active .menu__link-icon {
+  transform: translate(50%, -50% - 2px);
+  .customShadowHover();
+  fill: var(--colorBlack2);
 }
 
 .menu__link--active:hover::after {
@@ -159,20 +179,17 @@
   }
 }
 
-.menu__link--active .menu__link-icon {
-  fill: var(--colorBlack2);
-}
-
 .menu__link-icon {
   position: absolute;
   top: 50%;
-  right: 26px;
+  right: 24px;
 
   width: 20px;
   height: 20px;
 
   border-radius: 50%;
   fill: var(--colorGrey3);
+  .customShadowDefault();
 
   transform: translate(50%, -50%);
   transition: box-shadow 0.2s, fill 0.2s;

@@ -14,6 +14,10 @@
 
 /*тень*/
 
+.customShadowDefault() {
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
+}
+
 .customShadowHover() {
   box-shadow: -1px 4px 4px 0 var(--colorBlack);
 }
@@ -21,6 +25,25 @@
 .customShadowActive() {
   box-shadow: 0 2px 2px 0 var(--colorBlack);
 }
+
+/*тень для фокуса*/
+
+.customShadowFocus(@color2, @color3) {
+  box-shadow: 0 2px 2px 0 var(--colorBlack),
+              0 0 0 4px @color2,
+              0 0 0 6px @color3;
+}
+
+/*transform*/
+
+.transformHover() {
+  transform: translate(0, -2px);
+}
+
+.transformActive() {
+  transform: translate(0, 0);
+}
+
 
 /* параметры текста для mobile*/
 

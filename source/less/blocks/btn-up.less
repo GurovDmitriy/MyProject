@@ -2,16 +2,19 @@
   position: relative;
   display: block;
 
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   margin: 0 auto;
   padding: 0;
 
   border: none;
   border-radius: 50%;
   background-color: transparent;
+  .customShadowDefault();
 
   transition: box-shadow 0.2s, transform 0.2s;
+
+  overflow: hidden;
 
   @media (min-width: @tabletWidth) {
     width: 46px;
@@ -24,14 +27,16 @@
     top: 50%;
     left: 50%;
 
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 
     border: 2px solid var(--colorBlack2);
     border-right-color: transparent;
     border-bottom-color: transparent;
 
     transform: translate(-50%, -25%) rotate(45deg);
+
+    transition: border-color 0.2s;
 
     @media (min-width: @tabletWidth) {
       width: 23px;
@@ -40,14 +45,26 @@
   }
 
   &:hover {
-    transform: translate(0, -2px);
-
     .customShadowHover();
+
+    .transformHover();
   }
 
   &:active {
-    transform: translate(0, -1px);
-
     .customShadowActive();
+
+    .transformActive();
+  }
+
+  &:hover::after {
+    border: 2px solid var(--colorGrey2);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &:active::after {
+    border: 2px solid var(--colorGrey3);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
   }
 }

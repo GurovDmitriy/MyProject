@@ -136,7 +136,7 @@
   display: block;
 
   margin-top: 0;
-  padding-right: 52px;
+  padding-right: 48px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
@@ -153,23 +153,23 @@
   }
 
   &:hover .main__link-icon {
-    transform: translate(50%, -50% - 5px);
+    transform: translate(50%, -50% - 2px);
 
     .customShadowHover();
 
     @media (min-width: @tabletWidth) {
-      transform: translate(0, -50% - 5px);
+      transform: translate(0, -50% - 2px);
     }
   }
 
   &:active .main__link-icon {
-    transform: translate(50%, -50% - 3px);
+    transform: translate(50%, -50%);
 
     .customShadowActive();
     fill: var(--colorGrey);
 
     @media (min-width: @tabletWidth) {
-      transform: translate(0, -50% - 3px);
+      transform: translate(0, -50%);
     }
   }
 
@@ -182,16 +182,17 @@
 .main__link-icon {
   position: absolute;
   top: 50%;
-  right: 26px;
+  right: 24px;
 
   width: 20px;
   height: 20px;
 
   border-radius: 50%;
+  .customShadowDefault();
   fill: var(--colorBlack2);
 
   transform: translate(50%, -50%);
-  transition: box-shadow 0.2s, fill 0.2s;
+  transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
 
   @media (min-width: @tabletWidth) {
     right: 0;

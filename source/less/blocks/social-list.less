@@ -25,46 +25,53 @@
 }
 
 .social-list__link {
+  position: relative;
+
   display: block;
 
-  transition: font-weight 0.2s, color 0.2s;
+  width: 48px;
+  height: 48px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+  border-radius: 50%;
+  .customShadowDefault();
+
+  transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
+
+  overflow: hidden;
 
   &:hover {
-    font-weight: var(--weightFont5);
-    color: var(--colorGrey2);
-  }
-
-  &:hover .social-list__icon {
-    transform: translate(0, -2px);
-
     .customShadowHover();
-    fill: var(--colorGrey2);
+
+    .transformHover();
   }
 
   &:active {
-    color: var(--colorGrey);
+    .customShadowActive();
+
+    .transformActive();
+  }
+
+  &:hover .social-list__icon {
+    fill: var(--colorGrey2);
   }
 
   &:active .social-list__icon {
-    transform: translate(0, -1px);
-
-    .customShadowActive();
     fill: var(--colorGrey);
   }
 }
 
 .social-list__icon {
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 48px;
+  height: 48px;
 
   border-radius: 50%;
   fill: var(--colorWhite2);
 
-  transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
+  transform: translate(-50%, -50%);
 
   @media (min-width: @tabletWidth) {
     width: 46px;

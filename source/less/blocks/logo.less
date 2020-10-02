@@ -3,47 +3,51 @@
 
   display: inline-block;
 
-  font-family: 'Special-Elite', 'Arial', sans-serif;
-  .fontTitleMobile();
-  line-height: 1em;
-  font-weight: 400;
+  width: 48px;
+  height: 48px;
 
-  transition: color 0.2s;
+  border-radius: 50%;
+  .customShadowDefault();
+
+  transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
 
   &:hover {
-    color: var(--colorGrey2);
+    .customShadowHover();
+
+    .transformHover();
+  }
+
+  &:active {
+    .customShadowActive();
+
+    .transformActive();
   }
 
   &:hover .logo__icon {
     fill: var(--colorGrey2);
   }
 
-  &:active {
-    color: var(--colorGrey3);
-  }
-
   &:active .logo__icon {
     fill: var(--colorGrey3);
-  }
-
-  @media (min-width: @tabletWidth) {
-    .fontTitleTablet();
-    line-height: 1em;
-  }
-
-  @media (min-width: @desktopWidth) {
-    .fontTitleDesktop();
-    line-height: 1em;
   }
 }
 
 .logo__icon {
-  width: 40px;
-  height: 51px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+
+
+  width: 48px;
+  height: 48px;
   margin-right: 10px;
 
+  border-radius: 50%;
   fill: var(--colorBlack2);
 
+  transform: translate(-50%, -50%);
   transition: fill 0.2s;
 
   @media (min-width: @tabletWidth) {

@@ -1,7 +1,7 @@
 .header {
   position: relative;
 
-  padding-top: 31px;
+  padding-top: 40px;
   padding-bottom: 35px;
 
   @media (min-width: @tabletWidth) {
@@ -33,6 +33,23 @@
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+}
+
+.header__wrapper-title {
+  font-family: 'Special-Elite', 'Arial', sans-serif;
+  .fontTitleMobile();
+  line-height: 1em;
+  font-weight: 400;
+
+  @media (min-width: @tabletWidth) {
+    .fontTitleTablet();
+    line-height: 1em;
+  }
+
+  @media (min-width: @desktopWidth) {
+    .fontTitleDesktop();
+    line-height: 1em;
   }
 }
 

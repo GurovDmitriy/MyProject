@@ -20,13 +20,14 @@
   overflow: hidden;
 
   background-color: var(--colorGrey3);
+  .customShadowDefault();
 
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    transform: translate(0, -2px);
-
     .customShadowHover();
+
+    .transformHover();
   }
 
   &:hover .works-list__img,
@@ -42,9 +43,9 @@
   }
 
   &:active {
-    transform: translate(0, -1px);
-
     .customShadowActive();
+
+    .transformActive();
   }
 }
 

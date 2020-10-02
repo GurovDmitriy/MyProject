@@ -16,11 +16,6 @@
 
   overflow: hidden;
 
-  @media (min-width: @tabletWidth) {
-    width: 46px;
-    height: 46px;
-  }
-
   &::after {
     position: absolute;
     content: '';
@@ -37,11 +32,6 @@
     transform: translate(-50%, -25%) rotate(45deg);
 
     transition: border-color 0.2s;
-
-    @media (min-width: @tabletWidth) {
-      width: 23px;
-      height: 23px;
-    }
   }
 
   &:hover {

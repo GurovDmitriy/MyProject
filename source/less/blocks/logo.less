@@ -5,11 +5,14 @@
 
   width: 48px;
   height: 48px;
+  margin-right: 10px;
 
   border-radius: 50%;
   .customShadowDefault();
 
   transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
+
+  overflow: hidden;
 
   &:hover {
     .customShadowHover();
@@ -30,6 +33,11 @@
   &:active .logo__icon {
     fill: var(--colorGrey3);
   }
+
+  @media (min-width: @tabletWidth) {
+    width: 78px;
+    height: 78px;
+  }
 }
 
 .logo__icon {
@@ -42,7 +50,6 @@
 
   width: 48px;
   height: 48px;
-  margin-right: 10px;
 
   border-radius: 50%;
   fill: var(--colorBlack2);
@@ -51,9 +58,7 @@
   transition: fill 0.2s;
 
   @media (min-width: @tabletWidth) {
-    bottom: 13px;
-
-    width: 70px;
-    height: 89px;
+    width: 78px;
+    height: 78px;
   }
 }

@@ -1758,22 +1758,6 @@ footer ::selection {
   --skill-js: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), var(--colorWhite) var(--skill-js));
 }
-.skills-list__item-php {
-  --skill-php: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-php), var(--colorWhite) var(--skill-php));
-}
-.skills-list__item-sql {
-  --skill-sql: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sql), var(--colorWhite) var(--skill-sql));
-}
-.skills-list__item-xml {
-  --skill-xml: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-xml), var(--colorWhite) var(--skill-xml));
-}
-.skills-list__item-nodejs {
-  --skill-nodejs: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-nodejs), var(--colorWhite) var(--skill-nodejs));
-}
 .skills-list__item-bootstrap {
   --skill-bootstrap: 50%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
@@ -1785,14 +1769,6 @@ footer ::selection {
 .skills-list__item-jquery {
   --skill-jquery: 10%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-jquery), var(--colorWhite) var(--skill-jquery));
-}
-.skills-list__item-react {
-  --skill-react: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-react), var(--colorWhite) var(--skill-react));
-}
-.skills-list__item-asp {
-  --skill-asp: 1%;
-  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-asp), var(--colorWhite) var(--skill-asp));
 }
 .skills-list__item-less {
   --skill-less: 50%;

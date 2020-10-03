@@ -2,8 +2,8 @@
   position: relative;
   display: block;
 
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   margin: 0 auto;
   padding: 0;
 
@@ -56,5 +56,10 @@
     border: 2px solid var(--colorGrey3);
     border-right-color: transparent;
     border-bottom-color: transparent;
+  }
+
+  @media (min-width: @tabletWidth) {
+    width: 48px;
+    height: 48px;
   }
 }

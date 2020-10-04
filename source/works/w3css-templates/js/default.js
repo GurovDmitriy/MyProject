@@ -1,0 +1,1 @@
+"use strict";const burger=document.querySelector(".usr-burger"),menu=document.querySelector(".usr-menu");burger.onclick=function(){burger.classList.contains("usr-burger--open")?burger.classList.toggle("usr-burger--close"):burger.classList.add("usr-burger--open"),menu.classList.toggle("usr-hidden")};

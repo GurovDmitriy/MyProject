@@ -20,6 +20,8 @@
 }
 
 .header__wrapper-logo {
+  position: relative;
+
   .container(@mobileContainer);
   margin-bottom: 15px;
 
@@ -36,20 +38,24 @@
   }
 }
 
-.header__wrapper-title {
+.header__title {
+  display: block;
+
   font-family: 'Special-Elite', 'Arial', sans-serif;
   .fontTitleMobile();
-  line-height: 1em;
+  line-height: 1;
   font-weight: 400;
+  text-transform: lowercase;
 
   @media (min-width: @tabletWidth) {
+    display: inline;
     .fontTitleTablet();
-    line-height: 1em;
+    line-height: 1;
   }
 
   @media (min-width: @desktopWidth) {
     .fontTitleDesktop();
-    line-height: 1em;
+    line-height: 1;
   }
 }
 

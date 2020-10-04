@@ -1,0 +1,1 @@
+"use strict";$(window).scroll(function(){$(".slideanim").each(function(){$(this).offset().top<$(window).scrollTop()+600&&$(this).addClass("slide")})});

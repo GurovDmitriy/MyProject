@@ -187,16 +187,16 @@ module.exports = function (grunt) {
 
     clean: {
       buildClean: {
-        src: ['build/'],
+        src: ['docs/'],
       },
       buildCleanStyleDev: {
-        src: ['build/css/'],
+        src: ['docs/css/'],
       },
       buildCleanJsDev: {
-        src: ['build/js/'],
+        src: ['docs/js/'],
       },
       buildCleanHtmlDev: {
-        src: ['build/*.html'],
+        src: ['docs/*.html'],
       },
     },
 
@@ -206,6 +206,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'source',
           src: [
+            '*',
             '*.xml',
             '*.html',
             'fonts/woff2/*',
@@ -215,7 +216,7 @@ module.exports = function (grunt) {
             'css/style.css',
             'js/*.js',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildStyleCopy: {
@@ -225,7 +226,7 @@ module.exports = function (grunt) {
           src: [
             'css/style.css',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildJsCopy: {
@@ -235,7 +236,7 @@ module.exports = function (grunt) {
           src: [
             'js/*.js',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildHtmlCopy: {
@@ -245,7 +246,7 @@ module.exports = function (grunt) {
           src: [
             '*.html',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
     },

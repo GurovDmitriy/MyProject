@@ -1703,29 +1703,32 @@ footer ::selection {
   left: 0;
   display: block;
   width: 100%;
-  padding: 5px 20px;
+  padding: 6px 20px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-weight: var(--weightFont3);
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 13px;
+  line-height: 21px;
   text-align: center;
   color: var(--colorWhite2);
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(-100%);
   transition: opacity 1s, transform 0.4s;
 }
 @media (min-width: 600px) {
   .works-list__link-caption {
     padding: 9px 30px;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 26px;
   }
 }
 @media (min-width: 1100px) {
   .works-list__link-caption {
-    padding: 12px 40px;
-    font-size: 20px;
-    line-height: 36px;
+    padding: 11px 40px;
+    font-size: 16px;
+    line-height: 32px;
+    opacity: 0;
+    transform: translateY(0);
   }
 }
 .works-list__img {

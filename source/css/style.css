@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Special-Elite';
+  src: url('../fonts/woff2/SpecialElite-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Mono';
+  src: url('../fonts/woff2/RobotoMono-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -302,27 +323,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-@font-face {
-  font-family: 'Special-Elite';
-  src: url('../fonts/woff2/SpecialElite-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Open-Sans';
-  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Mono';
-  src: url('../fonts/woff2/RobotoMono-VariableFont_wght.woff2') format('woff2-variations');
-  font-weight: 100 700;
-  font-style: normal;
-  font-display: swap;
 }
 /* переменные css */
 :root {

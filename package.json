@@ -1,21 +1,29 @@
 {
-  "name": "myproject",
+  "name": "typenote",
   "version": "1.0.0",
-  "description": "my blog and portfolio",
+  "description": "Portfolio and blog",
   "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GurovDmitriy/MyProject.git"
+    "url": "git+https://github.com/GurovDmitriy/gurovdmitriy.github.io.git"
   },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "education"
+  ],
   "author": "Gurov Dmitriy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GurovDmitriy/MyProject/issues"
+    "url": "https://github.com/GurovDmitriy/gurovdmitriy.github.io/issues"
   },
-  "homepage": "https://github.com/GurovDmitriy/MyProject#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "eslint": "^7.6.0",
@@ -33,12 +41,13 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-cwebp": "^2.1.1",
+    "grunt-cwebp": "^3.0.2",
     "grunt-image": "^6.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-prettify": "^0.4.0",
     "grunt-svgstore": "^2.0.0",
     "grunt-ttf2woff2": "^1.0.1",
     "load-grunt-tasks": "^5.1.0"
-  }
+  },
+  "homepage": "https://github.com/GurovDmitriy/gurovdmitriy.github.io#readme"
 }

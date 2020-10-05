@@ -99,13 +99,21 @@
   .container(@mobileContainer);
   margin-bottom: 0;
 
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  .fontTextMobile();
+  font-weight: var(--weightFont3);
+
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);
+
+    .fontTextTablet();
   }
 
   @media (min-width: @desktopWidth) {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+
+    .fontTextDesktop();
   }
 }

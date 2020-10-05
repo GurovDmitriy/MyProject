@@ -42,10 +42,10 @@ module.exports = function (grunt) {
       },
       serverSyncDev: {
         bsFiles: {
-          src: ['build/*.html', 'build/css/*.css', 'build/js/*.js'],
+          src: ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js'],
         },
         options: {
-          server: 'build/',
+          server: 'docs/',
           watchTask: true,
         },
       },
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
             require('autoprefixer')(),
           ],
         },
-        src: 'build/css/style.css',
+        src: 'docs/css/style.css',
       },
     },
 
@@ -77,9 +77,9 @@ module.exports = function (grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'build/css/',
+          cwd: 'docs/css/',
           src: ['*.css', '!*.min.css'],
-          dest: 'build/css/',
+          dest: 'docs/css/',
         }]
       }
     },
@@ -92,9 +92,9 @@ module.exports = function (grunt) {
       jsMin: {
         files: [{
           expand: true,
-          cwd: 'build/js',
+          cwd: 'docs/js',
           src: '*.js',
-          dest: 'build/js',
+          dest: 'docs/js',
         }],
       },
     },
@@ -156,10 +156,10 @@ module.exports = function (grunt) {
       },
       files: {
         expand: true,
-        cwd: 'build/',
+        cwd: 'docs/',
         ext: '.html',
         src: ['*.html'],
-        dest: 'build/',
+        dest: 'docs/',
       },
     },
 
@@ -171,9 +171,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'build',
+          cwd: 'docs',
           src: ['**/*.html', '*.html'],
-          dest: 'build',
+          dest: 'docs',
         }],
       },
     },

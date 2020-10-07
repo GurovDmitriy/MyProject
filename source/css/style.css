@@ -460,6 +460,11 @@ button:focus:not(:focus-visible) {
   box-shadow: 0 2px 2px 0 var(--colorBlack), 0 0 0 4px var(--colorBlack2), 0 0 0 6px var(--colorWhite2);
   transition: fill 0.2s, transform 0.2s;
 }
+.js-focus-visible .copyright__licenses-link.focus-visible {
+  outline: none;
+  box-shadow: 0 2px 2px 0 var(--colorBlack), 0 0 0 4px var(--colorBlack2), 0 0 0 6px var(--colorWhite2);
+  transition: fill 0.2s, transform 0.2s;
+}
 .js-focus-visible .works-list__link.focus-visible {
   outline-offset: 4px;
 }
@@ -1565,11 +1570,51 @@ footer ::selection {
   color: var(--colorGrey);
 }
 .copyright__licenses-link {
+  position: relative;
   display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
+  transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+.copyright__licenses-link:hover {
+  box-shadow: -1px 4px 4px 0 var(--colorBlack);
+  transform: translate(0, -2px);
+}
+.copyright__licenses-link:active {
+  box-shadow: 0 2px 2px 0 var(--colorBlack);
+  transform: translate(0, 0);
+}
+.copyright__licenses-link:hover .copyright__licenses-icon {
+  fill: var(--colorGrey2);
+}
+.copyright__licenses-link:active .copyright__licenses-icon {
+  fill: var(--colorGrey);
+}
+@media (min-width: 600px) {
+  .copyright__licenses-link {
+    width: 26px;
+    height: 26px;
+  }
 }
 .copyright__licenses-icon {
-  display: block;
-  filter: opacity(0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  fill: var(--colorBlack2);
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 600px) {
+  .copyright__licenses-icon {
+    width: 26px;
+    height: 26px;
+  }
 }
 .links-list {
   display: grid;

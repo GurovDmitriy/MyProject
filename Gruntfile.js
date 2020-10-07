@@ -148,6 +148,17 @@ module.exports = function (grunt) {
           dest: 'source/image/min/',
         }],
       },
+      svgMin: {
+        options: {
+          svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors'],
+        },
+        files: [{
+          expand: true,
+          cwd: 'source/image/origin/',
+          src: ['**/*.svg'],
+          dest: 'source/image/min/',
+        }],
+      },
     },
 
     prettify: {
@@ -272,7 +283,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('imgpress', [
     'cwebp',
-    'image',
+    'image.imageMin',
+    'svgstore',
+  ]);
+
+  grunt.registerTask('svgsprite', [
+    'image:svgMin',
     'svgstore',
   ]);
 

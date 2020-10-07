@@ -129,6 +129,12 @@ button:focus:not(:focus-visible) {
   transition: fill 0.2s, transform 0.2s;
 }
 
+.js-focus-visible .copyright__licenses-link.focus-visible {
+  outline: none;
+  .customShadowFocus(var(--colorBlack2), var(--colorWhite2));
+  transition: fill 0.2s, transform 0.2s;
+}
+
 .js-focus-visible .works-list__link.focus-visible {
   outline-offset: 4px;
 }

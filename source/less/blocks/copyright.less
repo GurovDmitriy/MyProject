@@ -1,25 +1,26 @@
 .copyright {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .copyright__date {
-  display: inline-block;
-
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 11px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   .fontTextSmallMobile();
   font-weight: var(--weightFont3);
 
   @media (min-width: @tabletWidth) {
+    margin-bottom: 24px;
+
     .fontTextSmallTablet();
   }
 
   @media (min-width: @desktopWidth) {
+    margin-bottom: 32px;
+
     .fontTextSmallDesktop();
   }
 }
@@ -37,4 +38,14 @@
   &:active {
     color: var(--colorGrey);
   }
+}
+
+.copyright__licenses-link {
+  display: block;
+}
+
+.copyright__licenses-icon {
+  display: block;
+
+  filter: opacity(0.5);
 }

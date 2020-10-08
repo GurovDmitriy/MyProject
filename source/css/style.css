@@ -1844,8 +1844,12 @@ footer ::selection {
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-w3css), var(--colorWhite) var(--skill-w3css));
 }
 .skills-list__item-jquery {
-  --skill-jquery: 10%;
+  --skill-jquery: 20%;
   background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-jquery), var(--colorWhite) var(--skill-jquery));
+}
+.skills-list__item-w3js {
+  --skill-w3js: 20%;
+  background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-w3js), var(--colorWhite) var(--skill-w3js));
 }
 .skills-list__item-less {
   --skill-less: 50%;

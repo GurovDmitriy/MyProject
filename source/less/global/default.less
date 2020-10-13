@@ -111,6 +111,14 @@ button:focus:not(:focus-visible) {
   .focusCustom(var(--colorGrey));
 }
 
+.js-focus-visible .menu__link.focus-visible {
+  outline-offset: -2px;
+
+  @media (min-width: @tabletWidth) {
+    outline-offset: 0;
+  }
+}
+
 .js-focus-visible .logo.focus-visible {
   outline: none;
   .customShadowFocus(var(--colorWhite), var(--colorGrey));

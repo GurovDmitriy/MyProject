@@ -445,6 +445,14 @@ button:focus:not(:focus-visible) {
 .js-focus-visible .focus-visible {
   outline: 2px solid var(--colorGrey);
 }
+.js-focus-visible .menu__link.focus-visible {
+  outline-offset: -2px;
+}
+@media (min-width: 600px) {
+  .js-focus-visible .menu__link.focus-visible {
+    outline-offset: 0;
+  }
+}
 .js-focus-visible .logo.focus-visible {
   outline: none;
   box-shadow: 0 2px 2px 0 var(--colorBlack), 0 0 0 4px var(--colorWhite), 0 0 0 6px var(--colorGrey);
@@ -616,6 +624,7 @@ footer ::selection {
 @media (min-width: 600px) {
   .header__wrapper-menu {
     max-height: none;
+    overflow: visible;
   }
 }
 @media (min-width: 1100px) {

@@ -1634,12 +1634,12 @@ footer ::selection {
 .links-list {
   display: grid;
   grid-template-columns: repeat(1, 100%);
-  grid-row-gap: 10px;
+  row-gap: 10px;
 }
 @media (min-width: 600px) {
   .links-list {
     grid-template-columns: repeat(2, 45%);
-    grid-row-gap: 0;
+    row-gap: 0;
     justify-content: space-between;
   }
 }

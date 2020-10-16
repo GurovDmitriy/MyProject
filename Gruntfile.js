@@ -17,12 +17,12 @@ module.exports = function (grunt) {
         tasks: ['less'],
       },
       HtmlWatchDev: {
-        files: ['source/*.html'],
+        files: ['source/**/*.html'],
         tasks: ['clean:buildCleanHtmlDev', 'copy:buildHtmlCopy', 'htmlmin'],
       },
       styleWatchDev: {
         files: ['source/less/**/*.less'],
-        tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'cssmin'],
+        tasks: ['less:lessBuild', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'cssmin'],
       },
       jsWatchDev: {
         files: ['source/js/**/*.js'],
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
     browserSync: {
       serverSync: {
         bsFiles: {
-          src: ['source/*.html', 'source/css/*.css', 'source/js/*.js'],
+          src: ['source/**/*.html', 'source/css/*.css', 'source/js/*.js'],
         },
         options: {
           server: 'source/',
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
       },
       serverSyncDev: {
         bsFiles: {
-          src: ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js'],
+          src: ['docs/**/*.html', 'docs/css/*.css', 'docs/js/*.js'],
         },
         options: {
           server: 'docs/',
@@ -60,16 +60,16 @@ module.exports = function (grunt) {
           'source/css/style.css': 'source/less/style.less',
         },
       },
-    },
-
-    postcss: {
-      stylePrefix: {
+      lessBuild: {
         options: {
-          processors: [
-            require('autoprefixer')(),
+          relativeUrls: true,
+          plugins: [
+            new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
           ],
         },
-        src: 'docs/css/style.css',
+        files: {
+          'source/css/style.css': 'source/less/style.less',
+        },
       },
     },
 
@@ -270,10 +270,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('serveDev', [
-    'less',
+    'less:lessBuild',
     'clean:buildClean',
     'copy:buildCopy',
-    'postcss',
     'cssmin',
     'uglify',
     'htmlmin',
@@ -293,10 +292,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'less',
+    'less:lessBuild',
     'clean:buildClean',
     'copy:buildCopy',
-    'postcss',
     'cssmin',
     'uglify',
     'htmlmin',

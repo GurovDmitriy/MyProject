@@ -15,21 +15,27 @@
 /*тень*/
 
 .customShadowDefault() {
-  box-shadow: 0 2px 2px 0 var(--colorBlack);
+  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
 }
 
 .customShadowHover() {
-  box-shadow: -1px 4px 4px 0 var(--colorBlack);
+  box-shadow: -1px 4px 4px 0 #000000;
+  box-shadow: -1px 4px 4px 0 var(--colorBlack, #000000);
 }
 
 .customShadowActive() {
-  box-shadow: 0 2px 2px 0 var(--colorBlack);
+  box-shadow: 0 2px 2px 0 #000000;
+  box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
 }
 
 /*тень для фокуса*/
 
 .customShadowFocus(@color2, @color3) {
-  box-shadow: 0 2px 2px 0 var(--colorBlack),
+  box-shadow: 0 2px 2px 0 #000000,
+              0 0 0 4px @color2,
+              0 0 0 6px @color3;
+  box-shadow: 0 2px 2px 0 var(--colorBlack, #000000),
               0 0 0 4px @color2,
               0 0 0 6px @color3;
 }

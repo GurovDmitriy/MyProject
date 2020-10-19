@@ -220,6 +220,7 @@ module.exports = function (grunt) {
             '*',
             '*.xml',
             '*.html',
+            'fonts/woff/*',
             'fonts/woff2/*',
             'image/min/*',
             'works/**/*',

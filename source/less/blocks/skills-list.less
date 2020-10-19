@@ -23,66 +23,79 @@
   font-weight: 400;
   text-align: center;
 
-  border: 2px solid var(--colorGrey);
+  border: 2px solid #3c3b3d;
+  border: 2px solid var(--colorGrey, #3c3b3d);
 
   &-html {
     --skill-html: 70%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-html), var(--colorWhite) var(--skill-html));
+    background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-html, 70%), var(--colorWhite, #ffffff) var(--skill-html, 70%));
   }
 
   &-css {
     --skill-css: 70%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-css), var(--colorWhite) var(--skill-css));
+    background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-css, 70%), var(--colorWhite, #ffffff) var(--skill-css, 70%));
   }
 
   &-js {
     --skill-js: 10%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-js), var(--colorWhite) var(--skill-js));
+    background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-js, 10%), var(--colorWhite, #ffffff) var(--skill-js, 10%));
   }
 
   &-bootstrap {
-    --skill-bootstrap: 50%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-bootstrap), var(--colorWhite) var(--skill-bootstrap));
+    --skill-bootstrap: 40%;
+    background-image: linear-gradient(90deg, #3c3b3d 40%, #ffffff 40%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-bootstrap, 40%), var(--colorWhite, #ffffff) var(--skill-bootstrap, 40%));
   }
 
   &-w3css {
-    --skill-w3css: 50%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-w3css), var(--colorWhite) var(--skill-w3css));
+    --skill-w3css: 70%;
+    background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-w3css, 70%), var(--colorWhite, #ffffff) var(--skill-w3css, 70%));
   }
 
   &-jquery {
     --skill-jquery: 20%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-jquery), var(--colorWhite) var(--skill-jquery));
+    background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-jquery, 20%), var(--colorWhite, #ffffff) var(--skill-jquery, 20%));
   }
 
   &-w3js {
     --skill-w3js: 20%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-w3js), var(--colorWhite) var(--skill-w3js));
+    background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-w3js, 20%), var(--colorWhite, #ffffff) var(--skill-w3js, 20%));
   }
 
   &-less {
     --skill-less: 50%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-less), var(--colorWhite) var(--skill-less));
+    background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-less, 50%), var(--colorWhite, #ffffff) var(--skill-less, 50%));
   }
 
   &-sass {
     --skill-sass: 10%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-sass), var(--colorWhite) var(--skill-sass));
+    background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-sass, 10%), var(--colorWhite, #ffffff) var(--skill-sass, 10%));
   }
 
   &-stylus {
     --skill-stylus: 10%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-stylus), var(--colorWhite) var(--skill-stylus));
+    background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-stylus, 10%), var(--colorWhite, #ffffff) var(--skill-stylus, 10%));
   }
 
   &-grunt {
-    --skill-grunt: 30%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-grunt), var(--colorWhite) var(--skill-grunt));
+    --skill-grunt: 50%;
+    background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-grunt, 50%), var(--colorWhite, #ffffff) var(--skill-grunt, 50%));
   }
 
   &-git {
-    --skill-git: 30%;
-    background-image: linear-gradient(90deg, var(--colorGrey) var(--skill-git), var(--colorWhite) var(--skill-git));
+    --skill-git: 50%;
+    background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+    background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-git, 50%), var(--colorWhite, #ffffff) var(--skill-git, 50%));
   }
 
   @media (min-width: @tabletWidth) {
@@ -95,7 +108,8 @@
 }
 
 .skills-list__text {
-  color: var(--colorWhite2);
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
   mix-blend-mode: difference;
 }
 

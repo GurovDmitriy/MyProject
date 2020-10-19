@@ -32,7 +32,8 @@ body {
   .fontTextMobile();
   font-weight: 400;
   font-style: normal;
-  color: var(--colorBlack2);
+  color: #1e1e1f;
+  color: var(--colorBlack2, #1e1e1f);
 
   @media (min-width: @tabletWidth) {
     .fontTextTablet();
@@ -108,7 +109,8 @@ button:focus:not(:focus-visible) {
 }
 
 .js-focus-visible .focus-visible {
-  .focusCustom(var(--colorGrey));
+  .focusCustom(#3c3b3d);
+  .focusCustom(var(--colorGrey, #3c3b3d));
 }
 
 .js-focus-visible .menu__link.focus-visible {
@@ -121,34 +123,33 @@ button:focus:not(:focus-visible) {
 
 .js-focus-visible .logo.focus-visible {
   outline: none;
-  .customShadowFocus(var(--colorWhite), var(--colorGrey));
+  .customShadowFocus(#ffffff, #3c3b3d);
+  .customShadowFocus(var(--colorWhite, #ffffff), var(--colorGrey, #3c3b3d));
   transition: fill 0.2s, transform 0.2s;
 }
 
 .js-focus-visible button.focus-visible {
   outline: none;
-  .customShadowFocus(var(--colorWhite), var(--colorGrey));
+  .customShadowFocus(#ffffff, #3c3b3d);
+  .customShadowFocus(var(--colorWhite, #ffffff), var(--colorGrey, #3c3b3d));
   transition: transform 0.2s;
 }
 
-.js-focus-visible .social-list__link.focus-visible {
-  outline: none;
-  .customShadowFocus(var(--colorBlack2), var(--colorWhite2));
-  transition: fill 0.2s, transform 0.2s;
+.js-focus-visible .footer *.focus-visible {
+  outline-color: #cbc9cf;
+  outline-color: var(--colorWhite2, #cbc9cf);
 }
 
+.js-focus-visible .social-list__link.focus-visible,
 .js-focus-visible .copyright__licenses-link.focus-visible {
   outline: none;
-  .customShadowFocus(var(--colorBlack2), var(--colorWhite2));
+  .customShadowFocus(#1e1e1f, #cbc9cf);
+  .customShadowFocus(var(--colorBlack2, #1e1e1f), var(--colorWhite2, #cbc9cf));
   transition: fill 0.2s, transform 0.2s;
 }
 
 .js-focus-visible .works-list__link.focus-visible {
   outline-offset: 4px;
-}
-
-.js-focus-visible .footer *.focus-visible {
-  outline-color: var(--colorWhite2);
 }
 
 /*scroll custom*/
@@ -158,23 +159,28 @@ button:focus:not(:focus-visible) {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--colorBlack2);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--colorGrey2);
+  background-color: #6d6c70;
+  background-color: var(--colorGrey2, #6d6c70);
 
   &:hover {
-    background-color: var(--colorGrey3);
+    background-color: #a2a1a6;
+    background-color: var(--colorGrey3, #a2a1a6);
   }
 
   &:active {
-    background-color: var(--colorWhite2);
+    background-color: #1e1e1f;
+    background-color: var(--colorWhite2, #1e1e1f);
   }
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: var(--colorBlack2);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 }
 
 /*Skip link*/
@@ -187,9 +193,11 @@ button:focus:not(:focus-visible) {
 
   padding: 10px;
 
-  color: var(--colorWhite2);
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
 
-  background-color: var(--colorBlack2);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 
   transform: translate(-50%, -100%);
   transition: transform 0.4s;
@@ -202,16 +210,22 @@ button:focus:not(:focus-visible) {
 /*User select*/
 
 ::selection {
-  background-color: var(--colorBlack2);
-  color: var(--colorWhite2);
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 }
 
 footer ::selection {
-  background-color: var(--colorWhite2);
-  color: var(--colorBlack2);
+  color: #1e1e1f;
+  color: var(--colorBlack2, #1e1e1f);
+  background-color:  #cbc9cf;
+  background-color: var(--colorWhite2, #cbc9cf);
 }
 
 .skills-list ::selection {
-  background-color: var(--colorWhite);
-  color: var(--colorBlack);
+  color: #000000;
+  color: var(--colorBlack, #000000);
+  background-color: #ffffff;
+  background-color: var(--colorWhite, #ffffff);
 }

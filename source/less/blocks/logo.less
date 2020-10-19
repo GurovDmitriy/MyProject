@@ -28,11 +28,13 @@
   }
 
   &:hover .logo__icon {
-    fill: var(--colorGrey2);
+    fill: #6d6c70;
+    fill: var(--colorGrey2, #6d6c70);
   }
 
   &:active .logo__icon {
-    fill: var(--colorGrey3);
+    fill: #a2a1a6;
+    fill: var(--colorGrey3, #a2a1a6);
   }
 
   @media (min-width: @tabletWidth) {
@@ -59,7 +61,8 @@
   height: 48px;
 
   border-radius: 50%;
-  fill: var(--colorBlack2);
+  fill: #1e1e1f;
+  fill: var(--colorBlack2, #1e1e1f);
 
   transform: translate(-50%, -50%);
   transition: fill 0.2s;

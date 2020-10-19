@@ -66,7 +66,8 @@
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   .fontH3Mobile();
-  font-weight: var(--weightFont5);
+  font-weight: 500;
+  font-weight: var(--weightFont5, 500);
   text-transform: uppercase;
 
   &:last-child {
@@ -85,7 +86,8 @@
 
     transform: translateY(-50%);
 
-    background-color: var(--colorBlack2);
+    background-color: #1e1e1f;
+    background-color: var(--colorBlack2, #1e1e1f);
   }
 
   @media (min-width: @tabletWidth) {
@@ -139,17 +141,20 @@
   padding-right: 48px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: var(--weightFont3);
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
   text-transform: lowercase;
 
   transition: font-weight 0.2s;
 
   &:hover {
-    font-weight: var(--weightFont5);
+    font-weight: 500;
+    font-weight: var(--weightFont5, 500);
   }
 
   &:active {
-    color: var(--colorGrey3);
+    color: #a2a1a6;
+    color: var(--colorGrey3, #a2a1a6);
   }
 
   &:hover .main__link-icon {
@@ -166,7 +171,8 @@
     transform: translate(50%, -50%);
 
     .customShadowActive();
-    fill: var(--colorGrey);
+    fill: #3c3b3d;
+    fill: var(--colorGrey, #3c3b3d);
 
     @media (min-width: @tabletWidth) {
       transform: translate(0, -50%);
@@ -189,7 +195,8 @@
 
   border-radius: 50%;
   .customShadowDefault();
-  fill: var(--colorBlack2);
+  fill: #1e1e1f;
+  fill: var(--colorBlack2, #1e1e1f);
 
   transform: translate(50%, -50%);
   transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;

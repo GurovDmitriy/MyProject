@@ -2,12 +2,14 @@
   margin-bottom: 10px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: var(--weightFont3);
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
 
   transition: font-weight 0.2s;
 
   &:hover {
-    font-weight: var(--weightFont5);
+    font-weight: 500;
+    font-weight: var(--weightFont, 500);
   }
 
   &:last-child {

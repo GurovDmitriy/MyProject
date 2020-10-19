@@ -4,9 +4,11 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  color: var(--colorWhite2);
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
 
-  background-color: var(--colorBlack2);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 
   @media (min-width: @tabletWidth) {
     padding-top: 60px;
@@ -40,22 +42,27 @@
 
 .footer-logo {
   &:hover {
-    color: var(--colorGrey2);
+    color: #6d6c70;
+    color: var(--colorGrey2, #6d6c70);
   }
 
   &:active {
-    color: var(--colorGrey);
+    color: #3c3b3d;
+    color: var(--colorGrey, #3c3b3d);
   }
 
   &:hover .footer__logo-icon {
-    fill: var(--colorGrey2);
+    fill: #6d6c70;
+    fill: var(--colorGrey2, #6d6c70);
   }
 
   &:active .footer__logo-icon {
-    fill: var(--colorGrey);
+    fill: #3c3b3d;
+    fill: var(--colorGrey, #3c3b3d);
   }
 }
 
 .footer__logo-icon {
-  fill: var(--colorWhite2);
+  fill: #cbc9cf;
+  fill: var(--colorWhite2, #cbc9cf);
 }

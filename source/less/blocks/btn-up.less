@@ -25,7 +25,8 @@
     width: 16px;
     height: 16px;
 
-    border: 2px solid var(--colorBlack2);
+    border: 2px solid #1e1e1f;
+    border: 2px solid var(--colorBlack2, #1e1e1f);
     border-right-color: transparent;
     border-bottom-color: transparent;
 
@@ -47,13 +48,15 @@
   }
 
   &:hover::after {
-    border: 2px solid var(--colorGrey2);
+    border: 2px solid #6d6c70;
+    border: 2px solid var(--colorGrey2, #6d6c70);
     border-right-color: transparent;
     border-bottom-color: transparent;
   }
 
   &:active::after {
-    border: 2px solid var(--colorGrey3);
+    border: 2px solid #a2a1a6;
+    border: 2px solid var(--colorGrey3, #a2a1a6);
     border-right-color: transparent;
     border-bottom-color: transparent;
   }

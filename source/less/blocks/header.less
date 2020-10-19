@@ -64,7 +64,8 @@
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   .fontTextMobile();
-  font-weight: var(--weightFont3);
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
   text-transform: lowercase;
 
   @media (min-width: @tabletWidth) {
@@ -118,7 +119,8 @@
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   .fontTextMobile();
-  font-weight: var(--weightFont3);
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
 
   @media (min-width: @tabletWidth) {
     .container(@tabletContainer);

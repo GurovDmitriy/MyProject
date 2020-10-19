@@ -19,7 +19,8 @@
   display: block;
   overflow: hidden;
 
-  background-color: var(--colorGrey3);
+  background-color: #a2a1a6;
+  background-color: var(--colorGrey3, #a2a1a6);
   .customShadowDefault();
 
   transition: transform 0.2s, box-shadow 0.2s;
@@ -60,10 +61,12 @@
   padding: 6px 20px;
 
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: var(--weightFont3);
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
   .fontTextSmallMobile();
   text-align: center;
-  color: var(--colorWhite2);
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
 
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;

@@ -132,6 +132,12 @@
   }
 }
 
+// hack for ie
+_:-ms-fullscreen, :root .menu__link  {
+  transition: none;
+}
+// hack for ie end
+
 .menu__link--active {
   font-weight: 500;
   font-weight: var(--weightFont5, 500);

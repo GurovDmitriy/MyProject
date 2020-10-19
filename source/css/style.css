@@ -436,6 +436,9 @@ ul {
 img {
   line-height: 0;
 }
+picture {
+  width: 100%;
+}
 figure {
   display: block;
   margin: 0;
@@ -736,9 +739,6 @@ footer ::selection {
 }
 @media (min-width: 1100px) {
   .header__image {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
     margin-bottom: 32px;
   }
 }
@@ -1518,6 +1518,11 @@ footer ::selection {
     line-height: 45px;
   }
 }
+_:-ms-fullscreen,
+:root .menu__link {
+  -webkit-transition: none;
+  transition: none;
+}
 .menu__link--active {
   font-weight: 500;
   font-weight: var(--weightFont5, 500);
@@ -2116,6 +2121,11 @@ footer ::selection {
   color: #3c3b3d;
   color: var(--colorGrey, #3c3b3d);
 }
+_:-ms-fullscreen,
+:root .copyright__link {
+  -webkit-transition: none;
+  transition: none;
+}
 .copyright__licenses-link {
   position: relative;
   display: block;
@@ -2181,15 +2191,15 @@ footer ::selection {
     height: 26px;
   }
 }
-.links-list {
-  display: grid;
-  grid-template-columns: repeat(1, 100%);
-  row-gap: 10px;
-}
 @media (min-width: 600px) {
   .links-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: grid;
     grid-template-columns: repeat(2, 45%);
-    row-gap: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2198,6 +2208,29 @@ footer ::selection {
 @media (min-width: 1100px) {
   .links-list {
     grid-template-columns: repeat(3, 30%);
+  }
+}
+.links-list__item {
+  margin-bottom: 5px;
+}
+.links-list__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .links-list__item {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen,
+  :root .links-list__item {
+    width: 45%;
+  }
+}
+@media (min-width: 1100px) {
+  _:-ms-fullscreen,
+  :root .links-list__item {
+    width: 30%;
   }
 }
 .links-list__link {
@@ -2259,6 +2292,11 @@ footer ::selection {
     padding-right: 40px;
   }
 }
+_:-ms-fullscreen,
+:root .links-list__link {
+  -webkit-transition: none;
+  transition: none;
+}
 .links-list__link-icon {
   position: absolute;
   top: 50%;
@@ -2313,26 +2351,33 @@ footer ::selection {
     margin-bottom: 24px;
   }
 }
-.works-list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-row-gap: 20px;
+_:-ms-fullscreen,
+:root .books-list__item {
+  -webkit-transition: none;
+  transition: none;
 }
 @media (min-width: 600px) {
   .works-list {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
   }
 }
 @media (min-width: 1100px) {
   .works-list {
-    grid-gap: 40px;
+    gap: 40px;
   }
+}
+_:-ms-fullscreen::after,
+:root .works-list::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .works-list__link {
   position: relative;
   display: block;
-  overflow: hidden;
+  margin-bottom: 20px;
   background-color: #a2a1a6;
   background-color: var(--colorGrey3, #a2a1a6);
   -webkit-box-shadow: 0 2px 2px 0 #000000;
@@ -2343,6 +2388,10 @@ footer ::selection {
   transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   transition: transform 0.2s, box-shadow 0.2s;
   transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  overflow: hidden;
+}
+.works-list__link:last-child {
+  margin-bottom: 0;
 }
 .works-list__link:hover {
   -webkit-box-shadow: -1px 4px 4px 0 #000000;
@@ -2370,6 +2419,42 @@ footer ::selection {
           box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+@media (min-width: 600px) {
+  .works-list__link {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen,
+  :root .works-list__link {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  _:-ms-fullscreen,
+  :root .works-list__link {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen:nth-last-child(-n+2),
+  :root .works-list__link:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen:nth-child(even),
+  :root .works-list__link:nth-child(even) {
+    float: right;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen:nth-child(odd),
+  :root .works-list__link:nth-child(odd) {
+    float: left;
+  }
 }
 .works-list__link-caption {
   position: absolute;
@@ -2419,20 +2504,28 @@ footer ::selection {
           filter: grayscale(100%);
 }
 .skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  gap: 20px;
 }
 @media (min-width: 600px) {
   .skills-list {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
   }
 }
 @media (min-width: 1100px) {
   .skills-list {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    gap: 40px;
   }
 }
 .skills-list__item {
@@ -2538,6 +2631,41 @@ footer ::selection {
     padding: 12px 20px;
   }
 }
+_:-ms-fullscreen,
+:root .skills-list__item {
+  width: 48%;
+  margin-bottom: 20px;
+}
+_:-ms-fullscreen:nth-last-child(-n+2),
+:root .skills-list__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen:nth-last-child(-n+3),
+  :root .skills-list__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1100px) {
+  _:-ms-fullscreen:nth-last-child(-n+4),
+  :root .skills-list__item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 600px) {
+  _:-ms-fullscreen,
+  :root .skills-list__item {
+    width: 31%;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  _:-ms-fullscreen,
+  :root .skills-list__item {
+    width: 22%;
+    margin-bottom: 40px;
+  }
+}
 .skills-list__text {
   color: #cbc9cf;
   color: var(--colorWhite2, #cbc9cf);
@@ -2588,4 +2716,9 @@ footer ::selection {
 .contacts-list__link:active {
   color: 300;
   color: var(--colorGrey3, 300);
+}
+_:-ms-fullscreen,
+:root .contacts-list__link {
+  -webkit-transition: none;
+  transition: none;
 }

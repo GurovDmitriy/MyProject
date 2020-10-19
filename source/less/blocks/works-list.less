@@ -1,29 +1,42 @@
 .works-list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-row-gap: 20px;
-
   @media (min-width: @tabletWidth) {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
   }
 
   @media (min-width: @desktopWidth) {
-    grid-gap: 40px;
+    gap: 40px;
   }
 }
+
+// hack for ie
+_:-ms-fullscreen, :root .works-list {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// hack for ie end
 
 .works-list__link {
   position: relative;
 
   display: block;
-  overflow: hidden;
+  margin-bottom: 20px;
 
   background-color: #a2a1a6;
   background-color: var(--colorGrey3, #a2a1a6);
   .customShadowDefault();
 
   transition: transform 0.2s, box-shadow 0.2s;
+
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     .customShadowHover();
@@ -48,7 +61,42 @@
 
     .transformActive();
   }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 0;
+  }
 }
+
+// hack for ie
+_:-ms-fullscreen, :root .works-list__link {
+  @media (min-width: @tabletWidth) {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    margin-bottom: 30px;
+  }
+
+  &:nth-last-child(-n+2) {
+    @media (min-width: @tabletWidth) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: @tabletWidth) {
+      float: right;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: @tabletWidth) {
+      float: left;
+    }
+  }
+}
+// hack for ie end
 
 .works-list__link-caption {
   position: absolute;

@@ -4,45 +4,45 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     concurrent: {
-      targetWatch: ['watch:styleWatch'],
-      targetWatchDev: ['watch:HtmlWatchDev', 'watch:styleWatchDev', 'watch:jsWatchDev'],
+      concurrentTask: ['watch:watchStyleTask'],
+      // concurrentBuildTask: [],
       options: {
         logConcurrentOutput: true,
       },
     },
 
     watch: {
-      styleWatch: {
+      watchStyleTask: {
         files: ['source/less/**/*.less'],
         tasks: ['less'],
       },
-      HtmlWatchDev: {
-        files: ['source/**/*.html'],
-        tasks: ['clean:buildCleanHtmlDev', 'copy:buildHtmlCopy', 'htmlmin'],
-      },
-      styleWatchDev: {
-        files: ['source/less/**/*.less'],
-        tasks: ['less:lessBuild', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'cssmin'],
-      },
-      jsWatchDev: {
-        files: ['source/js/**/*.js'],
-        tasks: ['clean:buildCleanJsDev', 'copy:buildJsCopy', 'uglify'],
-      },
+      // watchHtmlBuildTask: {
+      //   files: ['source/*.html', 'source/works/*/*.html'],
+      //   tasks: [],
+      // },
+      // watchStyleBuildTask: {
+      //   files: ['source/less/**/*.less'],
+      //   tasks: [],
+      // },
+      // watchJsBuildTask: {
+      //   files: ['source/js/*.js'],
+      //   tasks: [],
+      // },
     },
 
     browserSync: {
-      serverSync: {
+      browserSyncTask: {
         bsFiles: {
-          src: ['source/**/*.html', 'source/css/*.css', 'source/js/*.js'],
+          src: ['source/*.html', 'source/works/*/*.html', 'source/css/*.css', 'source/js/*.js'],
         },
         options: {
           server: 'source/',
           watchTask: true,
         },
       },
-      serverSyncDev: {
+      serverSyncBuildTask: {
         bsFiles: {
-          src: ['docs/**/*.html', 'docs/css/*.css', 'docs/js/*.js'],
+          src: ['docs/*.html', 'docs/works/*/*.html', 'docs/css/*.css', 'docs/js/*.js'],
         },
         options: {
           server: 'docs/',
@@ -52,15 +52,7 @@ module.exports = function (grunt) {
     },
 
     less: {
-      lessCompil: {
-        options: {
-          relativeUrls: true,
-        },
-        files: {
-          'source/css/style.css': 'source/less/style.less',
-        },
-      },
-      lessBuild: {
+      lessTask: {
         options: {
           relativeUrls: true,
           plugins: [
@@ -74,49 +66,61 @@ module.exports = function (grunt) {
     },
 
     cssmin: {
-      target: {
+      cssminBuildTask: {
         files: [{
           expand: true,
           cwd: 'docs/css/',
-          src: ['*.css', '!*.min.css'],
+          src: ['*.css'],
           dest: 'docs/css/',
         }]
       }
     },
 
-    uglify: {
-      options: {
-        mangle: false,
-        expand: true,
+    babel: {
+      babelBuildTask: {
+        options: {
+          presets: ["@babel/preset-env"],
+        },
+        files: [{
+          expand: true,
+          cwd: 'docs/js/',
+          src: ['default.js'],
+          dest: 'docs/js/',
+        }]
       },
-      jsMin: {
+    },
+
+    uglify: {
+      uglifyBuildTask: {
         files: [{
           expand: true,
           cwd: 'docs/js',
           src: '*.js',
-          dest: 'docs/js',
+          dest: 'docs/js'
         }],
       },
     },
 
     svgstore: {
-      options: {
-        includeTitleElement: false,
-        prefix: 'icon-',
-        svg: {
-          viewBox: '0 0 100 100',
-          xmlns: 'http://www.w3.org/2000/svg',
+      svgstoreTask: {
+        options: {
+          includeTitleElement: false,
+          prefix: 'icon-',
+          svg: {
+            viewBox: '0 0 100 100',
+            xmlns: 'http://www.w3.org/2000/svg',
+          },
         },
-      },
-      svgSprite: {
-        files: {
-          'source/image/min/sprite.svg': ['source/image/min/*.svg'],
+        svgSprite: {
+          files: {
+            'source/image/min/sprite.svg': ['source/image/min/*.svg'],
+          },
         },
       },
     },
 
     cwebp: {
-      imagesWebp: {
+      cwebpTask: {
         options: {
           q: 70,
         },
@@ -130,7 +134,7 @@ module.exports = function (grunt) {
     },
 
     image: {
-      imageMin: {
+      imageMinTask: {
         options: {
           optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
           pngquant: ['--speed=1', '--force', 256],
@@ -148,7 +152,7 @@ module.exports = function (grunt) {
           dest: 'source/image/min/',
         }],
       },
-      svgMin: {
+      imageSvgMinTask: {
         options: {
           svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors'],
         },
@@ -161,21 +165,23 @@ module.exports = function (grunt) {
       },
     },
 
-    prettify: {
-      options: {
-        config: '.prettifyrc',
-      },
-      files: {
-        expand: true,
-        cwd: 'docs/',
-        ext: '.html',
-        src: ['*.html'],
-        dest: 'docs/',
-      },
-    },
+    // prettify: {
+    //   prettifyTask: {
+    //     options: {
+    //       config: '.prettifyrc',
+    //     },
+    //     files: {
+    //       expand: true,
+    //       cwd: 'docs/',
+    //       ext: '.html',
+    //       src: ['*.html'],
+    //       dest: 'docs/',
+    //     },
+    //   },
+    // },
 
     htmlmin: {
-      dev: {
+      htmlMinBuildTask: {
         options: {
           removeComments: true,
           collapseWhitespace: true,
@@ -183,121 +189,90 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'docs',
-          src: ['**/*.html', '*.html'],
+          src: ['*.html', 'works/*/*.html'],
           dest: 'docs',
         }],
       },
     },
 
+    ttf2woff: {
+      ttf2woffTask: {
+        src: ['source/fonts/ttf/*.ttf'],
+        dest: 'source/fonts/woff/',
+      },
+    },
+
     ttf2woff2: {
-      default: {
+      ttf2woff2Task: {
         src: ['source/fonts/ttf/*.ttf'],
         dest: 'source/fonts/woff2/',
       },
     },
 
+
     clean: {
-      buildClean: {
+      cleanBuildTask: {
         src: ['docs/'],
-      },
-      buildCleanStyleDev: {
-        src: ['docs/css/'],
-      },
-      buildCleanJsDev: {
-        src: ['docs/js/'],
-      },
-      buildCleanHtmlDev: {
-        src: ['docs/*.html'],
       },
     },
 
     copy: {
-      buildCopy: {
-        files: [{
+      copyBuildTask: {
+        files: [
+        {
+          expand: true,
+          flatten: true,
+          src: ['source/*'],
+          dest: 'docs/',
+          filter: 'isFile'
+        },
+        {
           expand: true,
           cwd: 'source',
           src: [
-            '*',
-            '*.xml',
-            '*.html',
             'fonts/woff/*',
             'fonts/woff2/*',
             'image/min/*',
             'works/**/*',
-            'image/favicon/*',
             'css/style.css',
             'js/*.js',
           ],
           dest: 'docs/',
-        }],
-      },
-      buildStyleCopy: {
-        files: [{
-          expand: true,
-          cwd: 'source',
-          src: [
-            'css/style.css',
-          ],
-          dest: 'docs/',
-        }],
-      },
-      buildJsCopy: {
-        files: [{
-          expand: true,
-          cwd: 'source',
-          src: [
-            'js/*.js',
-          ],
-          dest: 'docs/',
-        }],
-      },
-      buildHtmlCopy: {
-        files: [{
-          expand: true,
-          cwd: 'source',
-          src: [
-            '*.html',
-          ],
-          dest: 'docs/',
-        }],
+        },
+        ],
       },
     },
   });
 
   grunt.registerTask('serve', [
-    'less',
-    'browserSync:serverSync',
-    'concurrent:targetWatch',
-  ]);
-
-  grunt.registerTask('serveDev', [
-    'less:lessBuild',
-    'clean:buildClean',
-    'copy:buildCopy',
-    'cssmin',
-    'uglify',
-    'htmlmin',
-    'browserSync:serverSyncDev',
-    'concurrent:targetWatchDev',
+    'less:lessTask',
+    'browserSync:browserSyncTask',
+    'concurrent:concurrentTask',
   ]);
 
   grunt.registerTask('imgpress', [
-    'cwebp',
-    'image.imageMin',
-    'svgstore',
+    'cwebp:cwebpTask',
+    'image',
+    'svgstore:svgstoreTask',
   ]);
 
   grunt.registerTask('svgsprite', [
-    'image:svgMin',
-    'svgstore',
+    'image:svgMinTask',
+    'svgstore:svgstoreTask',
+  ]);
+
+  grunt.registerTask('fontgen', [
+    'ttf2woff:ttf2woffTask',
+    'ttf2woff2:ttf2woff2Task',
   ]);
 
   grunt.registerTask('build', [
-    'less:lessBuild',
-    'clean:buildClean',
-    'copy:buildCopy',
-    'cssmin',
-    'uglify',
-    'htmlmin',
+    'less:lessTask',
+    'clean:cleanBuildTask',
+    'copy:copyBuildTask',
+    'cssmin:cssminBuildTask',
+    'babel:babelBuildTask',
+    'uglify:uglifyBuildTask',
+    'htmlmin:htmlMinBuildTask',
   ]);
 };

@@ -1,16 +1,22 @@
 .skills-list {
+  // for ie
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // for ie end
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  gap: 20px;
 
   @media (min-width: @tabletWidth) {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
   }
 
   @media (min-width: @desktopWidth) {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    gap: 40px;
   }
 }
 
@@ -106,6 +112,39 @@
     padding: 12px 20px;
   }
 }
+
+// hack for ie
+_:-ms-fullscreen, :root .skills-list__item {
+  width: 48%;
+  margin-bottom: 20px;
+
+  &:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  &:nth-last-child(-n+3) {
+    @media (min-width: @tabletWidth) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-last-child(-n+4) {
+    @media (min-width: @desktopWidth) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tabletWidth) {
+    width: 31%;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    width: 22%;
+    margin-bottom: 40px;
+  }
+}
+// hack for ie end
 
 .skills-list__text {
   color: #cbc9cf;

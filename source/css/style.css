@@ -438,6 +438,7 @@ img {
 }
 picture {
   width: 100%;
+  height: auto;
 }
 figure {
   display: block;

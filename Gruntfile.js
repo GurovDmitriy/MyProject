@@ -5,7 +5,11 @@ module.exports = function (grunt) {
 
     concurrent: {
       concurrentTask: ['watch:watchStyleTask'],
-      // concurrentBuildTask: [],
+      concurrentBuildTask: [
+        'watch:watchHtmlBuildTask',
+        'watch:watchStyleBuildTask',
+        'watch:watchJsBuildTask',
+      ],
       options: {
         logConcurrentOutput: true,
       },
@@ -14,35 +18,35 @@ module.exports = function (grunt) {
     watch: {
       watchStyleTask: {
         files: ['source/less/**/*.less'],
-        tasks: ['less'],
+        tasks: ['less:lessTask'],
       },
-      // watchHtmlBuildTask: {
-      //   files: ['source/*.html', 'source/works/*/*.html'],
-      //   tasks: [],
-      // },
-      // watchStyleBuildTask: {
-      //   files: ['source/less/**/*.less'],
-      //   tasks: [],
-      // },
-      // watchJsBuildTask: {
-      //   files: ['source/js/*.js'],
-      //   tasks: [],
-      // },
+      watchHtmlBuildTask: {
+        files: ['source/*.html'],
+        tasks: ['clean:cleanHtmlBuildTask', 'copy:copyHtmlBuildTask', 'htmlmin:htmlMinBuildTask'],
+      },
+      watchStyleBuildTask: {
+        files: ['source/less/**/*.less'],
+        tasks: ['less:lessTask', 'clean:cleanStyleBuildTask', 'copy:copyStyleBuildTask', 'cssmin:cssminBuildTask'],
+      },
+      watchJsBuildTask: {
+        files: ['source/js/*.js'],
+        tasks: ['clean:cleanJsBuildTask', 'copy:copyJsBuildTask', 'babel:babelBuildTask', 'uglify:uglifyBuildTask'],
+      },
     },
 
     browserSync: {
       browserSyncTask: {
         bsFiles: {
-          src: ['source/*.html', 'source/works/*/*.html', 'source/css/*.css', 'source/js/*.js'],
+          src: ['source/*.html', 'source/css/*.css', 'source/js/*.js'],
         },
         options: {
           server: 'source/',
           watchTask: true,
         },
       },
-      serverSyncBuildTask: {
+      browserSyncBuildTask: {
         bsFiles: {
-          src: ['docs/*.html', 'docs/works/*/*.html', 'docs/css/*.css', 'docs/js/*.js'],
+          src: ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js'],
         },
         options: {
           server: 'docs/',
@@ -219,31 +223,75 @@ module.exports = function (grunt) {
       cleanBuildTask: {
         src: ['docs/'],
       },
+      cleanHtmlBuildTask: {
+        src: ['docs/*.html'],
+      },
+      cleanStyleBuildTask: {
+        src: ['docs/css/*.css'],
+      },
+      cleanJsBuildTask: {
+        src: ['docs/js/*.js'],
+      },
     },
 
     copy: {
       copyBuildTask: {
         files: [
-        {
-          expand: true,
-          flatten: true,
-          src: ['source/*'],
-          dest: 'docs/',
-          filter: 'isFile'
-        },
-        {
-          expand: true,
-          cwd: 'source',
-          src: [
-            'fonts/woff/*',
-            'fonts/woff2/*',
-            'image/min/*',
-            'works/**/*',
-            'css/style.css',
-            'js/*.js',
-          ],
-          dest: 'docs/',
-        },
+          {
+            expand: true,
+            flatten: true,
+            src: ['source/*'],
+            dest: 'docs/',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            cwd: 'source',
+            src: [
+              'fonts/woff/*',
+              'fonts/woff2/*',
+              'image/min/*',
+              'css/style.css',
+              'js/*.js',
+            ],
+            dest: 'docs/',
+          },
+        ],
+      },
+      copyHtmlBuildTask: {
+        files: [
+          {
+            expand: true,
+            cwd: 'source',
+            src: [
+              '*.html',
+            ],
+            dest: 'docs/',
+          },
+        ],
+      },
+      copyStyleBuildTask: {
+        files: [
+          {
+            expand: true,
+            cwd: 'source',
+            src: [
+              'css/*.css',
+            ],
+            dest: 'docs/',
+          },
+        ],
+      },
+      copyJsBuildTask: {
+        files: [
+          {
+            expand: true,
+            cwd: 'source',
+            src: [
+              'js/*.js',
+            ],
+            dest: 'docs/',
+          },
         ],
       },
     },
@@ -253,6 +301,18 @@ module.exports = function (grunt) {
     'less:lessTask',
     'browserSync:browserSyncTask',
     'concurrent:concurrentTask',
+  ]);
+
+  grunt.registerTask('servebuild', [
+    'less:lessTask',
+    'clean:cleanBuildTask',
+    'copy:copyBuildTask',
+    'cssmin:cssminBuildTask',
+    'babel:babelBuildTask',
+    'uglify:uglifyBuildTask',
+    'htmlmin:htmlMinBuildTask',
+    'browserSync:browserSyncBuildTask',
+    'concurrent:concurrentBuildTask',
   ]);
 
   grunt.registerTask('imgpress', [

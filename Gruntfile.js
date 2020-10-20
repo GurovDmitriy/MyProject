@@ -58,6 +58,11 @@ module.exports = function (grunt) {
           plugins: [
             new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
           ],
+          sourceMap: true,
+          sourceMapFilename: 'source/css/style.css.map',
+          sourceMapURL: '/css/style.css.map',
+          sourceMapBasepath: 'source',
+          sourceMapRootpath: '/',
         },
         files: {
           'source/css/style.css': 'source/less/style.less',

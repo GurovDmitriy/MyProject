@@ -1,830 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="UTF-8">
-  <title>Typenote.io — BS: Band</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Typenote.io — BS: Band">
-  <meta name="keywords"    content="typenote.io, bootstrap, template, band, music, concert">
-  <meta name="author"      content="Gurov Dmitriy">
-  <meta name="robots"      content="noindex, follow">
-
-  <link rel="preload" href="fonts/woff2/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/woff2/Lato-Bold.woff2"    as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/woff2/Lato-Italic.woff2"  as="font" type="font/woff2" crossorigin>
-
-  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="css/style.css"                                                         as="style">
-
-  <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"    as="script">
-  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" as="script">
-
-  <link rel="preload" href="js/webp.js"                                                          as="script">
-  <link rel="preload" href="js/picturefill.js"                                                   as="script">
-  <link rel="preload" href="js/lazysizes.js"                                                     as="script">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <link rel="icon"             type="image/svg+xml"                 href="../../image/favicon/typewriter.svg">
-  <link rel="apple-touch-icon"                      sizes="180x180" href="../../image/favicon/apple-touch-icon.png">
-  <link rel="icon"             type="image/png"     sizes="32x32"   href="../../image/favicon/favicon-32x32.png">
-  <link rel="icon"             type="image/png"     sizes="16x16"   href="../../image/favicon/favicon-16x16.png">
-  <link rel="manifest"                                              href="../../site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color"             content="#ffffff">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179727419-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Typenote.io — BS: Band</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Typenote.io — BS: Band"><meta name="keywords" content="typenote.io, bootstrap, template, band, music, concert"><meta name="author" content="Gurov Dmitriy"><meta name="robots" content="noindex, follow"><link rel="preload" href="fonts/woff2/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/woff2/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/woff2/Lato-Italic.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style"><link rel="preload" href="css/style.css" as="style"><link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" as="script"><link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" as="script"><link rel="preload" href="js/webp.js" as="script"><link rel="preload" href="js/picturefill.js" as="script"><link rel="preload" href="js/lazysizes.js" as="script"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><link rel="stylesheet" href="css/style.css" type="text/css"><link rel="icon" type="image/svg+xml" href="../../image/favicon/typewriter.svg"><link rel="apple-touch-icon" sizes="180x180" href="../../image/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="../../image/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../image/favicon/favicon-16x16.png"><link rel="manifest" href="../../site.webmanifest"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-179727419-1"></script><script>window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-179727419-1');
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    gtag('config', 'UA-179727419-1');</script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5LPTH3Q');</script>
-  <!-- End Google Tag Manager -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"    defer></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
-
-  <script>document.createElement("picture");</script>
-
-  <script src="js/webp.js" async></script>
-  <script src="js/picturefill.js"      async></script>
-  <script src="js/lazysizes.js"        async></script>
-
-</head>
-
-<!-- -Navigation -->
-<!-- -Header -->
-<!-- -Main navigation -->
-<!-- -Slider -->
-<!-- -slide-indicator -->
-<!-- -slide-inner -->
-<!-- -slide-control -->
-<!-- -Main -->
-<!-- -Gallery face -->
-<!-- -Gallery tour -->
-<!-- -Modal -->
-<!-- -Contacts -->
-<!-- -Form main -->
-<!-- -Nav tabs -->
-<!-- -Footer -->
-<!-- -Map -->
-<!-- -Copyrights -->
-
-<body id="page" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LPTH3Q"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- -Header -->
-  <header>
-
-    <h1 class="sr-only">The Band - music group</h1>
-
-    <!-- -Main navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-
-      <h2 class="sr-only">Main navigation</h2>
-
-      <div class="container-fluid">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Logo</a>
-          <a class="skip-link" href="#usr-main">Skip link</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#band">Band</a></li>
-            <li><a href="#tour">Tour</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Merchandise</a></li>
-                <li><a href="#">Extras</a></li>
-                <li><a href="#">Medias</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-    <!-- Main navigation end -->
-
-    <!-- -Slider -->
-    <div class="carousel slide" id="slider" data-ride="carousel">
-
-      <h2 class="sr-only">Slider concert</h2>
-
-      <!-- -slide-indicator -->
-      <ol class="carousel-indicators">
-        <li data-target="#slider" data-slide-to="0" class="active"></li>
-        <li data-target="#slider" data-slide-to="1"></li>
-        <li data-target="#slider" data-slide-to="2"></li>
-      </ol>
-
-      <!-- -slide-inner -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <picture>
-            <source type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-1-desktop-3x.webp 3x,
-                            image/min/img-bandslide-1-desktop-2x.webp 2x,
-                            image/min/img-bandslide-1-desktop.webp">
-
-            <source type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-1-tablet-3x.webp 3x,
-                            image/min/img-bandslide-1-tablet-2x.webp 2x,
-                            image/min/img-bandslide-1-tablet.webp">
-
-            <source type="image/webp"
-                    srcset="image/min/img-bandslide-1-mobile-3x.webp 3x,
-                            image/min/img-bandslide-1-mobile-2x.webp 2x,
-                            image/min/img-bandslide-1-mobile.webp">
-
-            <source type="image/jpg"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-1-desktop-3x.jpg 3x,
-                            image/min/img-bandslide-1-desktop-2x.jpg 2x,
-                            image/min/img-bandslide-1-desktop.jpg">
-
-            <source type="image/jpg"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-1-tablet-3x.jpg 3x,
-                            image/min/img-bandslide-1-tablet-2x.jpg 2x,
-                            image/min/img-bandslide-1-tablet.jpg">
-
-            <source type="image/jpg"
-                    srcset="image/min/img-bandslide-1-mobile-3x.jpg 3x,
-                            image/min/img-bandslide-1-mobile-2x.jpg 2x,
-                            image/min/img-bandslide-1-mobile.jpg">
-
-            <img class="img-responsive" src="image/min/img-bandslide-1-mobile.jpg"
-                                        width="480"
-                                        height="280"
-                                        alt="Music group on the scene">
-          </picture>
-          <div class="carousel-caption">
-            <h3>New York</h3>
-            <p class="">The atmosphere in New York is...</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <picture>
-            <source type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-2-desktop-3x.webp 3x,
-                            image/min/img-bandslide-2-desktop-2x.webp 2x,
-                            image/min/img-bandslide-2-desktop.webp">
-
-            <source type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-2-tablet-3x.webp 3x,
-                            image/min/img-bandslide-2-tablet-2x.webp 2x,
-                            image/min/img-bandslide-2-tablet.webp">
-
-            <source type="image/webp"
-                    srcset="image/min/img-bandslide-2-mobile-3x.webp 3x,
-                            image/min/img-bandslide-2-mobile-2x.webp 2x,
-                            image/min/img-bandslide-2-mobile.webp">
-
-            <source type="image/jpg"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-2-desktop-3x.jpg 3x,
-                            image/min/img-bandslide-2-desktop-2x.jpg 2x,
-                            image/min/img-bandslide-2-desktop.jpg">
-
-            <source type="image/jpg"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-2-tablet-3x.jpg 3x,
-                            image/min/img-bandslide-2-tablet-2x.jpg 2x,
-                            image/min/img-bandslide-2-tablet.jpg">
-
-            <source type="image/jpg"
-                    srcset="image/min/img-bandslide-2-mobile-3x.jpg 3x,
-                            image/min/img-bandslide-2-mobile-2x.jpg 2x,
-                            image/min/img-bandslide-2-mobile.jpg">
-
-            <img class="img-responsive" src="image/min/img-bandslide-2-mobile.jpg"
-                                        width="480"
-                                        height="280"
-                                        alt="Music group and people on the scene">
-          </picture>
-          <div class="carousel-caption">
-            <h3>Chicago</h3>
-            <p class="">Thank you, Chicago - A night we won't forget.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <picture>
-            <source type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-3-desktop-3x.webp 3x,
-                            image/min/img-bandslide-3-desktop-2x.webp 2x,
-                            image/min/img-bandslide-3-desktop.webp">
-
-            <source type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-3-tablet-3x.webp 3x,
-                            image/min/img-bandslide-3-tablet-2x.webp 2x,
-                            image/min/img-bandslide-3-tablet.webp">
-
-            <source type="image/webp"
-                    srcset="image/min/img-bandslide-3-mobile-3x.webp 3x,
-                            image/min/img-bandslide-3-mobile-2x.webp 2x,
-                            image/min/img-bandslide-3-mobile.webp">
-
-            <source type="image/jpg"
-                    media="(min-width: 1200px)"
-                    srcset="image/min/img-bandslide-3-desktop-3x.jpg 3x,
-                            image/min/img-bandslide-3-desktop-2x.jpg 2x,
-                            image/min/img-bandslide-3-desktop.jpg">
-
-            <source type="image/jpg"
-                    media="(min-width: 768px)"
-                    srcset="image/min/img-bandslide-3-tablet-3x.jpg 3x,
-                            image/min/img-bandslide-3-tablet-2x.jpg 2x,
-                            image/min/img-bandslide-3-tablet.jpg">
-
-            <source type="image/jpg"
-                    srcset="image/min/img-bandslide-3-mobile-3x.jpg 3x,
-                            image/min/img-bandslide-3-mobile-2x.jpg 2x,
-                            image/min/img-bandslide-3-mobile.jpg">
-
-            <img class="img-responsive" src="image/min/img-bandslide-3-mobile.jpg"
-                                        width="480"
-                                        height="280"
-                                        alt="Music on the scene with guitar">
-          </picture>
-          <div class="carousel-caption">
-            <h3>LA</h3>
-            <p class="">Even though the traffic was a mess, we had the best time.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- -slide-control -->
-      <a class="left carousel-control" data-slide="prev" href="#slider">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Prev</span>
-      </a>
-      <a class="right carousel-control" data-slide="next" href="#slider">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
-    </div>
-    <!-- Slider ends-->
-
-  </header>
-  <!-- Header end -->
-
-  <!-- -Main -->
-  <main id="usr-main">
-
-    <section id="band">
-
-      <div class="container text-center">
-
-        <h2 tabindex="0">The band</h2>
-        <p><em>We love music!</em></p>
-
-        <p class="">And mobilize emerging dynamic, paradigm benefit corporation replicable, incubator indicators. Inclusive scalable inspiring outcomes venture philanthropy movements technology. Global then human-centered, shared unit of analysis inspirational sustainable. Think tank, inclusive inspire grit fairness green space circular social return on investment. Relief, compassion framework, cultivate paradigm changemaker ecosystem, granular, because. Capacity building vibrant indicators, co-create our work the resistance. Social return on investment issue outcomes do-gooder movements to. Compelling, or shine.</p>
-
-        <!-- -Gallery face -->
-        <div class="row ">
-          <div class="col-sm-4">
-            <figure>
-              <h3>John</h3>
-              <a href="#demo" data-toggle="collapse">
-                <picture>
-                  <source type="image/webp"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-1-desktop-3x.webp 3x,
+  })(window,document,'script','dataLayer','GTM-5LPTH3Q');</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer="defer"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer="defer"></script><script>document.createElement("picture");</script><script src="js/webp.js" async></script><script src="js/picturefill.js" async></script><script src="js/lazysizes.js" async></script></head><body id="page" data-spy="scroll" data-target=".navbar" data-offset="50"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LPTH3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header><h1 class="sr-only">The Band - music group</h1><nav class="navbar navbar-inverse navbar-fixed-top"><h2 class="sr-only">Main navigation</h2><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Logo</a> <a class="skip-link" href="#usr-main">Skip link</a></div><div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav navbar-right"><li class="active"><a href="#">Home</a></li><li><a href="#band">Band</a></li><li><a href="#tour">Tour</a></li><li><a href="#contact">Contact</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Merchandise</a></li><li><a href="#">Extras</a></li><li><a href="#">Medias</a></li></ul></li></ul></div></div></nav><div class="carousel slide" id="slider" data-ride="carousel"><h2 class="sr-only">Slider concert</h2><ol class="carousel-indicators"><li data-target="#slider" data-slide-to="0" class="active"></li><li data-target="#slider" data-slide-to="1"></li><li data-target="#slider" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="item active"><picture><source type="image/webp" media="(min-width: 1200px)" srcset="image/min/img-bandslide-1-desktop-3x.webp 3x, image/min/img-bandslide-1-desktop-2x.webp 2x, image/min/img-bandslide-1-desktop.webp"><source type="image/webp" media="(min-width: 768px)" srcset="image/min/img-bandslide-1-tablet-3x.webp 3x, image/min/img-bandslide-1-tablet-2x.webp 2x, image/min/img-bandslide-1-tablet.webp"><source type="image/webp" srcset="image/min/img-bandslide-1-mobile-3x.webp 3x, image/min/img-bandslide-1-mobile-2x.webp 2x, image/min/img-bandslide-1-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" srcset="image/min/img-bandslide-1-desktop-3x.jpg 3x, image/min/img-bandslide-1-desktop-2x.jpg 2x, image/min/img-bandslide-1-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" srcset="image/min/img-bandslide-1-tablet-3x.jpg 3x, image/min/img-bandslide-1-tablet-2x.jpg 2x, image/min/img-bandslide-1-tablet.jpg"><source type="image/jpg" srcset="image/min/img-bandslide-1-mobile-3x.jpg 3x, image/min/img-bandslide-1-mobile-2x.jpg 2x, image/min/img-bandslide-1-mobile.jpg"><img class="img-responsive" src="image/min/img-bandslide-1-mobile.jpg" width="480" height="280" alt="Music group on the scene"></picture><div class="carousel-caption"><h3>New York</h3><p class="">The atmosphere in New York is...</p></div></div><div class="item"><picture><source type="image/webp" media="(min-width: 1200px)" srcset="image/min/img-bandslide-2-desktop-3x.webp 3x, image/min/img-bandslide-2-desktop-2x.webp 2x, image/min/img-bandslide-2-desktop.webp"><source type="image/webp" media="(min-width: 768px)" srcset="image/min/img-bandslide-2-tablet-3x.webp 3x, image/min/img-bandslide-2-tablet-2x.webp 2x, image/min/img-bandslide-2-tablet.webp"><source type="image/webp" srcset="image/min/img-bandslide-2-mobile-3x.webp 3x, image/min/img-bandslide-2-mobile-2x.webp 2x, image/min/img-bandslide-2-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" srcset="image/min/img-bandslide-2-desktop-3x.jpg 3x, image/min/img-bandslide-2-desktop-2x.jpg 2x, image/min/img-bandslide-2-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" srcset="image/min/img-bandslide-2-tablet-3x.jpg 3x, image/min/img-bandslide-2-tablet-2x.jpg 2x, image/min/img-bandslide-2-tablet.jpg"><source type="image/jpg" srcset="image/min/img-bandslide-2-mobile-3x.jpg 3x, image/min/img-bandslide-2-mobile-2x.jpg 2x, image/min/img-bandslide-2-mobile.jpg"><img class="img-responsive" src="image/min/img-bandslide-2-mobile.jpg" width="480" height="280" alt="Music group and people on the scene"></picture><div class="carousel-caption"><h3>Chicago</h3><p class="">Thank you, Chicago - A night we won't forget.</p></div></div><div class="item"><picture><source type="image/webp" media="(min-width: 1200px)" srcset="image/min/img-bandslide-3-desktop-3x.webp 3x, image/min/img-bandslide-3-desktop-2x.webp 2x, image/min/img-bandslide-3-desktop.webp"><source type="image/webp" media="(min-width: 768px)" srcset="image/min/img-bandslide-3-tablet-3x.webp 3x, image/min/img-bandslide-3-tablet-2x.webp 2x, image/min/img-bandslide-3-tablet.webp"><source type="image/webp" srcset="image/min/img-bandslide-3-mobile-3x.webp 3x, image/min/img-bandslide-3-mobile-2x.webp 2x, image/min/img-bandslide-3-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" srcset="image/min/img-bandslide-3-desktop-3x.jpg 3x, image/min/img-bandslide-3-desktop-2x.jpg 2x, image/min/img-bandslide-3-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" srcset="image/min/img-bandslide-3-tablet-3x.jpg 3x, image/min/img-bandslide-3-tablet-2x.jpg 2x, image/min/img-bandslide-3-tablet.jpg"><source type="image/jpg" srcset="image/min/img-bandslide-3-mobile-3x.jpg 3x, image/min/img-bandslide-3-mobile-2x.jpg 2x, image/min/img-bandslide-3-mobile.jpg"><img class="img-responsive" src="image/min/img-bandslide-3-mobile.jpg" width="480" height="280" alt="Music on the scene with guitar"></picture><div class="carousel-caption"><h3>LA</h3><p class="">Even though the traffic was a mess, we had the best time.</p></div></div></div><a class="left carousel-control" data-slide="prev" href="#slider"><span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Prev</span> </a><a class="right carousel-control" data-slide="next" href="#slider"><span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span></a></div></header><main id="usr-main"><section id="band"><div class="container text-center"><h2 tabindex="0">The band</h2><p><em>We love music!</em></p><p class="">And mobilize emerging dynamic, paradigm benefit corporation replicable, incubator indicators. Inclusive scalable inspiring outcomes venture philanthropy movements technology. Global then human-centered, shared unit of analysis inspirational sustainable. Think tank, inclusive inspire grit fairness green space circular social return on investment. Relief, compassion framework, cultivate paradigm changemaker ecosystem, granular, because. Capacity building vibrant indicators, co-create our work the resistance. Social return on investment issue outcomes do-gooder movements to. Compelling, or shine.</p><div class="row"><div class="col-sm-4"><figure><h3>John</h3><a href="#demo" data-toggle="collapse"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-face-1-desktop-3x.webp 3x,
                                        image/min/img-face-1-desktop-2x.webp 2x,
-                                       image/min/img-face-1-desktop.webp">
-                 <source type="image/webp"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-1-tablet-3x.webp 3x,
+                                       image/min/img-face-1-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-face-1-tablet-3x.webp 3x,
                                        image/min/img-face-1-tablet-2x.webp 2x,
-                                       image/min/img-face-1-tablet.webp">
-                 <source type="image/webp"
-                          data-srcset="image/min/img-face-1-mobile-3x.webp 3x,
+                                       image/min/img-face-1-tablet.webp"><source type="image/webp" data-srcset="image/min/img-face-1-mobile-3x.webp 3x,
                                        image/min/img-face-1-mobile-2x.webp 2x,
-                                       image/min/img-face-1-mobile.webp">
-                 <source type="image/jpg"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-1-desktop-3x.jpg 3x,
+                                       image/min/img-face-1-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-face-1-desktop-3x.jpg 3x,
                                        image/min/img-face-1-desktop-2x.jpg 2x,
-                                       image/min/img-face-1-desktop.jpg">
-                 <source type="image/jpg"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-1-tablet-3x.jpg 3x,
+                                       image/min/img-face-1-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-face-1-tablet-3x.jpg 3x,
                                        image/min/img-face-1-tablet-2x.jpg 2x,
-                                       image/min/img-face-1-tablet.jpg">
-                 <source type="image/jpg"
-                          data-srcset="image/min/img-face-1-mobile-3x.jpg 3x,
+                                       image/min/img-face-1-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-face-1-mobile-3x.jpg 3x,
                                        image/min/img-face-1-mobile-2x.jpg 2x,
-                                       image/min/img-face-1-mobile.jpg">
-                 <img class="img-responsive img-circle lazyload" data-src="image/min/img-face-1-mobile.jpg"
-                                                                  width="480"
-                                                                  height="480"
-                                                                  alt="Photo John's - music band">
-                </picture>
-              </a>
-              <figcaption>
-                <div class="collapse" id="demo">
-                  <ul class="list-unstyled">
-                    <li>Guitarist and Lead Vocalist</li>
-                    <li>Loves long walks on the beach</li>
-                    <li>Member since 1988</li>
-                  </ul>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="col-sm-4">
-            <figure>
-              <h3>Mike</h3>
-              <a href="#demo2" data-toggle="collapse">
-                <picture>
-                  <source type="image/webp"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-2-desktop-3x.webp 3x,
+                                       image/min/img-face-1-mobile.jpg"><img class="img-responsive img-circle lazyload" data-src="image/min/img-face-1-mobile.jpg" width="480" height="480" alt="Photo John's - music band"></picture></a><figcaption><div class="collapse" id="demo"><ul class="list-unstyled"><li>Guitarist and Lead Vocalist</li><li>Loves long walks on the beach</li><li>Member since 1988</li></ul></div></figcaption></figure></div><div class="col-sm-4"><figure><h3>Mike</h3><a href="#demo2" data-toggle="collapse"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-face-2-desktop-3x.webp 3x,
                                        image/min/img-face-2-desktop-2x.webp 2x,
-                                       image/min/img-face-2-desktop.webp">
-
-                  <source type="image/webp"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-2-tablet-3x.webp 3x,
+                                       image/min/img-face-2-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-face-2-tablet-3x.webp 3x,
                                        image/min/img-face-2-tablet-2x.webp 2x,
-                                       image/min/img-face-2-tablet.webp">
-
-                  <source type="image/webp"
-                          data-srcset="image/min/img-face-2-mobile-3x.webp 3x,
+                                       image/min/img-face-2-tablet.webp"><source type="image/webp" data-srcset="image/min/img-face-2-mobile-3x.webp 3x,
                                        image/min/img-face-2-mobile-2x.webp 2x,
-                                       image/min/img-face-2-mobile.webp">
-
-                  <source type="image/jpg"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-2-desktop-3x.jpg 3x,
+                                       image/min/img-face-2-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-face-2-desktop-3x.jpg 3x,
                                        image/min/img-face-2-desktop-2x.jpg 2x,
-                                       image/min/img-face-2-desktop.jpg">
-
-                  <source type="image/jpg"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-2-tablet-3x.jpg 3x,
+                                       image/min/img-face-2-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-face-2-tablet-3x.jpg 3x,
                                        image/min/img-face-2-tablet-2x.jpg 2x,
-                                       image/min/img-face-2-tablet.jpg">
-
-                  <source type="image/jpg"
-                          data-srcset="image/min/img-face-2-mobile-3x.jpg 3x,
+                                       image/min/img-face-2-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-face-2-mobile-3x.jpg 3x,
                                        image/min/img-face-2-mobile-2x.jpg 2x,
-                                       image/min/img-face-2-mobile.jpg">
-                  <img class="img-responsive img-circle lazyload" data-src="image/min/img-face-2-mobile.jpg"
-                                                                  width="480"
-                                                                  height="480"
-                                                                  alt="Photo Mike's - music band">
-                </picture>
-              </a>
-              <figcaption>
-                <div class="collapse" id="demo2">
-                  <ul class="list-unstyled">
-                    <li>Drummer</li>
-                    <li>Loves drummin'</li>
-                    <li>Member since 1988</li>
-                  </ul>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="col-sm-4">
-            <figure>
-              <h3>Brad</h3>
-              <a href="#demo3" data-toggle="collapse">
-                <picture>
-                  <source type="image/webp"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-3-desktop-3x.webp 3x,
+                                       image/min/img-face-2-mobile.jpg"><img class="img-responsive img-circle lazyload" data-src="image/min/img-face-2-mobile.jpg" width="480" height="480" alt="Photo Mike's - music band"></picture></a><figcaption><div class="collapse" id="demo2"><ul class="list-unstyled"><li>Drummer</li><li>Loves drummin'</li><li>Member since 1988</li></ul></div></figcaption></figure></div><div class="col-sm-4"><figure><h3>Brad</h3><a href="#demo3" data-toggle="collapse"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-face-3-desktop-3x.webp 3x,
                                        image/min/img-face-3-desktop-2x.webp 2x,
-                                       image/min/img-face-3-desktop.webp">
-
-                  <source type="image/webp"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-3-tablet-3x.webp 3x,
+                                       image/min/img-face-3-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-face-3-tablet-3x.webp 3x,
                                        image/min/img-face-3-tablet-2x.webp 2x,
-                                       image/min/img-face-3-tablet.webp">
-
-                  <source type="image/webp"
-                          data-srcset="image/min/img-face-3-mobile-3x.webp 3x,
+                                       image/min/img-face-3-tablet.webp"><source type="image/webp" data-srcset="image/min/img-face-3-mobile-3x.webp 3x,
                                        image/min/img-face-3-mobile-2x.webp 2x,
-                                       image/min/img-face-3-mobile.webp">
-
-                  <source type="image/jpg"
-                          media="(min-width: 1200px)"
-                          data-srcset="image/min/img-face-3-desktop-3x.jpg 3x,
+                                       image/min/img-face-3-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-face-3-desktop-3x.jpg 3x,
                                        image/min/img-face-3-desktop-2x.jpg 2x,
-                                       image/min/img-face-3-desktop.jpg">
-
-                  <source type="image/jpg"
-                          media="(min-width: 768px)"
-                          data-srcset="image/min/img-face-3-tablet-3x.jpg 3x,
+                                       image/min/img-face-3-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-face-3-tablet-3x.jpg 3x,
                                        image/min/img-face-3-tablet-2x.jpg 2x,
-                                       image/min/img-face-3-tablet.jpg">
-
-                  <source type="image/jpg"
-                          data-srcset="image/min/img-face-3-mobile-3x.jpg 3x,
+                                       image/min/img-face-3-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-face-3-mobile-3x.jpg 3x,
                                        image/min/img-face-3-mobile-2x.jpg 2x,
-                                       image/min/img-face-3-mobile.jpg">
-
-                  <img class="img-responsive img-circle lazyload" data-src="image/min/img-face-3-mobile.jpg"
-                                                                  width="480"
-                                                                  height="480"
-                                                                  alt="Photo John's - music band">
-                </picture>
-              </a>
-              <figcaption>
-                <div class="collapse" id="demo3">
-                  <ul class="list-unstyled">
-                    <li>Bass player</li>
-                    <li>Loves math</li>
-                    <li>Member since 2005</li>
-                  </ul>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <!-- Gallery face end -->
-
-      </div>
-
-    </section>
-
-    <section id="tour">
-
-      <div class="container text-center">
-        <h2 tabindex="0">Tour dates</h2>
-        <p>Compelling natural resources co-create impact inspire transparent. Thought provoking think.</p>
-
-        <ul class="list-group text-left">
-          <li class="list-group-item">September <span class="label label-default">Sold Out!</span></li>
-          <li class="list-group-item">October <span class="label label-default">Sold Out!</span></li>
-          <li class="list-group-item">November <span class="badge">3</span></li>
-        </ul>
-
-        <!-- -Gallery tour -->
-        <div class="row small">
-          <div class="col-sm-4">
-            <figure tabindex="0">
-              <picture>
-                <source type="image/webp"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-1-desktop-3x.webp 3x,
+                                       image/min/img-face-3-mobile.jpg"><img class="img-responsive img-circle lazyload" data-src="image/min/img-face-3-mobile.jpg" width="480" height="480" alt="Photo John's - music band"></picture></a><figcaption><div class="collapse" id="demo3"><ul class="list-unstyled"><li>Bass player</li><li>Loves math</li><li>Member since 2005</li></ul></div></figcaption></figure></div></div></div></section><section id="tour"><div class="container text-center"><h2 tabindex="0">Tour dates</h2><p>Compelling natural resources co-create impact inspire transparent. Thought provoking think.</p><ul class="list-group text-left"><li class="list-group-item">September <span class="label label-default">Sold Out!</span></li><li class="list-group-item">October <span class="label label-default">Sold Out!</span></li><li class="list-group-item">November <span class="badge">3</span></li></ul><div class="row small"><div class="col-sm-4"><figure tabindex="0"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-work-1-desktop-3x.webp 3x,
                                      image/min/img-work-1-desktop-2x.webp 2x,
-                                     image/min/img-work-1-desktop.webp">
-
-                <source type="image/webp"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-1-tablet-3x.webp 3x,
+                                     image/min/img-work-1-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-work-1-tablet-3x.webp 3x,
                                      image/min/img-work-1-tablet-2x.webp 2x,
-                                     image/min/img-work-1-tablet.webp">
-
-                <source type="image/webp"
-                        data-srcset="image/min/img-work-1-mobile-3x.webp 3x,
+                                     image/min/img-work-1-tablet.webp"><source type="image/webp" data-srcset="image/min/img-work-1-mobile-3x.webp 3x,
                                      image/min/img-work-1-mobile-2x.webp 2x,
-                                     image/min/img-work-1-mobile.webp">
-
-                <source type="image/jpg"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-1-desktop-3x.jpg 3x,
+                                     image/min/img-work-1-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-work-1-desktop-3x.jpg 3x,
                                      image/min/img-work-1-desktop-2x.jpg 2x,
-                                     image/min/img-work-1-desktop.jpg">
-
-                <source type="image/jpg"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-1-tablet-3x.jpg 3x,
+                                     image/min/img-work-1-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-work-1-tablet-3x.jpg 3x,
                                      image/min/img-work-1-tablet-2x.jpg 2x,
-                                     image/min/img-work-1-tablet.jpg">
-
-                <source type="image/jpg"
-                        data-srcset="image/min/img-work-1-mobile-3x.jpg 3x,
+                                     image/min/img-work-1-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-work-1-mobile-3x.jpg 3x,
                                      image/min/img-work-1-mobile-2x.jpg 2x,
-                                     image/min/img-work-1-mobile.jpg">
-
-                <img class="img-responsive lazyload" data-src="image/min/img-work-1-mobile.jpg"
-                                                                width="480"
-                                                                height="480"
-                                                                alt="Paris">
-              </picture>
-              <figcaption>
-                <h3>Paris</h3>
-                <p>Friday 27 November 2020</p>
-                <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="col-sm-4">
-            <figure tabindex="0">
-              <picture>
-                <source type="image/webp"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-2-desktop-3x.webp 3x,
+                                     image/min/img-work-1-mobile.jpg"><img class="img-responsive lazyload" data-src="image/min/img-work-1-mobile.jpg" width="480" height="480" alt="Paris"></picture><figcaption><h3>Paris</h3><p>Friday 27 November 2020</p><button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button></figcaption></figure></div><div class="col-sm-4"><figure tabindex="0"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-work-2-desktop-3x.webp 3x,
                                      image/min/img-work-2-desktop-2x.webp 2x,
-                                     image/min/img-work-2-desktop.webp">
-
-                <source type="image/webp"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-2-tablet-3x.webp 3x,
+                                     image/min/img-work-2-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-work-2-tablet-3x.webp 3x,
                                      image/min/img-work-2-tablet-2x.webp 2x,
-                                     image/min/img-work-2-tablet.webp">
-
-                <source type="image/webp"
-                        data-srcset="image/min/img-work-2-mobile-3x.webp 3x,
+                                     image/min/img-work-2-tablet.webp"><source type="image/webp" data-srcset="image/min/img-work-2-mobile-3x.webp 3x,
                                      image/min/img-work-2-mobile-2x.webp 2x,
-                                     image/min/img-work-2-mobile.webp">
-
-                <source type="image/jpg"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-2-desktop-3x.jpg 3x,
+                                     image/min/img-work-2-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-work-2-desktop-3x.jpg 3x,
                                      image/min/img-work-2-desktop-2x.jpg 2x,
-                                     image/min/img-work-2-desktop.jpg">
-
-                <source type="image/jpg"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-2-tablet-3x.jpg 3x,
+                                     image/min/img-work-2-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-work-2-tablet-3x.jpg 3x,
                                      image/min/img-work-2-tablet-2x.jpg 2x,
-                                     image/min/img-work-2-tablet.jpg">
-
-                <source type="image/jpg"
-                        data-srcset="image/min/img-work-2-mobile-3x.jpg 3x,
+                                     image/min/img-work-2-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-work-2-mobile-3x.jpg 3x,
                                      image/min/img-work-2-mobile-2x.jpg 2x,
-                                     image/min/img-work-2-mobile.jpg">
-                <img class="img-responsive lazyload" data-src="image/min/img-work-2-mobile.jpg"
-                                                                width="480"
-                                                                height="480"
-                                                                alt="New York">
-              </picture>
-              <figcaption>
-                <h3>New York</h3>
-                <p>Saturday 28 November 2020</p>
-                <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="col-sm-4">
-            <figure tabindex="0">
-              <picture>
-                <source type="image/webp"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-3-desktop-3x.webp 3x,
+                                     image/min/img-work-2-mobile.jpg"><img class="img-responsive lazyload" data-src="image/min/img-work-2-mobile.jpg" width="480" height="480" alt="New York"></picture><figcaption><h3>New York</h3><p>Saturday 28 November 2020</p><button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button></figcaption></figure></div><div class="col-sm-4"><figure tabindex="0"><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-work-3-desktop-3x.webp 3x,
                                      image/min/img-work-3-desktop-2x.webp 2x,
-                                     image/min/img-work-3-desktop.webp">
-
-                <source type="image/webp"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-3-tablet-3x.webp 3x,
+                                     image/min/img-work-3-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-work-3-tablet-3x.webp 3x,
                                      image/min/img-work-3-tablet-2x.webp 2x,
-                                     image/min/img-work-3-tablet.webp">
-
-                <source type="image/webp"
-                        data-srcset="image/min/img-work-3-mobile-3x.webp 3x,
+                                     image/min/img-work-3-tablet.webp"><source type="image/webp" data-srcset="image/min/img-work-3-mobile-3x.webp 3x,
                                      image/min/img-work-3-mobile-2x.webp 2x,
-                                     image/min/img-work-3-mobile.webp">
-
-                <source type="image/jpg"
-                        media="(min-width: 1200px)"
-                        data-srcset="image/min/img-work-3-desktop-3x.jpg 3x,
+                                     image/min/img-work-3-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-work-3-desktop-3x.jpg 3x,
                                      image/min/img-work-3-desktop-2x.jpg 2x,
-                                     image/min/img-work-3-desktop.jpg">
-
-                <source type="image/jpg"
-                        media="(min-width: 768px)"
-                        data-srcset="image/min/img-work-3-tablet-3x.jpg 3x,
+                                     image/min/img-work-3-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-work-3-tablet-3x.jpg 3x,
                                      image/min/img-work-3-tablet-2x.jpg 2x,
-                                     image/min/img-work-3-tablet.jpg">
-
-                <source type="image/jpg"
-                        data-srcset="image/min/img-work-3-mobile-3x.jpg 3x,
+                                     image/min/img-work-3-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-work-3-mobile-3x.jpg 3x,
                                      image/min/img-work-3-mobile-2x.jpg 2x,
-                                     image/min/img-work-3-mobile.jpg">
-
-                <img class="img-responsive lazyload" data-src="image/min/img-work-3-mobile.jpg"
-                                                                width="480"
-                                                                height="480"
-                                                                alt="San Francisco">
-              </picture>
-              <figcaption>
-                <h3>San Francisco</h3>
-                <p>Sunday 29 November 2020</p>
-                <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <!-- Gallery tour end -->
-
-        <!-- -Modal -->
-        <div class="modal fade" id="modal" role="dialog" aria-label="Popup buy ticket">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button class="close glyphicon glyphicon-remove" data-dismiss="modal" type="button"><span class="sr-only">Close</span></button>
-                <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-              </div>
-              <div class="modal-body text-left">
-                <form action="#" method="get">
-                  <div class="form-group">
-                    <label for="number"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-                    <input class="form-control" id="number" type="number" name="number" placeholder="How many?">
-                  </div>
-                  <div class="form-group">
-                    <label for="email-cart"><span class="glyphicon glyphicon-user"></span> Send To</label>
-                    <input class="form-control" type="email" id="email-cart" name="email-cart" placeholder="Enter email">
-                  </div>
-                  <button class="btn btn-default btn-block" type="submit">Pay <span class="glyphicon glyphicon-ok"></span></button>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-default pull-left" type="button" data-dismiss="modal">Cansel <span class="glyphicon glyphicon-remove"></span></button>
-                <p>Need <a href="#">help?</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal end -->
-
-      </div>
-
-    </section>
-
-    <section id="contact">
-
-      <div class="container">
-        <h2 class="text-center" tabindex="0">Contact</h2>
-        <p class="text-center">We love our fans!</p>
-
-        <div class="row">
-
-          <!-- -Contacts -->
-          <div class="col-sm-6 col-lg-4 usr-contacts">
-            <p>Fan? Drop a note.</p>
-            <p><address tabindex="0"><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</address></p>
-            <p><span class="glyphicon glyphicon-phone"></span><a href="tel:"> Phone: +00 1515151515</a></p>
-            <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:"> Email: mail@mail.com</a></p>
-          </div>
-          <!-- Contacts end -->
-
-          <!-- -Form main -->
-          <div class="col-sm-6 col-sm-8">
-            <form action="#" method="get">
-              <div class="form-group">
-                <label class="sr-only" for="name">Name</label>
-                <input class="form-control" id="name" type="text" name="name" placeholder="Name">
-              </div>
-
-              <div class="form-group">
-                <label class="sr-only" for="email">Email</label>
-                <input class="form-control" id="email" type="email" name="email" placeholder="Email">
-              </div>
-
-              <div class="form-group">
-                <label class="sr-only" for="comment">Comment</label>
-                <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="5">
-                </textarea>
-              </div>
-
-              <button class="btn btn-lg btn-default pull-right" type="submit">Send</button>
-            </form>
-          </div>
-          <!-- Form main ends -->
-
-        </div>
-      </div>
-
-        <!-- -Nav tabs -->
-      <div class="container">
-        <h2 class="text-center" tabindex="0">From The Blog</h2>
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#menu-tab1">John</a></li>
-          <li><a data-toggle="tab" href="#menu-tab2">Mike</a></li>
-          <li><a data-toggle="tab" href="#menu-tab3">Brad</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="menu-tab1">
-            <h3>John, Manager</h3>
-            <p>Man, we've been on the road for some time now. Looking forward.</p>
-          </div>
-         <div class="tab-pane fade" id="menu-tab2">
-            <h3>Mike, Guitarist</h3>
-            <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-          </div>
-         <div class="tab-pane fade" id="menu-tab3">
-            <h3>Brad, Bass player</h3>
-            <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-          </div>
-        </div>
-        <!-- Nav tabs end -->
-
-      </div>
-
-    </section>
-
-  </main>
-  <!-- Main end -->
-
-  <!-- -Footer -->
-  <footer>
-
-    <!-- -Map -->
-    <picture>
-      <source type="image/webp"
-              media="(min-width: 1200px)"
-              data-srcset="image/min/img-map-desktop-3x.webp 3x,
+                                     image/min/img-work-3-mobile.jpg"><img class="img-responsive lazyload" data-src="image/min/img-work-3-mobile.jpg" width="480" height="480" alt="San Francisco"></picture><figcaption><h3>San Francisco</h3><p>Sunday 29 November 2020</p><button class="btn btn-lg btn-default" data-toggle="modal" data-target="#modal" type="button">Buy tickets</button></figcaption></figure></div></div><div class="modal fade" id="modal" role="dialog" aria-label="Popup buy ticket"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button class="close glyphicon glyphicon-remove" data-dismiss="modal" type="button"><span class="sr-only">Close</span></button><h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4></div><div class="modal-body text-left"><form action="#" method="get"><div class="form-group"><label for="number"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label> <input class="form-control" id="number" type="number" name="number" placeholder="How many?"></div><div class="form-group"><label for="email-cart"><span class="glyphicon glyphicon-user"></span> Send To</label> <input class="form-control" type="email" id="email-cart" name="email-cart" placeholder="Enter email"></div><button class="btn btn-default btn-block" type="submit">Pay <span class="glyphicon glyphicon-ok"></span></button></form></div><div class="modal-footer"><button class="btn btn-default pull-left" type="button" data-dismiss="modal">Cansel <span class="glyphicon glyphicon-remove"></span></button><p>Need <a href="#">help?</a></p></div></div></div></div></div></section><section id="contact"><div class="container"><h2 class="text-center" tabindex="0">Contact</h2><p class="text-center">We love our fans!</p><div class="row"><div class="col-sm-6 col-lg-4 usr-contacts"><p>Fan? Drop a note.</p><p></p><address tabindex="0"><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</address><p></p><p><span class="glyphicon glyphicon-phone"></span><a href="tel:"> Phone: +00 1515151515</a></p><p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:">Email: mail@mail.com</a></p></div><div class="col-sm-6 col-sm-8"><form action="#" method="get"><div class="form-group"><label class="sr-only" for="name">Name</label> <input class="form-control" id="name" type="text" name="name" placeholder="Name"></div><div class="form-group"><label class="sr-only" for="email">Email</label> <input class="form-control" id="email" type="email" name="email" placeholder="Email"></div><div class="form-group"><label class="sr-only" for="comment">Comment</label> <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="5">
+                </textarea></div><button class="btn btn-lg btn-default pull-right" type="submit">Send</button></form></div></div></div><div class="container"><h2 class="text-center" tabindex="0">From The Blog</h2><ul class="nav nav-tabs"><li class="active"><a data-toggle="tab" href="#menu-tab1">John</a></li><li><a data-toggle="tab" href="#menu-tab2">Mike</a></li><li><a data-toggle="tab" href="#menu-tab3">Brad</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="menu-tab1"><h3>John, Manager</h3><p>Man, we've been on the road for some time now. Looking forward.</p></div><div class="tab-pane fade" id="menu-tab2"><h3>Mike, Guitarist</h3><p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p></div><div class="tab-pane fade" id="menu-tab3"><h3>Brad, Bass player</h3><p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p></div></div></div></section></main><footer><picture><source type="image/webp" media="(min-width: 1200px)" data-srcset="image/min/img-map-desktop-3x.webp 3x,
                            image/min/img-map-desktop-2x.webp 2x,
-                           image/min/img-map-desktop.webp">
-
-      <source type="image/webp"
-              media="(min-width: 768px)"
-              data-srcset="image/min/img-map-tablet-3x.webp 3x,
+                           image/min/img-map-desktop.webp"><source type="image/webp" media="(min-width: 768px)" data-srcset="image/min/img-map-tablet-3x.webp 3x,
                            image/min/img-map-tablet-2x.webp 2x,
-                           image/min/img-map-tablet.webp">
-
-      <source type="image/webp"
-              data-srcset="image/min/img-map-mobile-3x.webp 3x,
+                           image/min/img-map-tablet.webp"><source type="image/webp" data-srcset="image/min/img-map-mobile-3x.webp 3x,
                            image/min/img-map-mobile-2x.webp 2x,
-                           image/min/img-map-mobile.webp">
-
-      <source type="image/jpg"
-              media="(min-width: 1200px)"
-              data-srcset="image/min/img-map-desktop-3x.jpg 3x,
+                           image/min/img-map-mobile.webp"><source type="image/jpg" media="(min-width: 1200px)" data-srcset="image/min/img-map-desktop-3x.jpg 3x,
                            image/min/img-map-desktop-2x.jpg 2x,
-                           image/min/img-map-desktop.jpg">
-
-      <source type="image/jpg"
-              media="(min-width: 768px)"
-              data-srcset="image/min/img-map-tablet-3x.jpg 3x,
+                           image/min/img-map-desktop.jpg"><source type="image/jpg" media="(min-width: 768px)" data-srcset="image/min/img-map-tablet-3x.jpg 3x,
                            image/min/img-map-tablet-2x.jpg 2x,
-                           image/min/img-map-tablet.jpg">
-
-      <source type="image/jpg"
-              data-srcset="image/min/img-map-mobile-3x.jpg 3x,
+                           image/min/img-map-tablet.jpg"><source type="image/jpg" data-srcset="image/min/img-map-mobile-3x.jpg 3x,
                            image/min/img-map-mobile-2x.jpg 2x,
-                           image/min/img-map-mobile.jpg">
-
-      <img class="img-responsive lazyload" data-src="image/min/img-map-mobile.jpg"
-                                                      width="480"
-                                                      height="320"
-                                                      alt="Map location">
-    </picture>
-    <!-- Map end -->
-
-    <!-- -Copyrights -->
-    <div class="container text-center">
-      <p>Create by <a href="../../author.html">Typenote.io</a></p>
-
-      <p>Powered by <a href="https://getbootstrap.com/">Bootstrap</a></p>
-    </div>
-    <!-- Copyright end -->
-
-  </footer>
-  <!-- Footer end -->
-
-  <script src="js/focus-visible.js" async></script>
-  <script src="js/default.js"       async></script>
-
-</body>
-</html>
+                           image/min/img-map-mobile.jpg"><img class="img-responsive lazyload" data-src="image/min/img-map-mobile.jpg" width="480" height="320" alt="Map location"></picture><div class="container text-center"><p>Create by <a href="../../author.html">Typenote.io</a></p><p>Powered by <a href="https://getbootstrap.com/">Bootstrap</a></p></div></footer><script src="js/focus-visible.js" async></script><script src="js/default.js" async></script></body></html>

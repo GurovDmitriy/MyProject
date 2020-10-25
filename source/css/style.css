@@ -2553,11 +2553,11 @@ _:-ms-fullscreen::after,
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-css, 70%), var(--colorWhite, #ffffff) var(--skill-css, 70%));
 }
 .skills-list__item-js {
-  --skill-js: 10%;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, #3c3b3d), color-stop(10%, #ffffff));
-  background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+  --skill-js: 20%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #3c3b3d), color-stop(20%, #ffffff));
+  background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--colorGrey, #3c3b3d)), to(var(--colorWhite, #ffffff)));
-  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-js, 10%), var(--colorWhite, #ffffff) var(--skill-js, 10%));
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-js, 20%), var(--colorWhite, #ffffff) var(--skill-js, 20%));
 }
 .skills-list__item-bootstrap {
   --skill-bootstrap: 40%;
@@ -2595,18 +2595,18 @@ _:-ms-fullscreen::after,
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-less, 50%), var(--colorWhite, #ffffff) var(--skill-less, 50%));
 }
 .skills-list__item-sass {
-  --skill-sass: 10%;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, #3c3b3d), color-stop(10%, #ffffff));
-  background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+  --skill-sass: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #3c3b3d), color-stop(50%, #ffffff));
+  background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--colorGrey, #3c3b3d)), to(var(--colorWhite, #ffffff)));
-  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-sass, 10%), var(--colorWhite, #ffffff) var(--skill-sass, 10%));
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-sass, 50%), var(--colorWhite, #ffffff) var(--skill-sass, 50%));
 }
-.skills-list__item-stylus {
-  --skill-stylus: 10%;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, #3c3b3d), color-stop(10%, #ffffff));
-  background-image: linear-gradient(90deg, #3c3b3d 10%, #ffffff 10%);
+.skills-list__item-gulp {
+  --skill-gulp: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #3c3b3d), color-stop(50%, #ffffff));
+  background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--colorGrey, #3c3b3d)), to(var(--colorWhite, #ffffff)));
-  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-stylus, 10%), var(--colorWhite, #ffffff) var(--skill-stylus, 10%));
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-gulp, 50%), var(--colorWhite, #ffffff) var(--skill-gulp, 50%));
 }
 .skills-list__item-grunt {
   --skill-grunt: 50%;

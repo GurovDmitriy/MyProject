@@ -19,11 +19,23 @@ burger.onclick = function () {
 // btn up
 
 const btnUp = document.querySelector('.btn-up');
+const btnUpLink = document.querySelector('.copyright__date > .copyright__link');
 const headerLogo = document.querySelector('.header__logo');
 
 btnUp.onclick = function () {
   topFunction(headerLogo);
 };
+
+btnUpLink.onclick = function () {
+  topFunction(headerLogo);
+};
+
+btnUpLink.onkeyup = function (evt) {
+  if (evt.keyCode === 13) {
+    topFunction(headerLogo);
+  }
+};
+
 
 function topFunction(element) {
   document.body.scrollTop = 0; // For Safari

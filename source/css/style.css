@@ -1679,32 +1679,16 @@ _:-ms-fullscreen,
   }
 }
 .main__caption {
-  position: relative;
   margin-top: 0;
   margin-bottom: 9px;
-  padding-left: 38px;
   font-family: 'Roboto-Mono', 'Arial', sans-serif;
   font-size: 20px;
   line-height: 32px;
   font-weight: 500;
   font-weight: var(--weightFont5, 500);
-  text-transform: uppercase;
 }
 .main__caption:last-child {
   margin-bottom: 0;
-}
-.main__caption::after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 0;
-  display: block;
-  width: 26px;
-  height: 2px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
 }
 @media (min-width: 600px) {
   .main__caption {
@@ -1719,6 +1703,30 @@ _:-ms-fullscreen,
     font-size: 25px;
     line-height: 45px;
   }
+}
+h2.main__caption {
+  text-transform: uppercase;
+}
+h3.main__caption {
+  text-transform: lowercase;
+}
+.main__caption-dash {
+  position: relative;
+  display: inline-block;
+  padding-left: 32px;
+}
+.main__caption-dash::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 22px;
+  height: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
 }
 .main__caption-works,
 .main__caption-skills {

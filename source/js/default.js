@@ -19,21 +19,10 @@ burger.onclick = function () {
 // btn up
 
 const btnUp = document.querySelector('.btn-up');
-const btnUpLink = document.querySelector('.copyright__date > .copyright__link');
 const headerLogo = document.querySelector('.header__logo');
 
 btnUp.onclick = function () {
   topFunction(headerLogo);
-};
-
-btnUpLink.onclick = function () {
-  topFunction(headerLogo);
-};
-
-btnUpLink.onkeyup = function (evt) {
-  if (evt.keyCode === 13) {
-    topFunction(headerLogo);
-  }
 };
 
 
@@ -43,4 +32,43 @@ function topFunction(element) {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
   element.focus();
+}
+
+// tooltip
+
+const tooltipLink = document.querySelectorAll('a:not([href]):not(a.menu__link)');
+const tolltipTag = 'span';
+const tolltipClass = 'tooltip';
+
+for (let i = 0; i < tooltipLink.length; i++) {
+
+  tooltipLink[i].onclick = function() {
+    tooltip(tooltipLink, i, tolltipTag, tolltipClass);
+  };
+
+  tooltipLink[i].onkeyup = function(evt) {
+    if(evt.keyCode === 13) {
+      tooltip(tooltipLink, i, tolltipTag, tolltipClass);
+    }
+  };
+};
+
+
+function tooltip(tlLink, i, tlTag, tlClass) {
+
+  if (!tlLink[i].querySelector(tlTag + '.' + tlClass)) {
+
+    tlLink[i].style.position = 'relative';
+    let tooltip = document.createElement(tlTag);
+
+    tooltip.textContent ='вы уже тут';
+
+    tooltip.setAttribute('class', tlClass);
+    tlLink[i].appendChild(tooltip);
+
+    setTimeout(function() {
+      tlLink[i].removeChild(tooltip);
+      tlLink[i].removeAttribute('style');
+    }, 2000);
+  }
 }

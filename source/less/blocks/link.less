@@ -1,0 +1,24 @@
+.link {
+  font-family: 'Roboto-Mono', 'Arial', sans-serif;
+  font-weight: 300;
+  font-weight: var(--weightFont3, 300);
+  text-decoration: underline;
+
+  transition: font-weight 0.2s, color 0.2s;
+
+  &:hover {
+    font-weight: 500;
+    font-weight: var(--weightFont5, 500);
+  }
+
+  &:active {
+    color: #a2a1a6;
+    color: var(--colorGrey3, #a2a1a6);
+  }
+}
+
+// hack for ie
+_:-ms-fullscreen, :root .links-list__link {
+  transition: none;
+}
+// hack for ie end

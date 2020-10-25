@@ -40,7 +40,7 @@ gulp.task('serverDev', function(done) {
   });
   done();
   gulp.watch('source/less/**/*.less', gulp.series('cssCompil'));
-  gulp.watch(['source/*.html', 'source/js/*.js']).on('change', browserSync.reload);
+  gulp.watch(['source/*.html', 'source/guides/*.html', 'source/js/*.js']).on('change', browserSync.reload);
 });
 
 /* style css compile, autoprefixer, source map */

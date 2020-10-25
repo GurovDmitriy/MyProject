@@ -1,0 +1,70 @@
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+
+  width: 100px;
+  padding: 5px 10px;
+
+  .fontTextSmallMobile();
+  text-align: center;
+  color: #cbc9cf;
+  color: var(--colorWhite2, #cbc9cf);
+
+  border-radius: 2px;
+  background-color: #1e1e1f;
+  background-color: var(--colorBlack2, #1e1e1f);
+
+  opacity: 0;
+  transform: translateX(-50%);
+
+  animation-name: tooltip;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+
+    border: 5px solid transparent;
+    border-top-color: #1e1e1f;
+    border-top-color: var(--colorBlack2, #1e1e1f);
+
+    transform: translateX(-50%);
+  }
+}
+
+.footer .tooltip {
+  background-color: #cbc9cf;
+  background-color: var(--colorWhite2, #cbc9cf);
+
+  color: #1e1e1f;
+  color: var(--colorBlack2, #1e1e1f);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+
+    border: 5px solid transparent;
+    border-top-color: #cbc9cf;
+    border-top-color: var(--colorWhite2, #cbc9cf);
+  }
+}
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

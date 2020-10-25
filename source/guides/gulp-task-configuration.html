@@ -3,33 +3,30 @@
 <head>
 
   <meta charset="utf-8">
-  <title>typenote.io &mdash; заметки для веб-разработки</title>
+  <title>Typenote.io &mdash; заметки для веб-разработки: Gulp конфигурация задач</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="typenote.io — ссылки на ресурсы для бесплатного обучения таким языкам веб-разработки, как HTML, CSS, JavaScript и многое другое.">
-  <meta name="keywords"    content="typenote.io, gurov, dmitriy, гуров, дмитрий, html, css, javascript, php, sql, bootstrap, jquery, react, angular, обучение, бесплатно, ссылки, веб-разработка, верстка, веб-программирование, сайт, книги">
+  <meta name="description" content="Typenote.io &mdash; Gulp: простая и эффективная конфигурация задач">
+  <meta name="keywords"    content="typenote.io, gurov, dmitriy, гуров, дмитрий, gulp, sass, less, configuration, task, browsersync, livereload, svginject, cssmin, htmlmin">
   <meta name="author"      content="Гуров Дмитрий">
 
-  <meta name="google-site-verification" content="MsiTiX_K8W5U6zgRmAxlaZliiVHr--9oeFbA0_DZlqc" />
-  <meta name="yandex-verify" content="54bb32c86584aa29" />
+  <link rel="preload" href="../font/woff2/SpecialElite-Regular.woff2"         as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../font/woff2/OpenSans-Regular.woff2"             as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../font/woff2/RobotoMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="preload" href="font/woff2/SpecialElite-Regular.woff2"         as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="font/woff2/OpenSans-Regular.woff2"             as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="font/woff2/RobotoMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../css/style.css" as="style">
 
-  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
 
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <link rel="icon"                     type="image/svg+xml"           href="/typewriter.svg">
-  <link rel="apple-touch-icon"         sizes="180x180"                href="/apple-touch-icon.png">
-  <link rel="icon"                     type="image/png"               sizes="32x32"                 href="/favicon-32x32.png">
-  <link rel="icon"                     type="image/png"               sizes="194x194"               href="/favicon-194x194.png">
-  <link rel="icon"                     type="image/png"               sizes="192x192"               href="/android-chrome-192x192.png">
-  <link rel="icon"                     type="image/png"               sizes="16x16"                 href="/favicon-16x16.png">
-  <link rel="manifest"                 href="/site.webmanifest">
-  <link rel="mask-icon"                href="/safari-pinned-tab.svg"  color="#5bbad5">
+  <link rel="icon"                     type="image/svg+xml"           href="../typewriter.svg">
+  <link rel="apple-touch-icon"         sizes="180x180"                href="../apple-touch-icon.png">
+  <link rel="icon"                     type="image/png"               sizes="32x32"                 href="../favicon-32x32.png">
+  <link rel="icon"                     type="image/png"               sizes="194x194"               href="../favicon-194x194.png">
+  <link rel="icon"                     type="image/png"               sizes="192x192"               href="../android-chrome-192x192.png">
+  <link rel="icon"                     type="image/png"               sizes="16x16"                 href="../favicon-16x16.png">
+  <link rel="manifest"                 href="../site.webmanifest">
+  <link rel="mask-icon"                href="../safari-pinned-tab.svg"  color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
   <meta name="theme-color"             content="#ffffff">
@@ -56,16 +53,15 @@
     // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="../js/picturefill.js" async></script>
 
-  <script src="js/webp.js"        async></script>
+  <script src="../js/webp.js"        async></script>
 
 </head>
 
 <!-- Navigation -->
 
 <!-- -SVG sprite -->
-
 <!-- -Header -->
 <!-- -Logo -->
 <!-- -Nav -->
@@ -78,7 +74,7 @@
 <!-- -Footer -->
 <!-- -Social list-->
 <!-- -Copyright -->
-
+<!-- -Footer end -->
 
 <body class="body">
 
@@ -101,14 +97,14 @@
     <!-- -Logo -->
     <div class="header__wrapper-logo">
 
-      <a class="logo header__logo" tabindex="0">
+      <a class="logo header__logo" href="../index.html">
         <svg class="logo__icon" width="40" height="51">
           <use xlink:href="#icon-typewriter"></use>
-        </svg><span class="visually-hidden">typenote.io</span></a>
+        </svg><span class="visually-hidden">Typenote.io</span></a>
 
-      <span class="header__title">typenote.io</span>
+      <span class="header__title">Typenote.io</span>
 
-      <h1 class="header__caption"><span class="visually-hidden">typenote.io &mdash;</span>Заметки для веб-разработки</h1>
+      <h1 class="header__caption"><span class="visually-hidden">Typenote.io &mdash;</span>Заметки для веб-разработки</h1>
 
     </div>
     <!-- Logo end -->
@@ -132,35 +128,35 @@
         <ul class="menu">
 
           <li class="menu__item">
-            <a class="menu__link menu__link--active" tabindex="0">Главная
+            <a class="menu__link" href="../index.html">Главная
             <svg class="menu__link-icon" width="20" height="20">
               <use xlink:href="#icon-right-arrow"></use>
             </svg></a>
           </li>
 
           <li class="menu__item">
-            <a class="menu__link" href="education.html">Обучение
+            <a class="menu__link" href="../education.html">Обучение
             <svg class="menu__link-icon" width="20" height="20">
               <use xlink:href="#icon-right-arrow"></use>
             </svg></a>
           </li>
 
           <li class="menu__item">
-            <a class="menu__link" href="blog.html">Блог
+            <a class="menu__link menu__link--active" href="../blog.html">Блог
             <svg class="menu__link-icon" width="20" height="20">
               <use xlink:href="#icon-right-arrow"></use>
             </svg></a>
           </li>
 
           <li class="menu__item">
-            <a class="menu__link" href="other.html">Разное
+            <a class="menu__link" href="../other.html">Разное
             <svg class="menu__link-icon" width="20" height="20">
               <use xlink:href="#icon-right-arrow"></use>
             </svg></a>
           </li>
 
           <li class="menu__item">
-            <a class="menu__link" href="author.html">Автор
+            <a class="menu__link" href="../author.html">Автор
               <svg class="menu__link-icon" width="20" height="20">
               <use xlink:href="#icon-right-arrow"></use>
             </svg></a>
@@ -178,42 +174,42 @@
 
       <source type="image/webp"
               media="(min-width: 1100px)"
-              srcset="image/img-typewriter-desktop-3x.webp 3x,
-                      image/img-typewriter-desktop-2x.webp 2x,
-                      image/img-typewriter-desktop.webp">
+              srcset="../image/img-work-desktop-3x.webp 3x,
+                      ../image/img-work-desktop-2x.webp 2x,
+                      ../image/img-work-desktop.webp">
 
       <source type="image/webp"
               media="(min-width: 600px)"
-              srcset="image/img-typewriter-tablet-3x.webp 3x,
-                      image/img-typewriter-tablet-2x.webp 2x,
-                      image/img-typewriter-tablet.webp">
+              srcset="../image/img-work-tablet-3x.webp 3x,
+                      ../image/img-work-tablet-2x.webp 2x,
+                      ../image/img-work-tablet.webp">
 
       <source type="image/webp"
-              srcset="image/img-typewriter-mobile-3x.webp 3x,
-                      image/img-typewriter-mobile-2x.webp 2x,
-                      image/img-typewriter-mobile.webp">
+              srcset="../image/img-work-mobile-3x.webp 3x,
+                      ../image/img-work-mobile-2x.webp 2x,
+                      ../image/img-work-mobile.webp">
 
       <source type="image/jpg"
               media="(min-width: 1100px)"
-              srcset="image/img-typewriter-desktop-3x.jpg 3x,
-                      image/img-typewriter-desktop-2x.jpg 2x,
-                      image/img-typewriter-desktop.jpg">
+              srcset="../image/img-work-desktop-3x.jpg 3x,
+                      ../image/img-work-desktop-2x.jpg 2x,
+                      ../image/img-work-desktop.jpg">
 
       <source type="image/jpg"
               media="(min-width: 600px)"
-              srcset="image/img-typewriter-tablet-3x.jpg 3x,
-                      image/img-typewriter-tablet-2x.jpg 2x,
-                      image/img-typewriter-tablet.jpg">
+              srcset="../image/img-work-tablet-3x.jpg 3x,
+                      ../image/img-work-tablet-2x.jpg 2x,
+                      ../image/img-work-tablet.jpg">
 
       <source type="image/jpg"
-              srcset="image/img-typewriter-mobile-3x.jpg 3x,
-                      image/img-typewriter-mobile-2x.jpg 2x,
-                      image/img-typewriter-mobile.jpg">
+              srcset="../image/img-work-mobile-3x.jpg 3x,
+                      ../image/img-work-mobile-2x.jpg 2x,
+                      ../image/img-work-mobile.jpg">
 
       <img class="header__image"
-           src="image/img-typewriter-mobile.jpg"
+           src="../image/img-work-mobile.jpg"
            width="480" height="270"
-           alt="Клавиатура старой печатной машинки, черно-белая фотография">
+           alt="Старая пустая комната с рабочим столом, черно-белое фото">
 
     </picture>
     <!-- Header image end -->
@@ -226,37 +222,1009 @@
   <!-- -Main -->
   <main class="main" id="main">
 
+    <article>
+
+    <div class="main__section">
+      <h2 class="main__caption" tabindex="0"><span class="main__caption-dash">Gulp:</span> простая и эффективная конфигурация задач.</h2>
+      <p class="time-article">Обновлено <time datetime="2020-10-30 13:31">2020.10.30</time></p>
+      <p class="main__text">Данный гайд рассчитан на новичков. Здесь разобрана тема автоматизации
+        процессов верстки сайта на Gulp, а в качестве пре-процессора будет выступать Sass.
+        В конце статьи будут ссылки на готовые стартовые репозитории на Gulp Sass и Less, Grunt Sass и Less.
+        Что будем автоматизировать:</p>
+      <ul class="list">
+        <li>Компиляция стилей из фала пре-процессора и живой сервер разработки</li>
+        <li>Генерация изображений в формат <mark class="mark">webp</mark></li>
+        <li>Минификация <mark class="mark">html</mark>,
+                        <mark class="mark">css</mark>,
+                        <mark class="mark">js</mark>,
+                        изображений <mark class="mark">jpg</mark>,
+                        <mark class="mark">png</mark>,
+                        <mark class="mark">svg</mark></li>
+        <li>Сборка спрайта <mark class="mark">svg</mark> и его автоматическая вставка в разметку <mark class="mark">html</mark></li>
+        <li>Конвертация шрифтов форматов <mark class="mark">woff</mark>,
+                                         <mark class="mark">woff2</mark> из
+                                         <mark class="mark">ttf</mark></li>
+        <li>Сборка production-версии сайта</li>
+      </ul>
+      <p class="main__text">Автоматизация задач будет настроена таким образом чтобы поддерживать актуальность файлов при
+        их изменении. Статья не будет охватывать базовую настройку консоли, установку Node.js, Gulp
+        или синтаксис JavaScript &mdash; стандартной документации на официальных сайтах достаточно.</p>
+    </div>
+
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0"><span class="main__caption-dash">Обучение</span></h2>
-      <p class="main__text">В разделе собрана информация для изучения таких языков веб-программирования, как HTML, CSS, JavaScript, PHP, SQL, Bootstrap, jQuery, React, Angular и другие. Представленные ресурсы являются полностью бесплатными. Вы можете узнать как научиться делать сайты с нуля или освежить свои навыки в той или иной области. Возможно для кого-то это станет хорошим стартом на пути к получению новых знаний, интересной и увлекательной удаленной работы со свободным графиком.</p>
-      <a class="main__link" href="education.html">Перейти в раздел
-        <svg class="main__link-icon" width="20" height="20">
-          <use xlink:href="#icon-right-arrow"></use>
-        </svg>
-      </a>
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Node.js</span> & Gulp: установка и настройка.</h3>
+      <p class="main__text">К каждому пакету, который мы будем конфигурировать, есть
+        документация к использованию. Для начала необходимо установить и настроить консоль, Node.js и Gulp:</p>
+      <ul class="list">
+        <li><a class="link" href="https://cmder.net/" rel="nofollow">Cmder</a></li>
+        <li><a class="link" href="https://nodejs.org/" rel="nofollow">Node.js</a></li>
+        <li><a class="link" href="https://gulpjs.com/" rel="nofollow">Gulp</a></li>
+        <li><a class="link" href="https://gulpjs.com/plugins" rel="nofollow">Плагины Gulp</a></li>
+        <li><a class="link" href="https://www.npmjs.com/" rel="nofollow">Документация к пакетам Npm</a></li>
+        <li><a class="link" href="https://sass-lang.com/" rel="nofollow">Sass</a></li>
+      </ul>
     </section>
 
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0"><span class="main__caption-dash">Блог</span></h2>
-      <p class="main__text">В блоге описаны наиболее распространенные задачи по верстке того или иного элемента и варианты их решения. Разобраны примеры неудачной реализации элементов сайтов крупных компаний. Обзор языков веб-программирования, возможности редакторов кода, какие есть обязательные критерии верстки сайтов, какими инструментами можно автоматизировать процессы создания сайта, обо всем об этом коротко.</p>
-      <a class="main__link" href="blog.html">Перейти в раздел
-        <svg class="main__link-icon" width="20" height="20">
-          <use xlink:href="#icon-right-arrow"></use>
-        </svg>
-      </a>
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Gulp:</span> установка плагинов.</h3>
+      <p class="main__text">Переходим в папку проекта и поочередно набираем в консоли команды для установки плагинов, которые мы будем настраивать:</p>
+<pre class="code-box"><code class="code-box__code shell">/* console command */
+$ gulp i --save-dev gulp
+$ gulp i --save-dev gulp-rename
+$ gulp i --save-dev del
+$ gulp i --save-dev browser-sync
+$ gulp i --save-dev gulp-sass
+$ gulp i --save-dev node-sass
+$ gulp i --save-dev gulp-sourcemaps
+$ gulp i --save-dev gulp-autoprefixer
+$ gulp i --save-dev gulp-htmlmin
+$ gulp i --save-dev gulp-csso
+$ gulp i --save-dev terser
+$ gulp i --save-dev gulp-terser
+$ gulp i --save-dev gulp-webp
+$ gulp i --save-dev gulp-image
+$ gulp i --save-dev gulp-svgstore
+$ gulp i --save-dev gulp-inject
+$ gulp i --save-dev gulp-ttf2woff
+$ gulp i --save-dev gulp-ttf2woff2</code></pre>
     </section>
 
     <section class="main__section">
-      <h2 class="main__caption" tabindex="0"><span class="main__caption-dash">Разное</span></h2>
-      <p class="main__text">В разделе собраны ссылки на бесплатные веб-ресурсы, программы и книги, которые не касаются веб-разработки или касаются ее косвенно. Изучение английского языка, навык слепого набора текста на клавиатуре, как научиться запоминать большой объем информации, развивающие игры, все то, что может помочь при выполнении ежедневных задач на компьютере или даст возможность разнообразить отдых и провести время с пользой.</p>
-      <a class="main__link" href="other.html">Перейти в раздел
-        <svg class="main__link-icon" width="20" height="20">
-          <use xlink:href="#icon-right-arrow"></use>
-        </svg>
-      </a>
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulpfile.js:</span> подключение плагинов.</h3>
+      <p class="main__text">В корне директории проекта создайте файл <mark class="mark">gulpfile.js</mark> и подключите пакеты для настроек:</p>
+<pre class="code-box"><code class="code-box__code js">/* file gulpfile.js */
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const htmlmin = require('gulp-htmlmin');
+const csso = require('gulp-csso');
+const terser = require('terser');
+const gulpTerser = require('gulp-terser');
+const webp = require('gulp-webp');
+const image = require('gulp-image');
+const svgstore = require('gulp-svgstore');
+const inject = require('gulp-inject');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');</code></pre>
     </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Development:</span> настройка задач для разработки.</h3>
+      <p class="main__text">Настраиваем задачи для разработки.</p>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync</span> & watch: настраиваем live-reload сервер.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp serverDev</code> для запуска сервера в папке <mark class="mark">
+        source</mark> &mdash; папка в которой будем хранить все исходники, а также настраиваем слежение за
+        изменениями файлов <mark class="mark">css</mark>,
+                           <mark class="mark">html</mark> и
+                           <mark class="mark">js</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* server and watcher for dev */
+gulp.task('serverDev', function(done) {
+  browserSync.init({
+    server: {
+       baseDir: 'source'
+    },
+  });
+  done();
+  gulp.watch('source/sass/**/*.scss', gulp.series('cssCompil'));
+  gulp.watch(['source/*.html', 'source/js/*.js']).on('change', browserSync.reload);
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">sass:</span> сборка стилей из файла пре-процессора.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp cssCompil</code> для сборки стилей из файлов <mark class="mark">scss</mark>, генерируем исходную карту, для связывания стилей пре-процессорного файла и выходного <mark class="mark">css</mark> и расставим префиксы:</p>
+<pre class="code-box"><code class="code-box__code js">/* css compile, auto-prefixer, source map */
+gulp.task('cssCompil', function() {
+  return gulp.src('source/sass/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('source/css'))
+    .pipe(browserSync.stream());
+});
+</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">webp:</span> генерация изображений формата webp.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp webpGen</code> и настроим генерацию изображений <mark class="mark">webp</mark>:</p>
+      <pre class="code-box"><code class="code-box__code js">/* webp gen */
+gulp.task('webpGen', function() {
+  return gulp.src('source/image/*.{jpg,png}')
+    .pipe(webp({quality: 70}))
+    .pipe(gulp.dest('source/image'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">image:</span> сжатие svg.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp svgMin</code> с помощью пакета <mark class="mark">gulp-image</mark> и настраиваем сжатие <mark class="mark">svg</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* svg minify */
+gulp.task('svgMin', function() {
+  return gulp.src('source/image/*.svg')
+    .pipe(image({svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']}))
+    .pipe(gulp.dest('source/image'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">svgstore & inject:</span> спрайт из svg.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp svgSprite</code> настроим сборку спрайта из <mark class="mark">svg</mark> файлов
+        и вставим его в разметку <mark class="mark">html</mark>.
+        Все иконки <mark class="mark">svg</mark> будут собираться на лету в спрайт, в их <mark class="mark">id</mark> будет добавлен префикс <mark class="mark">icon-</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* svg sprite end inject in html */
+gulp.task('svgSprite', function() {
+  const svgs = gulp.src('source/image/*.svg', {base: 'source/image'})
+    .pipe(rename({prefix: 'icon-'}))
+    .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+
+  return gulp.src('source/**/*.html')
+    .pipe(inject(svgs, {transform: fileContents}))
+    .pipe(gulp.dest('source'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">ttf2woff:</span> конвертируем ttf в woff и woff2.</h3>
+      <p class="main__text">Регистрируем команды <code class="code">gulp fontGenWoff</code> и <code class="code">gulp fontGenWoff2</code>
+      и настроим генерацию шрифтов в форматы <mark class="mark">woff</mark> и <mark class="mark">woff2</mark>:</p>
+      <pre class="code-box"><code class="code-box__code js">/* font gen woff */
+gulp.task('fontGenWoff', function(){
+  return gulp.src('source/font/ttf/*.ttf')
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('source/font/woff'));
+});
+/* font gen woff2 */
+gulp.task('fontGenWoff2', function(){
+  return gulp.src('source/font/ttf/*.ttf')
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest('source/font/woff2'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">del:</span> очистка.</h3>
+      <p class="main__text">Регистрируем команды <code class="code">gulp cleanWebp</code> и <code class="code">gulp cleanFont</code> и
+        настраиваем
+        удаление файлов cгенерированных шрифтов и изображений формата <mark class="mark">webp</mark>. Это нужно для актуальности сгенерированных файлов, если мы меняем исходные файлы шрифтов <mark class="mark">ttf</mark> и изображений <mark class="mark">jpg</mark>, <mark class="mark">png</mark> и <mark class="mark">gif</mark>, чтобы в каталоге не оставались файлы которые мы заменили или удалили:</p>
+      <pre class="code-box">
+<code class="code-box__code js">/* delete webp for refresh */
+gulp.task('cleanWebp', function() {
+  return del('source/image/*.webp');
+});
+/* delete font woff woff2 for refresh */
+gulp.task('cleanFont', function() {
+  return del(['source/font/*', '!source/font/ttf']);
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Production:</span> настройка задач для production-версии.</h3>
+      <p class="main__text">Настраиваем задачи для production-версии сайта.</p>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">htmlmin:</span> сжатие html.</h3>
+      <p class="main__text">Регистрируем команды <code class="code">gulp htmlMin</code>, <code class="code">gulp cssMin</code>,
+        <code class="code">gulp jsMin</code> и настраиваем сжатие <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark> файлов для <mark class="mark">build</mark> версии сайта:</p>
+<pre class="code-box"><code class="code-box__code js">/* html minify */
+gulp.task('htmlMin', function() {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    }))
+    .pipe(gulp.dest('build'));
+});
+/* css minify */
+gulp.task('cssMin', function() {
+  return gulp.src('build/css/*.css')
+    .pipe(csso({comments: false}))
+    .pipe(gulp.dest('build/css'));
+});
+/* js minify */
+gulp.task('jsMin', function() {
+  return gulp.src('build/js/*.js')
+    .pipe(gulpTerser({format: {comments: false}}, terser.minify))
+    .pipe(gulp.dest('build/js'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">image:</span> сжатие изображений.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp imageMin</code> с помощью все того же пакета, с которым мы ранее настраивали сжатие <mark class="mark">svg</mark>, настроим сжатие изображений <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* image minify */
+gulp.task('imageMin', function() {
+  return gulp.src('build/image/*')
+    .pipe(image({
+      optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
+      pngquant: ['--speed=1', '--force', 256],
+      zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
+      jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
+      mozjpeg: ['-optimize', '-progressive'],
+      gifsicle: ['--optimize'],
+    }))
+    .pipe(gulp.dest('build/image'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">clean:</span> очистка.</h3>
+      <p class="main__text">Регистрируем команды <code class="code">gulp cleanFull</code> и <code class="code">gulp clean</code> и настраиваем
+        очистку папки <mark class="mark">build</mark>, нам необходимо иметь возможность очищать как всю папку <mark class="mark">build</mark>, так и все кроме папки <mark class="mark">image</mark>. Часто для обновления production-версии сайта
+        мы будем вносить поправки в файлах <mark class="mark">font</mark>, <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark> &mdash; поэтому нет смысла постоянно сжимать изображения, хорошее сжатие <mark class="mark">jpg</mark> и <mark class="mark">png</mark> занимает много времени:</p>
+<pre class="code-box"><code class="code-box__code js">/* delete all build folder */
+gulp.task('cleanFull', function() {
+  return del('build');
+});
+/* delete build folder without image  */
+gulp.task('clean', function() {
+  return del(['build/*', '!build/image']);
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash"><mark class="mark">copy:</mark></span> копирование файлов.</h3>
+      <p class="main__text">Регистрируем команды <code class="code">gulp copyFull</code> и <code class="code">gulp copy</code> и настраиваем
+       копирование всех файлов на первом уровне вложенности где могут быть <mark class="mark">html</mark>, файлы иконок для сайта, записи <mark class="mark">cname</mark> и многое другое, и на остальных уровнях.
+       Исключаем копирование исходников пре-процессора, шрифтов <mark class="mark">ttf</mark>, <mark class="mark">map</mark>, <mark class="mark">svg</mark>(спрайт в разметке, исходники не нужны). Как и в предыдущей задаче, нам необходимо разделить
+       копирование всех необходимых файлов из <mark class="mark">source</mark> папки и иметь возможность копирования всех файлов без папки <mark class="mark">image</mark>, если мы не вносили в нее изменений:</p>
+<pre class="code-box"><code class="code-box__code js">/* copy all files for build */
+gulp.task('copyFull', function() {
+  return gulp.src([
+    'source/**',
+    '!source/sass/**',
+    '!source/font/ttf/**',
+    '!source/css/*.map',
+    '!source/image/*.svg',
+    ], {base: 'source'})
+    .pipe(gulp.dest('build'));
+});
+/* copy all files for build without image */
+gulp.task('copy', function() {
+  return gulp.src([
+    'source/**',
+    '!source/sass/**',
+    '!source/font/ttf/**',
+    '!source/css/*.map',
+    '!source/image/**',
+    ], {base: 'source'})
+    .pipe(gulp.dest('build'));
+});</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> сервер для тестирования.</h3>
+      <p class="main__text">Регистрируем команду <code class="code">gulp serverTest</code> и настраиваем запуск сервера в <mark class="mark">build</mark> папке &mdash; допустим для отладки lighthouse в режиме разработчика в браузере:</p>
+<pre class="code-box"><code class="code-box__code js">/* server for test only product version */
+gulp.task('serverTest', function(done) {
+  browserSync.init({
+    server: {
+       baseDir: 'build'
+    },
+  });
+  done();
+});
+</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Development:</span> настройка команд для разработки.</h3>
+      <p class="main__text">Настраиваем команды для разработки. Функции <code class="code">gulp.series()</code> и <code class="code">gulp.parallel()</code>
+      позволяют настраивать команды для последовательного и параллельного выполнения задач.</p>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fullstart.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp fullstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark> <mark class="mark">woff2</mark> и последующую
+        их генерацию из <mark class="mark">ttf</mark>, очистку <mark class="mark">webp</mark> изображений и их генерацию, компиляцию стилей, сжатие <mark class="mark">svg</mark>, генерацию спрайта и вставку его в <mark class="mark">html</mark> файлы. Эта команда рекомендуется как первая к запуску, для генерации всех нужных файлов для разработки или обновления файлов для разработки:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp fullstart */
+exports.fullstart = gulp.series(
+  gulp.parallel(
+    'cleanFont',
+    'cleanWebp'
+  ),
+  gulp.parallel(
+    'cssCompil',
+    'fontGenWoff',
+    'fontGenWoff2',
+    'webpGen',
+    'svgMin'
+  ),
+  'svgSprite'
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> start.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp start</code>. Эта команда запускает компиляцию стилей,
+      сервер для разработки и следит за изменениями файлов <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>. Эта команда будет использоваться часто:</p>
+      <pre class="code-box">
+<code class="code-box__code js">/* console command: gulp start */
+  exports.start = gulp.series(
+    'cssCompil',
+    'serverDev'
+  );</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> imgstart.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp imgstart</code>. Эта команда запускает очистку изображений <mark class="mark">webp</mark> и их последующую
+        компиляцию. Эта команда будет использоваться если мы внесли изменения в изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp imgstart */
+exports.imgstart = gulp.series(
+  'cleanWebp',
+  'webpGen'
+);
+</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gilp</span> svgstart.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp svgstart</code>. Эта команда запускает сжатие <mark class="mark">svg</mark>, сборку спрайта <mark class="mark">svg</mark>
+       и вставку его в разметку <mark class="mark">html</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">
+exports.svgstart = gulp.series(
+  'svgMin',
+  'svgSprite'
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fontstart.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp fontstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark>, <mark class="mark">woff2</mark> и
+        последующую их генерацию из  <mark class="mark">ttf</mark>. Эта команда будет использоваться если мы внесли изменения в <mark class="mark">ttf</mark> шрифты:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp fontstart */
+exports.fontstart = gulp.series(
+  'cleanFont',
+  gulp.parallel(
+    'fontGenWoff',
+    'fontGenWoff2'
+  ),
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Production:</span> настройка команд для production-версии.</h3>
+      <p class="main__text">Настраиваем команды для production-версии сайта.</p>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fullbuild.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp fullbuild</code>. Эта команда запускает очистку папки <mark class="mark">build</mark>,
+      далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>, изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark>. Команда будет использоваться для полной сборки или обновления production-версии:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp fullbuild */
+exports.fullbuild = gulp.series(
+  'cleanFull',
+  'copyFull',
+  gulp.parallel(
+    'htmlMin',
+    'cssMin',
+    'jsMin'
+  ),
+  'imageMin'
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> build.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp build</code>. Эта команда запускает очистку папки <mark class="mark">build</mark> но не папки <mark class="mark">image</mark> внутри,
+      далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp build */
+exports.build = gulp.series(
+  'clean',
+  'copy',
+  gulp.parallel(
+    'htmlMin',
+    'cssMin',
+    'jsMin'
+  )
+);
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> testbuild.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">gulp testbuild</code>. Эта команда запускает сервер для отладки готовой сборки в <mark class="mark">build</mark>
+        папке. Зачем <code class="code">gulp testbuild</code> когда можно <code class="code">gulp serverTest</code> &mdash; для симметрии,
+        да это одно и тоже, если нужно будет еще что то запустить с сервером &mdash; допишем:</p>
+<pre class="code-box"><code class="code-box__code js">/* console command: gulp testbuild */
+exports.testbuild = gulp.series(
+  'serverTest'
+);</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">package.json:</span> npm run build.</h3>
+      <p class="main__text">Настраиваем команду <code class="code">npm run build</code> в секции <mark class="mark">scripts</mark> в файле <mark class="mark">package.json</mark> в корне нашего проекта.
+        Эта команда запускает последовательно
+        команды <code class="code">gulp fullstart</code> и <code class="code">gulp fullbuild</code> &mdash; тем самым запуская
+        тестирование или подготовку рабочей среды. Полностью содержимое, в корне проекта, файла <mark class="mark">package.json</mark>:</p>
+<pre class="code-box"><code class="code-box__code json">{
+  "name": "gulp-sass-start-repository",
+  "version": "1.0.0",
+  "description": "gulp sass start repository",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^6.2.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^1.4.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^4.14.1",
+    "terser": "^5.3.7"
+  },
+  "scripts": {
+    "build": "gulp fullstart && gulp fullbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "",
+    ""
+  ],
+  "browserslist": [
+    "defaults"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulpfile.js:</span> весь код.</h3>
+      <p class="main__text">Полностью содержимое конфигураций в корне проекта файла <mark class="mark">gulpfile.js</mark>:</p>
+<pre class="code-box"><code class="code-box__code js">const gulp = require('gulp');
+const rename = require('gulp-rename');
+const del = require('del');
+
+const browserSync = require('browser-sync').create();
+
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+
+const htmlmin = require('gulp-htmlmin');
+const csso = require('gulp-csso');
+const terser = require('terser');
+const gulpTerser = require('gulp-terser');
+
+const webp = require('gulp-webp');
+const image = require('gulp-image');
+const svgstore = require('gulp-svgstore');
+const inject = require('gulp-inject');
+
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+
+
+/*----------------------------------------*/
+/* tasks for development on source folder */
+/*----------------------------------------*/
+
+
+/* server and watcher for dev */
+
+gulp.task('serverDev', function(done) {
+  browserSync.init({
+    server: {
+       baseDir: 'source'
+    },
+  });
+  done();
+  gulp.watch('source/sass/**/*.scss', gulp.series('cssCompil'));
+  gulp.watch(['source/*.html', 'source/js/*.js']).on('change', browserSync.reload);
+});
+
+/* style css compile, autoprefixer, source map */
+
+gulp.task('cssCompil', function() {
+  return gulp.src('source/sass/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('source/css'))
+    .pipe(browserSync.stream());
+});
+
+/* webp gen */
+
+gulp.task('webpGen', function() {
+  return gulp.src('source/image/*.{jpg,png}')
+    .pipe(webp({quality: 70}))
+    .pipe(gulp.dest('source/image'));
+});
+
+/* svg minify */
+
+gulp.task('svgMin', function() {
+  return gulp.src('source/image/*.svg')
+    .pipe(image({svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']}))
+    .pipe(gulp.dest('source/image'));
+});
+
+/* svg sprite end inject in html */
+
+gulp.task('svgSprite', function() {
+  const svgs = gulp.src('source/image/*.svg', {base: 'source/image'})
+    .pipe(rename({prefix: 'icon-'}))
+    .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+
+  return gulp.src('source/**/*.html')
+    .pipe(inject(svgs, {transform: fileContents}))
+    .pipe(gulp.dest('source'));
+});
+
+/* font gen woff */
+
+gulp.task('fontGenWoff', function(){
+  return gulp.src('source/font/ttf/*.ttf')
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('source/font/woff'));
+});
+
+/* font gen woff2 */
+
+gulp.task('fontGenWoff2', function(){
+  return gulp.src('source/font/ttf/*.ttf')
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest('source/font/woff2'));
+});
+
+/* delete webp for refresh */
+
+gulp.task('cleanWebp', function() {
+  return del('source/image/*.webp');
+});
+
+/* delete font woff woff2 for refresh */
+
+gulp.task('cleanFont', function() {
+  return del(['source/font/*', '!source/font/ttf']);
+});
+
+
+/*----------------------------------------*/
+/* tasks for production on build folder   */
+/*----------------------------------------*/
+
+
+/* html minify */
+
+gulp.task('htmlMin', function() {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    }))
+    .pipe(gulp.dest('build'));
+});
+
+/* css minify */
+
+gulp.task('cssMin', function() {
+  return gulp.src('build/css/*.css')
+    .pipe(csso({comments: false}))
+    .pipe(gulp.dest('build/css'));
+});
+
+/* js minify */
+
+gulp.task('jsMin', function() {
+  return gulp.src('build/js/*.js')
+    .pipe(gulpTerser({format: {comments: false}}, terser.minify))
+    .pipe(gulp.dest('build/js'));
+});
+
+/* image minify */
+
+gulp.task('imageMin', function() {
+  return gulp.src('build/image/*')
+    .pipe(image({
+      optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
+      pngquant: ['--speed=1', '--force', 256],
+      zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
+      jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
+      mozjpeg: ['-optimize', '-progressive'],
+      gifsicle: ['--optimize'],
+    }))
+    .pipe(gulp.dest('build/image'));
+});
+
+/* delete all build folder */
+
+gulp.task('cleanFull', function() {
+  return del('build');
+});
+
+/* delete build folder without image  */
+
+gulp.task('clean', function() {
+  return del(['build/*', '!build/image']);
+});
+
+/* copy all files for build */
+
+gulp.task('copyFull', function() {
+  return gulp.src([
+    'source/**',
+    '!source/sass/**',
+    '!source/font/ttf/**',
+    '!source/css/*.map',
+    '!source/image/*.svg',
+    ], {base: 'source'})
+    .pipe(gulp.dest('build'));
+});
+
+/* copy all files for build without image */
+
+gulp.task('copy', function() {
+  return gulp.src([
+    'source/**',
+    '!source/sass/**',
+    '!source/font/ttf/**',
+    '!source/css/*.map',
+    '!source/image/**',
+    ], {base: 'source'})
+    .pipe(gulp.dest('build'));
+});
+
+/* server for test only product version */
+
+gulp.task('serverTest', function(done) {
+  browserSync.init({
+    server: {
+       baseDir: 'build'
+    },
+  });
+  done();
+});
+
+
+/*----------------------------------------*/
+/* config commands for development        */
+/*----------------------------------------*/
+
+
+/* console command: gulp fullstart */
+
+exports.fullstart = gulp.series(
+  gulp.parallel(
+    'cleanFont',
+    'cleanWebp'
+  ),
+  gulp.parallel(
+    'cssCompil',
+    'fontGenWoff',
+    'fontGenWoff2',
+    'webpGen',
+    'svgMin'
+  ),
+  'svgSprite'
+);
+
+/* console command: gulp start */
+
+exports.start = gulp.series(
+  'cssCompil',
+  'serverDev'
+);
+
+
+/* console command: gulp imgstart */
+
+exports.imgstart = gulp.series(
+  'cleanWebp',
+  'webpGen'
+);
+
+/* console command: gulp svgstart */
+
+exports.svgstart = gulp.series(
+  'svgMin',
+  'svgSprite'
+);
+
+/* console command: gulp fontstart */
+
+exports.fontstart = gulp.series(
+  'cleanFont',
+  gulp.parallel(
+    'fontGenWoff',
+    'fontGenWoff2'
+  ),
+);
+
+
+/*----------------------------------------*/
+/* config commands for production         */
+/*----------------------------------------*/
+
+
+/* console command: gulp fullbuild */
+
+exports.fullbuild = gulp.series(
+  'cleanFull',
+  'copyFull',
+  gulp.parallel(
+    'htmlMin',
+    'cssMin',
+    'jsMin'
+  ),
+  'imageMin'
+);
+
+/* console command: gulp build */
+
+exports.build = gulp.series(
+  'clean',
+  'copy',
+  gulp.parallel(
+    'htmlMin',
+    'cssMin',
+    'jsMin'
+  )
+);
+
+/* console command: gulp testbuild */
+
+exports.testbuild = gulp.series(
+  'serverTest'
+);
+
+/*
+  Gulp
+
+  for development
+
+  first launch after download repository
+  console command:
+
+  - `npm i`          - install devDependencies
+  - `npm run build`  - full update dev and build
+
+
+  daily launch
+  console command:
+
+  - `gulp fullstart` - first start, full update for development (css, webp, svgmin, svgsprite inject in html, fontgen)
+  - `gulp start`     - compilation of styles and live reload server
+  - `gulp imgstart`  - webp update and generation
+  - `gulp svgstart`  - svg update minify and svgsprite inject to html
+  - `gulp fontstart` - font update convert to woff & woff2
+
+
+  for production
+
+  Compressing images is a long task,
+  it makes no sense to run it every time,
+  when you update the build without changing
+  the jpg png webp, so there are two commands - fullbuild and build
+
+  console command:
+
+  - `gulp fullbuild` - full build production version and min all files
+  - `gulp build`     - copy font, copy and minify html, css, js
+  - `gulp testbuild` - server for test only (for example for testing lighthouse)
+
+  when developing:
+
+  open the second tab in the browser
+  http: // localhost: 3001 / (or the address that browsersync points for gui to the console)
+  to open the server settings.
+  You can turn on outline highlighting or grid for debugging
+  in the debag section
+
+  enjoy
+*/</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">html.</span></h3>
+      <p class="main__text">Для автоматической вставки в разметку <mark class="mark">html</mark> файла спрайта <mark class="mark">svg</mark>
+        нам необходимо добавить следующий код:</p>
+<pre class="code-box"><code class="code-box__code">&lt;!-- html files --&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body class=&quot;body&quot;&gt;
+  &lt;div style=&quot;display: none&quot;&gt;
+    &lt;!-- inject:svg --&gt;
+    &lt;!-- endinject --&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">summary.</span></h3>
+      <p class="main__text">При скачивании репозитория с <mark class="mark">GitHub</mark> в корне проекта выполнить <code class="code">npm i</code>
+        &mdash; произойдет установка всех пакетов из файла <mark class="mark">package.json</mark> в секции <mark class="mark">devDependencies</mark>.
+        Выполнить <code class="code">npm run build</code> &mdash; выполнятся команды <code class="code">gulp fullstart</code> и
+        <code class="code">gulp fullbuld</code>. Далее пользуемся одиночными командами которые мы настроили:</p>
+<pre class="code-box"><code class="code-box__code">daily launch
+console command:
+
+- gulp fullstart - first start, full update for development (css, webp, svgmin, svgsprite inject in html, fontgen)
+- gulp start     - compilation of styles and live reload server
+- gulp imgstart  - webp update and generation
+- gulp svgstart  - svg update minify and svgsprite inject to html
+- gulp fontstart - font update convert to woff & woff2
+
+for production
+console command:
+
+- gulp fullbuild - full build production version and min all files
+- gulp build     - copy font, copy and minify html, css, js
+- gulp testbuild - server for test only (for example for testing lighthouse)</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">.gitignore.</span></h3>
+      <p class="main__text">Настраиваем <mark class="mark">.gitignore</mark> файл в корне проекта. Убираем из отслеживания гита все сгенерированные файлы. Храним только исходники:</p>
+<pre class="code-box"><code class="code-box__code"># Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.a
+*.so
+*~
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# User #
+######################
+.idea
+*.ai
+*.pdf
+*.psd
+*.sublime*
+/source/image/sprite.svg
+/source/image/*.webp
+/source/css
+/source/font/woff
+/source/font/woff2
+**/node_modules
+**/build</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Структура</span> проекта.</h3>
+      <p class="main__text">В зависимости от разной файловой структуры проекта, будут меняться директории в настройках пакетов.
+        Структура папок при рассмотренных настройках:</p>
+<pre class="code-box"><code class="code-box__code">/* folders and files */
+Project/
+  |   |
+  |   build/
+  |   source/
+  |   |    |
+  |   |    font/
+  |   |      |
+  |   |      ttf/
+  |   |      woff/
+  |   |      woff2/
+  |   |
+  |   image/
+  |   js/
+  |   sass/
+  |   |  |
+  |   |  blocks/
+  |   |  global/
+  |   |  styles.scss
+  |   |
+  |   index.html
+  |
+  node_modules/
+  gulpfile.js
+  package.json
+  .gitignore</code></pre>
+    </section>
+
+    <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Стартовые</span> репозитории.</h3>
+      <p class="main__text">На этом все. По ссылке ниже готовые стартовые репозитории:</p>
+      <ul class="list">
+        <li>Gulp and Sass</li>
+        <li>Gulp and Less</li>
+        <li>Grunt and Sass</li>
+        <li>Grunt and Less</li>
+      </ul>
+      <a class="link" href="https://github.com/GurovDmitriy/Start-repository">Start-repository</a>
+    </section>
+
 
     <button class="btn-up" type="button"><span class="visually-hidden">К началу</span></button>
+
+  </article>
 
   </main>
   <!-- Main end -->
@@ -271,7 +1239,7 @@
 
       <li class="social-list__item">
         <a class="social-list__link" href="https://github.com/GurovDmitriy">
-          <span class="visually-hidden">GitHub: github.com/GurovDmitriy</span>
+          <span class="visually-hidden">Github: github.com/GurovDmitriy</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-github"></use>
           </svg>
@@ -298,7 +1266,7 @@
 
       <li class="social-list__item">
         <a class="social-list__link" href="https://codepen.io/gurovdmitriy">
-          <span class="visually-hidden">CodePen: codepen.io/gurovdmitriy</span>
+          <span class="visually-hidden">Codepen: codepen.io/gurovdmitriy</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-codepen"></use>
           </svg>
@@ -306,7 +1274,7 @@
       </li>
 
     </ul>
-    <!-- Social end -->
+    <!-- Social list end-->
 
     <!-- -Copyright -->
     <div class="copyright footer__item">
@@ -314,7 +1282,7 @@
       <div class="copyright__date">
         <span>&copy;</span>
         <time datetime="2020-06-15 13:31">2020</time>
-        <a class="copyright__link copyright__link-up" tabindex="0">typenote.io</a>
+        <a class="copyright__link" href="../index.html">Typenote.io</a>
         <span>Gurov Dmitriy</span>
       </div>
 
@@ -329,10 +1297,11 @@
     <!-- Copyright end -->
 
   </footer>
-  <!-- Footer -->
+  <!-- -Footer end -->
 
-  <script src="js/default.js"       async></script>
-  <script src="js/focus-visible.js" async></script>
-
+  <script src="../js/default.js"       async></script>
+  <script src="../js/focus-visible.js" async></script>
+  <script src="../js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

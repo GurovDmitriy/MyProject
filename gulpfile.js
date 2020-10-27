@@ -7,8 +7,7 @@ const browserSync = require('browser-sync').create();
 
 const less = require('gulp-less');
 const sourcemaps = require('gulp-sourcemaps');
-const LessAutoprefix = require('less-plugin-autoprefix');
-const autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
+const autoprefixer = require('gulp-autoprefixer');
 
 const htmlmin = require('gulp-htmlmin');
 const csso = require('gulp-csso');
@@ -50,9 +49,9 @@ gulp.task('cssCompil', function() {
     .pipe(sourcemaps.init())
     .pipe(less({
       paths: [path.join('source/less', 'less', 'includes')],
-      plugins: [autoprefix],
       relativeUrls: true
     }))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('source/css'))
     .pipe(browserSync.stream());
@@ -144,7 +143,11 @@ gulp.task('htmlMin', function() {
 
 gulp.task('cssMin', function() {
   return gulp.src('docs/css/*.css')
-    .pipe(csso({comments: false}))
+    .pipe(csso({
+      comments: false,
+      restructure: false,
+      sourceMap: false
+    }))
     .pipe(gulp.dest('docs/css'));
 });
 
@@ -163,7 +166,7 @@ gulp.task('jsbabel', function() {
     .pipe(babel({
         presets: ['@babel/env']
     }))
-    .pipe(gulp.dest('docs/js/default.js'));
+    .pipe(gulp.dest('docs/js'));
 });
 
 /* image minify */
@@ -222,13 +225,12 @@ gulp.task('copy', function() {
 
 /* server for test only product version */
 
-gulp.task('serverTest', function(done) {
+gulp.task('serverTest', function() {
   browserSync.init({
     server: {
        baseDir: 'docs'
     },
   });
-  done();
 });
 
 
@@ -297,12 +299,12 @@ exports.fontstart = gulp.series(
 exports.fullbuild = gulp.series(
   'cleanFull',
   'copyFull',
+  'jsbabel',
   gulp.parallel(
     'htmlMin',
     'cssMin',
     'jsMin'
   ),
-  'jsbabel',
   'imageMin'
 );
 
@@ -311,12 +313,12 @@ exports.fullbuild = gulp.series(
 exports.build = gulp.series(
   'clean',
   'copy',
+  'jsbabel',
   gulp.parallel(
     'htmlMin',
     'cssMin',
     'jsMin'
-  ),
-  'jsbabel'
+  )
 );
 
 /* console command: gulp testbuild */

@@ -68,12 +68,15 @@ ul {
 }
 
 img {
+  width: 100%;
+  height: auto;
   line-height: 0;
+  font-size: 0;
 }
 
 picture {
   width: 100%;
-  height: auto;
+
 }
 
 figure {
@@ -224,6 +227,14 @@ button:focus:not(:focus-visible) {
   color: var(--colorWhite2, #cbc9cf);
   background-color: #1e1e1f;
   background-color: var(--colorBlack2, #1e1e1f);
+}
+
+code::selection,
+code-box ::selection {
+  color: #1e1e1f;
+  color:  var(--colorBlack2, #1e1e1f);
+  background-color: #cbc9cf;
+  background-color: var(--colorWhite2, #cbc9cf);
 }
 
 footer ::selection {

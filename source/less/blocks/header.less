@@ -97,8 +97,6 @@
 
 .header__image {
   display: block;
-  width: 100%;
-  height: auto;
   margin-bottom: 15px;
 
   @media (min-width: @tabletWidth) {
@@ -109,6 +107,16 @@
     margin-bottom: 32px;
   }
 }
+
+// hack for ie
+_:-ms-fullscreen, :root .header__image {
+  height: calc(100vw * 0.5625);
+
+  @media (min-width: @desktopWidth) {
+    height: auto;
+  }
+}
+// hack for ie end
 
 .header__text {
   .container(@mobileContainer);

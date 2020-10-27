@@ -22,4 +22,12 @@
     <loc>https://www.typenote.io/author.html</loc>
   </url>
 
+  <url>
+    <loc>https://www.typenote.io/guides/gulp-task-configuration.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.typenote.io/guides/grunt-task-configuration.html</loc>
+  </url>
+
 </urlset>

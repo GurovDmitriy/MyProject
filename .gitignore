@@ -45,8 +45,6 @@ Thumbs.db
 *.pdf
 *.psd
 *.sublime*
-*.map
-*.css
 **/source/image/sprite.svg
 **/source/image/*.webp
 **/source/css

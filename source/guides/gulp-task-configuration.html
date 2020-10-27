@@ -171,43 +171,36 @@
 
     <!-- -Header image -->
     <picture>
-
-      <source type="image/webp"
+     <source type="image/webp"
               media="(min-width: 1100px)"
               srcset="../image/img-work-desktop-3x.webp 3x,
                       ../image/img-work-desktop-2x.webp 2x,
                       ../image/img-work-desktop.webp">
-
-      <source type="image/webp"
+     <source type="image/webp"
               media="(min-width: 600px)"
               srcset="../image/img-work-tablet-3x.webp 3x,
                       ../image/img-work-tablet-2x.webp 2x,
                       ../image/img-work-tablet.webp">
-
-      <source type="image/webp"
+     <source type="image/webp"
               srcset="../image/img-work-mobile-3x.webp 3x,
                       ../image/img-work-mobile-2x.webp 2x,
                       ../image/img-work-mobile.webp">
-
-      <source type="image/jpg"
+     <source type="image/jpg"
               media="(min-width: 1100px)"
               srcset="../image/img-work-desktop-3x.jpg 3x,
                       ../image/img-work-desktop-2x.jpg 2x,
                       ../image/img-work-desktop.jpg">
-
-      <source type="image/jpg"
+     <source type="image/jpg"
               media="(min-width: 600px)"
               srcset="../image/img-work-tablet-3x.jpg 3x,
                       ../image/img-work-tablet-2x.jpg 2x,
                       ../image/img-work-tablet.jpg">
-
-      <source type="image/jpg"
+     <source type="image/jpg"
               srcset="../image/img-work-mobile-3x.jpg 3x,
                       ../image/img-work-mobile-2x.jpg 2x,
                       ../image/img-work-mobile.jpg">
-
-      <img class="header__image"
-           src="../image/img-work-mobile.jpg"
+     <img class="header__image"
+           src="../image/img-work-desktop.jpg"
            width="480" height="270"
            alt="Старая пустая комната с рабочим столом, черно-белое фото">
 
@@ -452,7 +445,11 @@ gulp.task('htmlMin', function() {
 /* css minify */
 gulp.task('cssMin', function() {
   return gulp.src('build/css/*.css')
-    .pipe(csso({comments: false}))
+    .pipe(csso({
+      comments: false,
+      restructure: false,
+      sourceMap: false
+    }))
     .pipe(gulp.dest('build/css'));
 });
 /* js minify */
@@ -530,13 +527,12 @@ gulp.task('copy', function() {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> сервер для тестирования.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp serverTest</code> и настраиваем запуск сервера в <mark class="mark">build</mark> папке &mdash; допустим для отладки lighthouse в режиме разработчика в браузере:</p>
 <pre class="code-box"><code class="code-box__code js">/* server for test only product version */
-gulp.task('serverTest', function(done) {
+gulp.task('serverTest', function() {
   browserSync.init({
     server: {
        baseDir: 'build'
     },
   });
-  done();
 });</code></pre>
     </section>
 
@@ -861,7 +857,11 @@ gulp.task('htmlMin', function() {
 
 gulp.task('cssMin', function() {
   return gulp.src('build/css/*.css')
-    .pipe(csso({comments: false}))
+    .pipe(csso({
+      comments: false,
+      restructure: false,
+      sourceMap: false
+    }))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -928,13 +928,12 @@ gulp.task('copy', function() {
 
 /* server for test only product version */
 
-gulp.task('serverTest', function(done) {
+gulp.task('serverTest', function() {
   browserSync.init({
     server: {
        baseDir: 'build'
     },
   });
-  done();
 });
 
 

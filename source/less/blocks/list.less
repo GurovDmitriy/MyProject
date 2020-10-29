@@ -1,19 +1,13 @@
 .list {
-  margin-bottom: 10px;
-  padding-left: 20px;
+  margin-bottom: @spaceM;
+  padding-left: @spaceXL;
   list-style-type: disc;
 
   &:last-child {
     margin-bottom: 0;
   }
+}
 
-  @media (min-width: @tabletWidth) {
-    margin-bottom: 18px;
-    padding-left: 30px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 24px;
-    padding-left: 40px;
-  }
+.list li {
+  margin-bottom: @spaceS;
 }

@@ -1,17 +1,7 @@
 .mark {
-  padding: 0 5px;
+  padding-left: @spaceS;
+  padding-right: @spaceS;
 
-  border-radius: 2px;
-  background-color: #cbc9cf;
-  background-color: var(--colorWhite2, #cbc9cf);
-
-  @media (min-width: @tabletWidth) {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-  @media (min-width: @tabletWidth) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+  border-radius: @borderRadiusDefault;
+  .backgroundColorWhite2();
 }

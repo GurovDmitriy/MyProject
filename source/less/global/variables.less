@@ -1,17 +1,8 @@
-/* переменные css */
+/* var css */
 
 :root {
-  /* переменные жирности шрифта */
 
-  --weightFont1: 100;
-  --weightFont2: 200;
-  --weightFont3: 300;
-  --weightFont4: 400;
-  --weightFont5: 500;
-  --weightFont6: 600;
-  --weightFont7: 700;
-
-  /* переменные цвета */
+  /* var color */
 
   --colorBlack: #000000;
   --colorWhite: #ffffff;
@@ -22,26 +13,66 @@
   --colorGrey: #3c3b3d;
   --colorGrey2: #6d6c70;
   --colorGrey3: #a2a1a6;
+
 }
 
-/* переменные less */
+/* var less */
 
-/* переменные вьюпорта */
+/* font */
+
+@fontSizeMobile: 16px;
+@fontSizeDesktop: 18px;
+@fontSizeDesktop: 20px;
+
+@lineHeightDefault: 1.625;
+
+@fontWeight1: 100;
+@fontWeight2: 200;
+@fontWeight3: 300;
+@fontWeight4: 400;
+@fontWeight5: 500;
+@fontWeight6: 600;
+@fontWeight7: 700;
+
+/* var viewport */
 
 @mobileWidth: 280px;
 @tabletWidth: 600px;
 @desktopWidth: 1100px;
 
-/* переменные центровщика */
+/* var centered block */
 
-@mobileContainer: 90%;
-@tabletContainer: 85%;
-@desktopContainer: 1000px;
+@container: 90%;
+@maxWidthContainer: 1000px;
 
-/* переменные плотности экрана */
+/* var retina */
 
 @retinaDppx2x: 1.5dppx;
 @retinaDpi2x: 144dpi;
 
 @retinaDppx3x: 2.4dppx;
 @retinaDpi3x: 220dpi;
+
+/* var font-family */
+
+@fontFamilyMain: 'Open-Sans', 'Arial', sans-serif;
+@fontFamilySpecial: 'Special-Elite', 'Arial', sans-serif;
+@fontFamilyVariety: 'Roboto-Mono', 'Arial', sans-serif;
+
+/* margin padding box */
+
+@spaceXS: 0.25rem;
+@spaceS: 0.5rem;
+@spaceM: 1rem;
+@spaceL: 1.5rem;
+@spaceXL: 2rem;
+@space2XL: 2.5rem;
+
+
+/* border-radius */
+
+@borderRadiusDefault: 2px;
+
+/* burger size */
+
+@burgerSize: 3rem;

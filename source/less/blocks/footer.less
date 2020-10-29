@@ -1,54 +1,20 @@
 .footer {
   flex-grow: 1;
 
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: @space2XL;
+  padding-bottom: @space2XL;
 
-  color: #cbc9cf;
-  color: var(--colorWhite2, #cbc9cf);
-
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
-
-  @media (min-width: @tabletWidth) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
-
-.footer__item {
-  .container(@mobileContainer);
-  margin-bottom: 36px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @tabletWidth) {
-    .container(@tabletContainer);
-    margin-bottom: 54px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    .container(@desktopContainer);
-    margin-bottom: 72px;
-  }
+  .colorWhite2();
+  .backgroundColorBlack2();
 }
 
 .footer-logo {
   &:hover {
-    color: #6d6c70;
-    color: var(--colorGrey2, #6d6c70);
+    .colorGrey2();
   }
 
   &:active {
-    color: #3c3b3d;
-    color: var(--colorGrey, #3c3b3d);
+    .colorGrey();
   }
 
   &:hover .footer__logo-icon {

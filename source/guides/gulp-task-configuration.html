@@ -100,11 +100,11 @@
       <a class="logo header__logo" href="../index.html">
         <svg class="logo__icon" width="40" height="51">
           <use xlink:href="#icon-typewriter"></use>
-        </svg><span class="visually-hidden">typenote.io</span></a>
+        </svg><span class="sr-only">typenote.io</span></a>
 
       <span class="header__title">typenote.io</span>
 
-      <h1 class="header__caption"><span class="visually-hidden">typenote.io &mdash;</span>Заметки для веб-разработки</h1>
+      <h1 class="header__caption"><span class="sr-only">typenote.io &mdash;</span>Заметки для веб-разработки</h1>
 
     </div>
     <!-- Logo end -->
@@ -114,12 +114,12 @@
     <!-- -Nav -->
     <nav class="nav">
 
-      <h2 class="visually-hidden">Главная навигация</h2>
+      <h2 class="sr-only">Главная навигация</h2>
 
       <!-- -Burger -->
       <button class="burger" type="button">
         <span class="burger__inner"></span>
-        <span class="visually-hidden">Меню</span>
+        <span class="sr-only">Меню</span>
       </button>
       <!-- Burger end -->
 
@@ -1208,6 +1208,21 @@ Project/
     </section>
 
     <section class="main__section">
+      <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> remote debug.</h3>
+      <p class="main__text">При запуске сервера консоль сигнализирует о том что можно в соседней вкладке
+        открыть GUI <mark class="mark">browserSync</mark>, как в примере это адрес <code class="code">http://localhost:3001</code> &mdash; здесь можно включить и настроить сетку и аутлайны блоков для отладки:</p>
+<pre class="code-box"><code class="code-box__code bash">/* console */
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.1.236:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------</code></pre>
+    </section>
+
+    <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Стартовые</span> репозитории.</h3>
       <p class="main__text">На этом все. По ссылке ниже готовые стартовые репозитории:</p>
       <ul class="list">
@@ -1220,7 +1235,7 @@ Project/
     </section>
 
 
-    <button class="btn-up" type="button"><span class="visually-hidden">К началу</span></button>
+    <button class="btn-up" type="button"><span class="sr-only">К началу</span></button>
 
   </article>
 
@@ -1230,14 +1245,14 @@ Project/
   <!-- -Footer -->
   <footer class="footer">
 
-    <h2 class="visually-hidden">Контакты</h2>
+    <h2 class="sr-only">Контакты</h2>
 
     <!-- -Social list-->
     <ul class="social-list footer__item">
 
       <li class="social-list__item">
         <a class="social-list__link" href="https://github.com/GurovDmitriy">
-          <span class="visually-hidden">GitHub: github.com/GurovDmitriy</span>
+          <span class="sr-only">GitHub: github.com/GurovDmitriy</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-github"></use>
           </svg>
@@ -1246,7 +1261,7 @@ Project/
 
       <li class="social-list__item">
         <a class="social-list__link" href="tel:+79887646888">
-          <span class="visually-hidden">Phone: +7(888)-888-88-88</span>
+          <span class="sr-only">Phone: +7(888)-888-88-88</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-phone"></use>
           </svg>
@@ -1255,7 +1270,7 @@ Project/
 
       <li class="social-list__item">
         <a class="social-list__link" href="mailto:typenote.io@gmail.com">
-          <span class="visually-hidden">E-mail: typenote.io@gmail.com</span>
+          <span class="sr-only">E-mail: typenote.io@gmail.com</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-mailbox"></use>
           </svg>
@@ -1264,7 +1279,7 @@ Project/
 
       <li class="social-list__item">
         <a class="social-list__link" href="https://codepen.io/gurovdmitriy">
-          <span class="visually-hidden">CodePen: codepen.io/gurovdmitriy</span>
+          <span class="sr-only">CodePen: codepen.io/gurovdmitriy</span>
           <svg class="social-list__icon" width="40" height="40">
             <use xlink:href="#icon-codepen"></use>
           </svg>
@@ -1285,7 +1300,7 @@ Project/
       </div>
 
       <a class="copyright__licenses-link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-        <span class="visually-hidden">Это произведение доступно по лицензии Creative Commons «Attribution» («Атрибуция») 4.0 Всемирная</span>
+        <span class="sr-only">Это произведение доступно по лицензии Creative Commons «Attribution» («Атрибуция») 4.0 Всемирная</span>
         <svg class="copyright__licenses-icon" width="80" height="15">
           <use xlink:href="#icon-ccl"></use>
         </svg>
@@ -1299,7 +1314,7 @@ Project/
 
   <script src="../js/default.js"       async></script>
   <script src="../js/focus-visible.js" async></script>
-  <script src="../js/highlight.js"></script>
+  <script src="../js/higlight.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

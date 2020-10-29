@@ -1,15 +1,13 @@
 .nav {
-  .container(@mobileContainer);
+  .container(@container);
 
   @media (min-width: @tabletWidth) {
-    .container(@tabletContainer);
-    margin-bottom: 22px;
+    margin-bottom: @spaceM;
   }
 
   @media (min-width: @desktopWidth) {
     width: 60%;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 30px;
   }
 }

@@ -1,37 +1,23 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
-
-  @media (min-width: @desktopWidth) {
-    width: 60%;
-  }
+  .container(@container);
+  margin-bottom: @spaceM;
 }
 
 .social-list__item {
-  margin-right: 20px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media (min-width: @tabletWidth) {
-    margin-right: 26px;
-  }
+  margin-bottom: @spaceM;
+  margin-left: @spaceS;
+  margin-right: @spaceS;
 }
 
 .social-list__link {
   position: relative;
 
   display: block;
-
-  width: 38px;
-  height: 38px;
+  .socialListLinkSize();
 
   border-radius: 50%;
   .customShadowDefault();
@@ -40,13 +26,11 @@
 
   &:hover {
     .customShadowHover();
-
     .transformHover();
   }
 
   &:active {
     .customShadowActive();
-
     .transformActive();
   }
 
@@ -59,11 +43,6 @@
     fill: #3c3b3d;
     fill: var(--colorGrey, #3c3b3d);
   }
-
-  @media (min-width: @tabletWidth) {
-    width: 48px;
-    height: 48px;
-  }
 }
 
 .social-list__icon {
@@ -71,17 +50,11 @@
   top: 50%;
   left: 50%;
 
-  width: 38px;
-  height: 38px;
+  .socialListLinkSize();
 
   border-radius: 50%;
   fill: #cbc9cf;
   fill: var(--colorWhite2, #cbc9cf);
 
   transform: translate(-50%, -50%);
-
-  @media (min-width: @tabletWidth) {
-    width: 48px;
-    height: 48px;
-  }
 }

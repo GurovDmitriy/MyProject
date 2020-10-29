@@ -1,27 +1,14 @@
 .books-list__item {
-  margin-bottom: 10px;
-
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
-
+  margin-bottom: @spaceS;
+  .fontLight();
   transition: font-weight 0.2s;
-
-  &:hover {
-    font-weight: 500;
-    font-weight: var(--weightFont, 500);
-  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  @media (min-width: @tabletWidth) {
-    margin-bottom: 18px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 24px;
+  &:hover {
+    font-weight: @fontWeight5;
   }
 }
 

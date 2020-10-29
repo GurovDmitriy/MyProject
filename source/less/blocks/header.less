@@ -1,80 +1,47 @@
 .header {
   position: relative;
 
-  padding-top: 40px;
-  padding-bottom: 35px;
-
-  @media (min-width: @tabletWidth) {
-    padding-top: 40px;
-    padding-bottom: 54px;
-  }
+  padding-top: @space2XL;
+  padding-bottom: @space2XL;
 
   @media (min-width: @desktopWidth) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .container(@desktopContainer);
-    padding-bottom: 72px;
+    .container(@container);
   }
 }
 
 .header__wrapper-logo {
   position: relative;
 
-  .container(@mobileContainer);
-  margin-bottom: 15px;
-
-  @media (min-width: @tabletWidth) {
-    .container(@tabletContainer);
-    margin-bottom: 46px;
-  }
+  .container(@container);
+  margin-bottom: @spaceM;
 
   @media (min-width: @desktopWidth) {
     width: 35%;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 30px;
   }
 }
 
 .header__title {
   display: block;
 
-  font-family: 'Special-Elite', 'Arial', sans-serif;
-  .fontTitleMobile();
-  line-height: 1;
-  font-weight: 400;
+  .fontTitle();
   text-transform: lowercase;
-
-  @media (min-width: @tabletWidth) {
-    .fontTitleTablet();
-    line-height: 1;
-  }
-
-  @media (min-width: @desktopWidth) {
-    .fontTitleDesktop();
-    line-height: 1;
-  }
 }
 
 .header__caption {
   margin-top: 0;
   margin-bottom: 0;
 
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  .fontTextMobile();
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
+  .fontH1();
   text-transform: lowercase;
 
-  @media (min-width: @tabletWidth) {
-    .fontTextTablet();
-  }
-
   @media (min-width: @desktopWidth) {
-    .fontTextDesktop();
-    line-height: 45px;
+    line-height: 2;
   }
 }
 
@@ -97,15 +64,7 @@
 
 .header__image {
   display: block;
-  margin-bottom: 15px;
-
-  @media (min-width: @tabletWidth) {
-    margin-bottom: 24px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 32px;
-  }
+  margin-bottom: @spaceM;
 }
 
 // hack for ie
@@ -119,25 +78,14 @@ _:-ms-fullscreen, :root .header__image {
 // hack for ie end
 
 .header__text {
-  .container(@mobileContainer);
+  .container(@container);
   margin-bottom: 0;
 
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  .fontTextMobile();
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
-
-  @media (min-width: @tabletWidth) {
-    .container(@tabletContainer);
-
-    .fontTextTablet();
-  }
+  .fontLight();
 
   @media (min-width: @desktopWidth) {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-
-    .fontTextDesktop();
   }
 }

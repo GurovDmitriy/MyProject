@@ -3,42 +3,29 @@
   flex-direction: column;
   align-items: flex-start;
 
-  margin-bottom: 10px;
+  margin-bottom: @spaceM;
 
   &:last-child {
     margin-bottom: 0;
   }
-
-  @media (min-width: @tabletWidth) {
-    margin-bottom: 18px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 24px;
-  }
 }
 
 .contacts-list__text {
-  font-family: 'Special-Elite', 'Arial', sans-serif;
-  font-weight: 400;
+  .fontSpecial();
 }
 
 .contacts-list__link {
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
+  .fontLight();
 
   transition: font-weight 0.2s, color 0.2s;
 
   &:hover {
-    font-weight: 500;
-    font-weight: var(--weightFont5, 500);
+    font-weight: @fontWeight5;
     text-decoration: underline;
   }
 
   &:active {
-    color: 300;
-    color: var(--colorGrey3, 300);
+    .colorGrey3();
   }
 }
 

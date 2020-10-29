@@ -61,7 +61,7 @@ function tooltip(tlLink, i, tlTag, tlClass) {
     tlLink[i].style.position = 'relative';
     let tooltip = document.createElement(tlTag);
 
-    tooltip.textContent ='вы уже тут';
+    tooltip.textContent ='уже тут';
 
     tooltip.setAttribute('class', tlClass);
     tlLink[i].appendChild(tooltip);

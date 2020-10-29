@@ -4,40 +4,23 @@
   margin: 0;
   padding: 0;
 
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
+  .backgroundColorBlack2();
 }
 
 .code-box__code {
   display: block;
 
-  width: 100%;
   min-height: 100px;
   max-height: 50vh;
   margin: 0;
-  padding: 16px 20px;
+  padding: @spaceM;
 
-  color: #a2a1a6;
-  color: var(--colorGrey3, #a2a1a6);
-  .fontTextSmallMobile();
   tab-size: 2;
+  .colorGrey3();
 
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
+  .backgroundColorBlack2();
 
   overflow: auto;
-
-  @media (min-width: @tabletWidth) {
-    padding: 18px 30px;
-
-    .fontTextSmallTablet();
-  }
-
-  @media (min-width: @desktopWidth) {
-    padding: 24px 40px;
-
-    .fontTextSmallDesktop();
-  }
 }
 
 // theme for code highlight
@@ -49,10 +32,8 @@
 */
 
 .hljs {
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
-  color: #a2a1a6;
-  color: var(--colorGrey3, #a2a1a6);
+  .colorGrey3();
+  .backgroundColorBlack2();
 }
 
 .hljs-comment,

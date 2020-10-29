@@ -3,17 +3,15 @@
   bottom: 100%;
   left: 50%;
 
-  width: 100px;
-  padding: 5px 10px;
+  width: 80px;
+  padding: @spaceXS;
 
-  .fontTextSmallMobile();
+  .fontSmall();
+  .colorWhite2();
   text-align: center;
-  color: #cbc9cf;
-  color: var(--colorWhite2, #cbc9cf);
 
-  border-radius: 2px;
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
+  border-radius: @borderRadiusDefault;
+  .backgroundColorBlack2();
 
   opacity: 0;
   transform: translateX(-50%);
@@ -39,11 +37,9 @@
 }
 
 .footer .tooltip {
-  background-color: #cbc9cf;
-  background-color: var(--colorWhite2, #cbc9cf);
+  .backgroundColorWhite2();
 
-  color: #1e1e1f;
-  color: var(--colorBlack2, #1e1e1f);
+  .colorBlack2();
 
   &::after {
     position: absolute;

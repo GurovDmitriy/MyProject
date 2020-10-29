@@ -2,11 +2,7 @@
   @media (min-width: @tabletWidth) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    gap: 40px;
+    gap: @spaceM;
   }
 }
 
@@ -24,10 +20,9 @@ _:-ms-fullscreen, :root .works-list {
   position: relative;
 
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: calc(100vw * 5 / 100);
 
-  background-color: #a2a1a6;
-  background-color: var(--colorGrey3, #a2a1a6);
+  .backgroundColorGrey3();
   .customShadowDefault();
 
   transition: transform 0.2s, box-shadow 0.2s;
@@ -40,7 +35,6 @@ _:-ms-fullscreen, :root .works-list {
 
   &:hover {
     .customShadowHover();
-
     .transformHover();
   }
 
@@ -52,13 +46,11 @@ _:-ms-fullscreen, :root .works-list {
   &:hover .works-list__link-caption,
   &:focus .works-list__link-caption {
     transform: translateY(-100%);
-
     opacity: 1;
   }
 
   &:active {
     .customShadowActive();
-
     .transformActive();
   }
 
@@ -71,11 +63,7 @@ _:-ms-fullscreen, :root .works-list {
 _:-ms-fullscreen, :root .works-list__link {
   @media (min-width: @tabletWidth) {
     width: 48%;
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 30px;
+    margin-bottom: @spaceXL;
   }
 
   &:nth-last-child(-n+2) {
@@ -106,15 +94,13 @@ _:-ms-fullscreen, :root .works-list__link {
   display: block;
 
   width: 100%;
-  padding: 6px 20px;
 
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
-  .fontTextSmallMobile();
+  padding: @spaceS @spaceM;
+
+  .fontSmall();
+  .colorWhite2();
+
   text-align: center;
-  color: #cbc9cf;
-  color: var(--colorWhite2, #cbc9cf);
 
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
@@ -122,19 +108,8 @@ _:-ms-fullscreen, :root .works-list__link {
   transform: translateY(-100%);
   transition: opacity 1s, transform 0.4s;
 
-  @media (min-width: @tabletWidth) {
-    padding: 9px 30px;
-
-    .fontTextSmallTablet();
-  }
-
   @media (min-width: @desktopWidth) {
-    padding: 11px 40px;
-
-    .fontTextSmallDesktop();
-
     opacity: 0;
-
     transform: translateY(0);
   }
 }

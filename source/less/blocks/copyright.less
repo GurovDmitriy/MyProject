@@ -3,27 +3,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .container(@container);
 }
 
 .copyright__date {
-  margin-bottom: 11px;
+  margin-bottom: @spaceM;
 
-  font-family: 'Roboto-Mono', 'Arial', sans-serif;
-  .fontTextSmallMobile();
-  font-weight: 300;
-  font-weight: var(--weightFont3, 300);
-
-  @media (min-width: @tabletWidth) {
-    margin-bottom: 24px;
-
-    .fontTextSmallTablet();
-  }
-
-  @media (min-width: @desktopWidth) {
-    margin-bottom: 32px;
-
-    .fontTextSmallDesktop();
-  }
+  .fontSmall();
+  .colorWhite2();
 }
 
 .copyright__link {
@@ -32,15 +20,12 @@
   transition: font-weight 0.2s, color 0.2s;
 
   &:hover {
-    font-weight: 500;
-    font-weight: var(--weightFont5, 500);
-    color: #6d6c70;
-    color: var(--colorGrey2, #6d6c70);
+    font-weight: @fontWeight5;
+    .colorGrey2();
   }
 
   &:active {
-    color: #3c3b3d;
-    color: var(--colorGrey, #3c3b3d);
+    .colorGrey();
   }
 }
 
@@ -52,17 +37,14 @@ _:-ms-fullscreen, :root .copyright__link  {
 
 .copyright__licenses-link {
   position: relative;
-
   display: block;
 
-  width: 20px;
-  height: 20px;
+  .copyrightIconSize();
 
   border-radius: 50%;
   .customShadowDefault();
 
   transition: box-shadow 0.2s, fill 0.2s, transform 0.2s;
-
   overflow: hidden;
 
   &:hover {
@@ -86,11 +68,6 @@ _:-ms-fullscreen, :root .copyright__link  {
     fill: #3c3b3d;
     fill: var(--colorGrey, #3c3b3d);
   }
-
-  @media (min-width: @tabletWidth) {
-    width: 26px;
-    height: 26px;
-  }
 }
 
 .copyright__licenses-icon {
@@ -98,8 +75,7 @@ _:-ms-fullscreen, :root .copyright__link  {
   top: 50%;
   left: 50%;
 
-  width: 20px;
-  height: 20px;
+  .copyrightIconSize();
 
   border-radius: 50%;
   fill: #1e1e1f;
@@ -107,9 +83,4 @@ _:-ms-fullscreen, :root .copyright__link  {
   opacity: 0.7;
 
   transform: translate(-50%, -50%);
-
-  @media (min-width: @tabletWidth) {
-    width: 26px;
-    height: 26px;
-  }
 }

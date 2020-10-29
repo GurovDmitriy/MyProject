@@ -1,20 +1,9 @@
 .code {
-  padding: 0 5px;
+  padding-left: @spaceS;
+  padding-right: @spaceS;
 
-  color: #cbc9cf;
-  color: var(--colorWhite2, #cbc9cf);
+  .colorWhite2();
 
-  border-radius: 2px;
-  background-color: #1e1e1f;
-  background-color: var(--colorBlack2, #1e1e1f);
-
-  @media (min-width: @tabletWidth) {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-  @media (min-width: @tabletWidth) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+  border-radius: @borderRadiusDefault;
+  .backgroundColorBlack2();
 }

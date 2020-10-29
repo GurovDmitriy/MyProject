@@ -269,7 +269,7 @@
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Grunt:</span> установка плагинов.</h3>
       <p class="main__text">Переходим в папку проекта и набираем по очереди команды в консоли для установки плагинов, которые мы будем конфигурировать:</p>
-<pre class="code-box"><code class="code-box__code">/* console command */
+<pre class="code-box"><code class="code-box__code powershell">/* console command */
 $ npm i --save-dev grunt
 $ npm i --save-dev grunt-browser-sync
 $ npm i --save-dev grunt-concurrent
@@ -293,7 +293,7 @@ $ npm i --save-dev load-grunt-tasks</code></pre>
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gruntfile.js:</span> подключение плагинов.</h3>
       <p class="main__text">В корне директории проекта создайте файл <mark class="mark">gruntfile.js</mark>, в секции <mark class="mark">initConfig</mark> начнем настраивать наши пакеты:</p>
-<pre class="code-box"><code class="code-box__code">// file Gruntfile.js
+<pre class="code-box"><code class="code-box__code javascript">// file Gruntfile.js
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
@@ -312,7 +312,7 @@ module.exports = function (grunt) {
         изменениями файлов <mark class="mark">css</mark>,
                            <mark class="mark">html</mark> и
                            <mark class="mark">js</mark> для перезагрузки браузера:</p>
-<pre class="code-box"><code class="code-box__code">// browser for dev
+<pre class="code-box"><code class="code-box__code javascript">// browser for dev
 browserSync: {
   serverDev: {
     bsFiles: {
@@ -336,7 +336,7 @@ browserSync: {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">watch:</span> настраиваем слежение за изменениями.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">grunt watch</code> для слежение за изменениями файлов <mark class="mark">less</mark>
         и указываем при их изменении запускать задачу компиляции файлов в стили <mark class="mark">css</mark>:</p>
-<pre class="code-box"><code class="code-box__code">// watcher
+<pre class="code-box"><code class="code-box__code javascript">// watcher
 watch: {
   watch: {
     files: ['source/less/**/*.less'],
@@ -348,7 +348,7 @@ watch: {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">less:</span> сборка стилей из файла пре-процессора.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">grunt cssCompil</code> для сборки стилей из файлов <mark class="mark">less</mark>, генерируем исходную карту, для связывания стилей пре-процессорного файла и выходного <mark class="mark">css</mark> и расставим префиксы:</p>
-<pre class="code-box"><code class="code-box__code">// css copmil
+<pre class="code-box"><code class="code-box__code javascript">// css copmil
 less: {
   cssCompil: {
     options: {
@@ -374,7 +374,7 @@ less: {
       <p class="main__text">Регистрируем задачи <code class="code">grunt htmlMin</code>, <code class="code">grunt cssMin</code>,
         и <code class="code">grunt jsMin</code> и настраиваем минификацию <mark class="mark">html</mark>,
         <mark class="mark">css</mark>, <mark class="mark">js</mark>:</p>
-      <pre class="code-box"><code class="code-box__code">// html minify
+      <pre class="code-box"><code class="code-box__code javascript">// html minify
 htmlmin: {
   htmlMin: {
     options: {
@@ -418,7 +418,7 @@ uglify: {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">svgstore:</span> спрайт svg.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">grunt svgSprite</code> и настраиваем сборку спрайта <mark class="mark">svg</mark>.
         Все иконки <mark class="mark">svg</mark> будут собираться в спрайт, в их <mark class="mark">id</mark> будет добавлен префикс <mark class="mark">icon-</mark>:</p>
-<pre class="code-box"><code class="code-box__code">// svg sprite
+<pre class="code-box"><code class="code-box__code javascript">// svg sprite
 svgstore: {
   options: {
     includeTitleElement: false,
@@ -439,7 +439,7 @@ svgstore: {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">cwebp:</span> генерируем webp.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">grunt webpGen</code> и настроим генерацию <mark class="mark">webp</mark> изображений:</p>
-<pre class="code-box"><code class="code-box__code">// webp convert
+<pre class="code-box"><code class="code-box__code javascript">// webp convert
 cwebp: {
   webpGen: {
     options: {
@@ -459,7 +459,7 @@ cwebp: {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">image:</span> сжатие изображений.</h3>
       <p class="main__text">Регистрируем задачи <code class="code">grunt imageMin</code> и <code class="code">grunt svgMin</code> &mdash; настроим
         сжатие <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark> и <mark class="mark">svg</mark>:</p>
-<pre class="code-box"><code class="code-box__code">// image minify
+<pre class="code-box"><code class="code-box__code javascript">// image minify
 image: {
   imageMin: {
     options: {
@@ -497,7 +497,7 @@ image: {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">ttf2woff:</span> конвертируем ttf в woff и woff2.</h3>
       <p class="main__text">Регистрируем задачи <code class="code">grunt fontWoff</code> и <code class="code">grunt fontWoff2</code>
       и настроим генерацию шрифтов в форматы <mark class="mark">woff</mark> и <mark class="mark">woff2</mark>:</p>
-      <pre class="code-box"><code class="code-box__code">// woff convert
+      <pre class="code-box"><code class="code-box__code javascript">// woff convert
 ttf2woff: {
   fontWoff: {
     src: ['source/font/ttf/*.ttf'],
@@ -522,7 +522,7 @@ ttf2woff2: {
         Удаляем файлы cгенерированных шрифтов <mark class="mark">woff</mark>, <mark class="mark">woff2</mark> и изображений формата <mark class="mark">webp</mark> &mdash;
         тоже отдельные задачи. Это нужно для актуальности сгенерированных файлов, если мы меняем исходные файлы шрифтов <mark class="mark">ttf</mark> и изображений <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, чтобы в каталоге не оставались файлы которые мы заменили или удалили:</p>
       <pre class="code-box">
-<code class="code-box__code">// clean all build
+<code class="code-box__code javascript">// clean all build
 clean: {
   cleanFull: {
     src: ['build/'],
@@ -548,7 +548,7 @@ clean: {
         у нас должна быть возможноть копирования полностью папки <mark class="mark">source</mark>
         для production-версии в папку <mark class="mark">build</mark> и возможность
         копирования всех необходимых файлов без папки <mark class="mark">image</mark>:</p>
-<pre class="code-box"><code class="code-box__code">// copy all for production
+<pre class="code-box"><code class="code-box__code javascript">// copy all for production
 copy: {
   copyFull: {
     files: [
@@ -617,7 +617,7 @@ copy: {
                                                                          <mark class="mark">js</mark></li>
       </ul>
 
-<pre class="code-box"><code class="code-box__code">// parallel config task
+<pre class="code-box"><code class="code-box__code javascript">// parallel config task
 concurrent: {
   parallelCleanFontWebp: [
     'clean:cleanFont',
@@ -648,7 +648,7 @@ concurrent: {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">command:</span> настройка команд запуска задач.</h3>
       <p class="main__text">В секции <mark class="mark">initConfig</mark> мы закончили. Займемся конфигурацией команд для запуска настроенных задач.</p>
-<pre class="code-box"><code class="code-box__code">// file Gruntfile.js
+<pre class="code-box"><code class="code-box__code javascript">// file Gruntfile.js
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
@@ -669,7 +669,7 @@ module.exports = function (grunt) {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">grunt</span> fullstart.</h3>
       <p class="main__text">Регистрируем команду <code class="code">grunt fullstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark> <mark class="mark">woff2</mark> и последующую
         их генерацию из <mark class="mark">ttf</mark>, очистку <mark class="mark">webp</mark> изображений и их генерацию, компиляцию стилей <mark class="mark">css</mark>, сжатие <mark class="mark">svg</mark>, генерацию спрайта <mark class="mark">svg</mark>. Эта команда рекомендуется как первая к запуску, для подготовки всех нужных файлов для разработки или обновления файлов для разработки:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('fullstart', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('fullstart', [
   'concurrent:parallelCleanFontWebp',
   'concurrent:parallelFullGen',
   'svgstore:svgSprite',
@@ -682,7 +682,7 @@ module.exports = function (grunt) {
       <p class="main__text">Настраиваем команду <code class="code">grunt start</code>. Эта команда запускает компиляцию стилей,
       сервер для разработки и следит за изменениями файлов <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>. Эта команда будет использоваться часто:</p>
       <pre class="code-box">
-<code class="code-box__code">grunt.registerTask('start', [
+<code class="code-box__code javascript">grunt.registerTask('start', [
   'less:cssCompil',
   'browserSync:serverDev',
   'watch:watch',
@@ -693,7 +693,7 @@ module.exports = function (grunt) {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">grunt</span> imgstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">grunt imgstart</code>. Эта команда запускает очистку изображений <mark class="mark">webp</mark> и их последующую
         компиляцию. Эта команда будет использоваться если мы внесли изменения в изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('imgstart', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('imgstart', [
   'clean:cleanWebp',
   'cwebp:webpGen',
 ]);</code></pre>
@@ -702,7 +702,7 @@ module.exports = function (grunt) {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">grunt</span> svgstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">grunt svgstart</code>. Эта команда запускает сжатие <mark class="mark">svg</mark>, сборку спрайта <mark class="mark">svg</mark>. Она будет использоваться если мы внесли изменения в файлы <mark class="mark">svg</mark>:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('svgstart', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('svgstart', [
   'image:svgMin',
   'svgstore:svgSprite',
 ]);</code></pre>
@@ -712,7 +712,7 @@ module.exports = function (grunt) {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">grunt</span> fontstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">grunt fontstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark>, <mark class="mark">woff2</mark> и
         последующую их генерацию из  <mark class="mark">ttf</mark>. Эта команда будет использоваться если мы внесли изменения в <mark class="mark">ttf</mark> шрифты:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('fontstart', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('fontstart', [
   'clean:cleanFont',
   'concurrent:parallelFont',
 ]);</code></pre>
@@ -727,7 +727,7 @@ module.exports = function (grunt) {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">grunt</span> fullbuild.</h3>
       <p class="main__text">Настраиваем команду <code class="code">grunt fullbuild</code>. Эта команда запускает очистку папки <mark class="mark">build</mark>,
       далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>, изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark>. Команда будет использоваться для полной сборки или обновления production-версии:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('fullbuild', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('fullbuild', [
   'clean:cleanFull',
   'copy:copyFull',
   'concurrent:parallelAllMin',
@@ -740,7 +740,7 @@ module.exports = function (grunt) {
       <p class="main__text">Настраиваем команду <code class="code">grunt build</code>. Эта команда запускает очистку папки <mark class="mark">build</mark> но не папки <mark class="mark">image</mark> внутри,
       далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>. Эта команда будет использоваться если мы хотим обновить <mark class="mark">build</mark> папку,
         но при разработке не вносили изменений в изображения:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('build', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('build', [
   'clean:clean',
   'copy:copy',
   'concurrent:parallelAllMin',
@@ -752,7 +752,7 @@ module.exports = function (grunt) {
       <p class="main__text">Настраиваем команду <code class="code">grunt testbuild</code>. Эта команда запускает сервер для тестирования готовой сборки в <mark class="mark">build</mark>
         папке. Зачем <code class="code">grunt testbuild</code> когда можно <code class="code">grunt serverTest</code> &mdash; для симметрии,
         да это одно и тоже, если нужно будет еще что то запустить с сервером &mdash; допишем:</p>
-<pre class="code-box"><code class="code-box__code">grunt.registerTask('testbuild', [
+<pre class="code-box"><code class="code-box__code javascript">grunt.registerTask('testbuild', [
   'browserSync:serverTest',
 ]);</code></pre>
     </section>
@@ -763,7 +763,7 @@ module.exports = function (grunt) {
         Эта команда запускает последовательно
         команды <code class="code">grunt fullstart</code> и <code class="code">grunt fullbuild</code> &mdash; тем самым запуская
         тестирование или подготовку рабочей среды. Полностью содержимое, в корне проекта, файла <mark class="mark">package.json</mark>:</p>
-<pre class="code-box"><code class="code-box__code">{
+<pre class="code-box"><code class="code-box__code json">{
   "name": "grunt-less-start-repository",
   "version": "1.0.0",
   "description": "grunt less start repository",
@@ -815,7 +815,7 @@ module.exports = function (grunt) {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gruntfile.js:</span> весь код.</h3>
       <p class="main__text">Полностью содержимое конфигураций в корне проекта файла <mark class="mark">gruntfile.js</mark>:</p>
-<pre class="code-box"><code class="code-box__code">module.exports = function (grunt) {
+<pre class="code-box"><code class="code-box__code javascript">module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
@@ -1192,7 +1192,7 @@ module.exports = function (grunt) {
         &mdash; произойдет установка всех пакетов из файла <mark class="mark">package.json</mark> в секции <mark class="mark">devDependencies</mark>.
         Выполнить <code class="code">npm run build</code> &mdash; выполнятся команды <code class="code">grunt fullstart</code> и
         <code class="code">grunt fullbuld</code>. Далее пользуемся одиночными командами которые мы настроили:</p>
-<pre class="code-box"><code class="code-box__code">daily launch
+<pre class="code-box"><code class="code-box__code plaintext">daily launch
 console command:
 
 - grunt fullstart - first start, full update for development (css, webp, svgmin, fontgen)
@@ -1212,7 +1212,7 @@ console command:
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">.gitignore.</span></h3>
       <p class="main__text">Настраиваем <mark class="mark">.gitignore</mark> файл в корне проекта. Убираем из отслеживания гита все сгенерированные файлы. Храним только исходники:</p>
-<pre class="code-box"><code class="code-box__code"># Compiled source #
+<pre class="code-box"><code class="code-box__code plaintext"># Compiled source #
 ###################
 *.com
 *.class
@@ -1264,8 +1264,6 @@ Thumbs.db
 **/source/css
 **/source/font/woff
 **/source/font/woff2
-**/source/image/sprite.svg
-**/source/image/*.webp
 **/node_modules
 **/build</code></pre>
     </section>
@@ -1274,7 +1272,7 @@ Thumbs.db
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Структура</span> проекта.</h3>
       <p class="main__text">В зависимости от разной файловой структуры проекта, будут меняться директории в настройках пакетов.
         Структура папок при рассмотренных настройках:</p>
-<pre class="code-box"><code class="code-box__code">/* folders and files */
+<pre class="code-box"><code class="code-box__code plaintext">/* folders and files */
 Project/
   |   |
   |   build/
@@ -1306,7 +1304,7 @@ Project/
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> remote debug.</h3>
       <p class="main__text">При запуске сервера консоль сигнализирует о том что можно в соседней вкладке
         открыть GUI <mark class="mark">browserSync</mark>, как в примере это адрес <code class="code">http://localhost:3001</code> &mdash; здесь можно включить и настроить сетку и аутлайны блоков для отладки:</p>
-<pre class="code-box"><code class="code-box__code">/* console */
+<pre class="code-box"><code class="code-box__code powershell">/* console */
 [Browsersync] Access URLs:
  --------------------------------------
        Local: http://localhost:3000

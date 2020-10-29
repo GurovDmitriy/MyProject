@@ -1,5 +1,5 @@
 /*
-  Highlight.js 10.3.1 (3797c108)
+  Highlight.js 10.3.2 (31e1fc40)
   License: BSD-3-Clause
   Copyright (c) 2006-2020, Ivan Sagalaev
 */
@@ -268,7 +268,7 @@ requireLanguage:function(e){var n=E(e);if(n)return n
 ;throw Error("The '{}' language is required, but not loaded.".replace("{}",e))},
 autoDetection:w,inherit:T,addPlugin:function(e){s.push(e)},vuePlugin:j
 }),t.debugMode=function(){o=!1},t.safeMode=function(){o=!0
-},t.versionString="10.3.1";for(const n in y)"object"==typeof y[n]&&e(y[n])
+},t.versionString="10.3.2";for(const n in y)"object"==typeof y[n]&&e(y[n])
 ;return Object.assign(t,y),t}({})}()
 ;"object"==typeof exports&&"undefined"!=typeof module&&(module.exports=hljs);hljs.registerLanguage("css",function(){"use strict";return function(e){var n={
 begin:/(?:[A-Z\_\.\-]+|--[a-zA-Z0-9_-]+)\s*:/,returnBegin:!0,end:";",
@@ -338,7 +338,64 @@ end:"}",contains:[{className:"attr",begin:/"/,end:/"/,
 contains:[n.BACKSLASH_ESCAPE],illegal:"\\n"},n.inherit(a,{begin:/:/
 })].concat(i),illegal:"\\S"},s={begin:"\\[",end:"\\]",contains:[n.inherit(a)],
 illegal:"\\S"};return t.push(l,s),i.forEach((function(n){t.push(n)})),{
-name:"JSON",contains:t,keywords:e,illegal:"\\S"}}}());hljs.registerLanguage("markdown",function(){"use strict";return function(n){
+name:"JSON",contains:t,keywords:e,illegal:"\\S"}}}());hljs.registerLanguage("javascript",function(){"use strict"
+;const e="[A-Za-z$_][0-9A-Za-z$_]*",n=["as","in","of","if","for","while","finally","var","new","function","do","return","void","else","break","catch","instanceof","with","throw","case","default","try","switch","continue","typeof","delete","let","yield","const","class","debugger","async","await","static","import","from","export","extends"],a=["true","false","null","undefined","NaN","Infinity"],s=[].concat(["setInterval","setTimeout","clearInterval","clearTimeout","require","exports","eval","isFinite","isNaN","parseFloat","parseInt","decodeURI","decodeURIComponent","encodeURI","encodeURIComponent","escape","unescape"],["arguments","this","super","console","window","document","localStorage","module","global"],["Intl","DataView","Number","Math","Date","String","RegExp","Object","Function","Boolean","Error","Symbol","Set","Map","WeakSet","WeakMap","Proxy","Reflect","JSON","Promise","Float64Array","Int16Array","Int32Array","Int8Array","Uint16Array","Uint32Array","Float32Array","Array","Uint8Array","Uint8ClampedArray","ArrayBuffer"],["EvalError","InternalError","RangeError","ReferenceError","SyntaxError","TypeError","URIError"])
+;function r(e){return i("(?=",e,")")}function t(e){return i("(",e,")?")}
+function i(...e){return e.map((e=>{
+return(n=e)?"string"==typeof n?n:n.source:null;var n})).join("")}
+return function(c){const o=e,l={begin:/<[A-Za-z0-9\\._:-]+/,
+end:/\/[A-Za-z0-9\\._:-]+>|\/>/,isTrulyOpeningTag:(e,n)=>{
+const a=e[0].length+e.index,s=e.input[a];"<"!==s?">"===s&&(((e,{after:n})=>{
+const a=e[0].replace("<","</");return-1!==e.input.indexOf(a,n)})(e,{after:a
+})||n.ignoreMatch()):n.ignoreMatch()}},g={$pattern:e,keyword:n.join(" "),
+literal:a.join(" "),built_in:s.join(" ")
+},d=(e,n)=>`\\b0[${e}][${n}]([${n}_]*[${n}])?n?`,b=/[1-9]([0-9_]*\d)?/,E=/\d([0-9_]*\d)?/,u=i(/[eE][+-]?/,E),_={
+className:"number",variants:[{begin:d("bB","01")},{begin:d("oO","0-7")},{
+begin:d("xX","0-9a-fA-F")},{begin:i(/\b/,b,"n")},{begin:i(/(\b0)?\./,E,t(u))},{
+begin:i(/\b/,b,t(i(/\./,t(E))),t(u))},{begin:/\b0[\.n]?/}],relevance:0},m={
+className:"subst",begin:"\\$\\{",end:"\\}",keywords:g,contains:[]},N={
+begin:"html`",end:"",starts:{end:"`",returnEnd:!1,
+contains:[c.BACKSLASH_ESCAPE,m],subLanguage:"xml"}},y={begin:"css`",end:"",
+starts:{end:"`",returnEnd:!1,contains:[c.BACKSLASH_ESCAPE,m],subLanguage:"css"}
+},f={className:"string",begin:"`",end:"`",contains:[c.BACKSLASH_ESCAPE,m]},A={
+className:"comment",variants:[c.COMMENT("/\\*\\*","\\*/",{relevance:0,
+contains:[{className:"doctag",begin:"@[A-Za-z]+",contains:[{className:"type",
+begin:"\\{",end:"\\}",relevance:0},{className:"variable",
+begin:o+"(?=\\s*(-)|$)",endsParent:!0,relevance:0},{begin:/(?=[^\n])\s/,
+relevance:0}]}]}),c.C_BLOCK_COMMENT_MODE,c.C_LINE_COMMENT_MODE]
+},p=[c.APOS_STRING_MODE,c.QUOTE_STRING_MODE,N,y,f,_,c.REGEXP_MODE]
+;m.contains=p.concat({begin:/{/,end:/}/,keywords:g,contains:["self"].concat(p)})
+;const O=[].concat(A,m.contains),T=O.concat([{begin:/\(/,end:/\)/,keywords:g,
+contains:["self"].concat(O)}]),R={className:"params",begin:/\(/,end:/\)/,
+excludeBegin:!0,excludeEnd:!0,keywords:g,contains:T};return{name:"Javascript",
+aliases:["js","jsx","mjs","cjs"],keywords:g,exports:{PARAMS_CONTAINS:T},
+illegal:/#(?![$_A-z])/,contains:[c.SHEBANG({label:"shebang",binary:"node",
+relevance:5}),{label:"use_strict",className:"meta",relevance:10,
+begin:/^\s*['"]use (strict|asm)['"]/
+},c.APOS_STRING_MODE,c.QUOTE_STRING_MODE,N,y,f,A,_,{
+begin:i(/[{,\n]\s*/,r(i(/(\/\/.*$)*/,/(\/\*(.|\n)*\*\/)*/,/\s*/,o+"\\s*:"))),
+relevance:0,contains:[{className:"attr",begin:o+r("\\s*:"),relevance:0}]},{
+begin:"("+c.RE_STARTERS_RE+"|\\b(case|return|throw)\\b)\\s*",
+keywords:"return throw case",contains:[A,c.REGEXP_MODE,{className:"function",
+begin:"(\\([^()]*(\\([^()]*(\\([^()]*\\))*[^()]*\\))*[^()]*\\)|"+c.UNDERSCORE_IDENT_RE+")\\s*=>",
+returnBegin:!0,end:"\\s*=>",contains:[{className:"params",variants:[{
+begin:c.UNDERSCORE_IDENT_RE},{className:null,begin:/\(\s*\)/,skip:!0},{
+begin:/\(/,end:/\)/,excludeBegin:!0,excludeEnd:!0,keywords:g,contains:T}]}]},{
+begin:/,/,relevance:0},{className:"",begin:/\s/,end:/\s*/,skip:!0},{variants:[{
+begin:"<>",end:"</>"},{begin:l.begin,"on:begin":l.isTrulyOpeningTag,end:l.end}],
+subLanguage:"xml",contains:[{begin:l.begin,end:l.end,skip:!0,contains:["self"]}]
+}],relevance:0},{className:"function",beginKeywords:"function",end:/[{;]/,
+excludeEnd:!0,keywords:g,contains:["self",c.inherit(c.TITLE_MODE,{begin:o}),R],
+illegal:/%/},{className:"function",
+begin:c.UNDERSCORE_IDENT_RE+"\\([^()]*(\\([^()]*(\\([^()]*\\))*[^()]*\\))*[^()]*\\)\\s*{",
+returnBegin:!0,contains:[R,c.inherit(c.TITLE_MODE,{begin:o})]},{variants:[{
+begin:"\\."+o},{begin:"\\$"+o}],relevance:0},{className:"class",
+beginKeywords:"class",end:/[{;=]/,excludeEnd:!0,illegal:/[:"\[\]]/,contains:[{
+beginKeywords:"extends"},c.UNDERSCORE_TITLE_MODE]},{begin:/\b(?=constructor)/,
+end:/[\{;]/,excludeEnd:!0,contains:[c.inherit(c.TITLE_MODE,{begin:o}),"self",R]
+},{begin:"(get|set)\\s+(?="+o+"\\()",end:/{/,keywords:"get set",
+contains:[c.inherit(c.TITLE_MODE,{begin:o}),{begin:/\(\)/},R]},{begin:/\$[(.]/}]
+}}}());hljs.registerLanguage("markdown",function(){"use strict";return function(n){
 const e={begin:"<",end:">",subLanguage:"xml",relevance:0},a={
 begin:"\\[.+?\\][\\(\\[].*?[\\)\\]]",returnBegin:!0,contains:[{
 className:"string",begin:"\\[",end:"\\]",excludeBegin:!0,returnEnd:!0,

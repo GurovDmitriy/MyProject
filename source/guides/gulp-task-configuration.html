@@ -262,7 +262,7 @@
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Gulp:</span> установка плагинов.</h3>
       <p class="main__text">Переходим в папку проекта и поочередно набираем в консоли команды для установки плагинов, которые мы будем настраивать:</p>
-<pre class="code-box"><code class="code-box__code">/* console command */
+<pre class="code-box"><code class="code-box__code powershell">/* console command */
 $ npm i --save-dev gulp
 $ npm i --save-dev gulp-rename
 $ npm i --save-dev del
@@ -286,7 +286,7 @@ $ npm i --save-dev gulp-ttf2woff2</code></pre>
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulpfile.js:</span> подключение плагинов.</h3>
       <p class="main__text">В корне директории проекта создайте файл <mark class="mark">gulpfile.js</mark> и подключите пакеты для настроек:</p>
-<pre class="code-box"><code class="code-box__code">/* file gulpfile.js */
+<pre class="code-box"><code class="code-box__code javascript">/* file gulpfile.js */
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const del = require('del');
@@ -319,7 +319,7 @@ const ttf2woff2 = require('gulp-ttf2woff2');</code></pre>
         изменениями файлов <mark class="mark">css</mark>,
                            <mark class="mark">html</mark> и
                            <mark class="mark">js</mark>:</p>
-<pre class="code-box"><code class="code-box__code">/* server and watcher for dev */
+<pre class="code-box"><code class="code-box__code javascript">/* server and watcher for dev */
 gulp.task('serverDev', function(done) {
   browserSync.init({
     server: {
@@ -335,7 +335,7 @@ gulp.task('serverDev', function(done) {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">sass:</span> сборка стилей из файла пре-процессора.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp cssCompil</code> для сборки стилей из файлов <mark class="mark">scss</mark>, генерируем исходную карту, для связывания стилей пре-процессорного файла и выходного <mark class="mark">css</mark> и расставим префиксы:</p>
-<pre class="code-box"><code class="code-box__code">/* css compile, auto-prefixer, source map */
+<pre class="code-box"><code class="code-box__code javascript">/* css compile, auto-prefixer, source map */
 gulp.task('cssCompil', function() {
   return gulp.src('source/sass/**/*.scss')
     .pipe(sourcemaps.init())
@@ -350,7 +350,7 @@ gulp.task('cssCompil', function() {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">webp:</span> генерация изображений формата webp.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp webpGen</code> и настроим генерацию изображений <mark class="mark">webp</mark>:</p>
-      <pre class="code-box"><code class="code-box__code">/* webp gen */
+      <pre class="code-box"><code class="code-box__code javascript">/* webp gen */
 gulp.task('webpGen', function() {
   return gulp.src('source/image/*.{jpg,png}')
     .pipe(webp({quality: 70}))
@@ -361,7 +361,7 @@ gulp.task('webpGen', function() {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">image:</span> сжатие svg.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp svgMin</code> с помощью пакета <mark class="mark">gulp-image</mark> и настраиваем сжатие <mark class="mark">svg</mark>:</p>
-<pre class="code-box"><code class="code-box__code">/* svg minify */
+<pre class="code-box"><code class="code-box__code javascript">/* svg minify */
 gulp.task('svgMin', function() {
   return gulp.src('source/image/*.svg')
     .pipe(image({svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']}))
@@ -374,7 +374,7 @@ gulp.task('svgMin', function() {
       <p class="main__text">Регистрируем задачу <code class="code">gulp svgSprite</code> настроим сборку спрайта из <mark class="mark">svg</mark> файлов
         и вставим его в разметку <mark class="mark">html</mark>.
         Все иконки <mark class="mark">svg</mark> будут собираться на лету в спрайт, в их <mark class="mark">id</mark> будет добавлен префикс <mark class="mark">icon-</mark>:</p>
-<pre class="code-box"><code class="code-box__code">/* svg sprite end inject in html */
+<pre class="code-box"><code class="code-box__code javascript">/* svg sprite end inject in html */
 gulp.task('svgSprite', function() {
   const svgs = gulp.src('source/image/*.svg', {base: 'source/image'})
     .pipe(rename({prefix: 'icon-'}))
@@ -394,7 +394,7 @@ gulp.task('svgSprite', function() {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">ttf2woff:</span> конвертируем ttf в woff и woff2.</h3>
       <p class="main__text">Регистрируем задачи <code class="code">gulp fontGenWoff</code> и <code class="code">gulp fontGenWoff2</code>
       и настроим генерацию шрифтов в форматы <mark class="mark">woff</mark> и <mark class="mark">woff2</mark>:</p>
-      <pre class="code-box"><code class="code-box__code">/* font gen woff */
+      <pre class="code-box"><code class="code-box__code javascript">/* font gen woff */
 gulp.task('fontGenWoff', function(){
   return gulp.src('source/font/ttf/*.ttf')
     .pipe(ttf2woff())
@@ -414,7 +414,7 @@ gulp.task('fontGenWoff2', function(){
         настраиваем
         удаление файлов cгенерированных шрифтов и изображений формата <mark class="mark">webp</mark>. Это нужно для актуальности сгенерированных файлов, если мы меняем исходные файлы шрифтов <mark class="mark">ttf</mark> и изображений <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, чтобы в каталоге не оставались файлы которые мы заменили или удалили:</p>
       <pre class="code-box">
-<code class="code-box__code">/* delete webp for refresh */
+<code class="code-box__code javascript">/* delete webp for refresh */
 gulp.task('cleanWebp', function() {
   return del('source/image/*.webp');
 });
@@ -433,7 +433,7 @@ gulp.task('cleanFont', function() {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">htmlmin:</span> сжатие html.</h3>
       <p class="main__text">Регистрируем задачи <code class="code">gulp htmlMin</code>, <code class="code">gulp cssMin</code>,
         <code class="code">gulp jsMin</code> и настраиваем сжатие <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark> файлов для <mark class="mark">build</mark> версии сайта:</p>
-<pre class="code-box"><code class="code-box__code">/* html minify */
+<pre class="code-box"><code class="code-box__code javascript">/* html minify */
 gulp.task('htmlMin', function() {
   return gulp.src('build/*.html')
     .pipe(htmlmin({
@@ -463,7 +463,7 @@ gulp.task('jsMin', function() {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">image:</span> сжатие изображений.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp imageMin</code> с помощью все того же пакета, с которым мы ранее настраивали сжатие <mark class="mark">svg</mark>, настроим сжатие изображений <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark>:</p>
-<pre class="code-box"><code class="code-box__code">/* image minify */
+<pre class="code-box"><code class="code-box__code javascript">/* image minify */
 gulp.task('imageMin', function() {
   return gulp.src('build/image/*')
     .pipe(image({
@@ -483,7 +483,7 @@ gulp.task('imageMin', function() {
       <p class="main__text">Регистрируем задачи <code class="code">gulp cleanFull</code> и <code class="code">gulp clean</code> и настраиваем
         очистку папки <mark class="mark">build</mark>, нам необходимо иметь возможность очищать как всю папку <mark class="mark">build</mark>, так и все кроме папки <mark class="mark">image</mark>. Часто для обновления production-версии сайта
         мы будем вносить поправки в файлах <mark class="mark">font</mark>, <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark> &mdash; поэтому нет смысла постоянно сжимать изображения, хорошее сжатие <mark class="mark">jpg</mark> и <mark class="mark">png</mark> занимает много времени:</p>
-<pre class="code-box"><code class="code-box__code">/* delete all build folder */
+<pre class="code-box"><code class="code-box__code javascript">/* delete all build folder */
 gulp.task('cleanFull', function() {
   return del('build');
 });
@@ -499,7 +499,7 @@ gulp.task('clean', function() {
        копирование всех файлов на первом уровне вложенности где могут быть <mark class="mark">html</mark>, файлы иконок для сайта, записи <mark class="mark">cname</mark> и многое другое, и на остальных уровнях.
        Исключаем копирование исходников пре-процессора, шрифтов <mark class="mark">ttf</mark>, <mark class="mark">map</mark>, <mark class="mark">svg</mark>(спрайт в разметке, исходники не нужны). Как и в предыдущей задаче, нам необходимо разделить
        копирование всех необходимых файлов из <mark class="mark">source</mark> папки и иметь возможность копирования всех файлов без папки <mark class="mark">image</mark>, если мы не вносили в нее изменений:</p>
-<pre class="code-box"><code class="code-box__code">/* copy all files for build */
+<pre class="code-box"><code class="code-box__code javascript">/* copy all files for build */
 gulp.task('copyFull', function() {
   return gulp.src([
     'source/**',
@@ -526,7 +526,7 @@ gulp.task('copy', function() {
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> сервер для тестирования.</h3>
       <p class="main__text">Регистрируем задачу <code class="code">gulp serverTest</code> и настраиваем запуск сервера в <mark class="mark">build</mark> папке &mdash; допустим для отладки lighthouse в режиме разработчика в браузере:</p>
-<pre class="code-box"><code class="code-box__code">/* server for test only product version */
+<pre class="code-box"><code class="code-box__code javascript">/* server for test only product version */
 gulp.task('serverTest', function() {
   browserSync.init({
     server: {
@@ -546,7 +546,7 @@ gulp.task('serverTest', function() {
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fullstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp fullstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark> <mark class="mark">woff2</mark> и последующую
         их генерацию из <mark class="mark">ttf</mark>, очистку <mark class="mark">webp</mark> изображений и их генерацию, компиляцию стилей <mark class="mark">css</mark>, сжатие <mark class="mark">svg</mark>, генерацию спрайта <mark class="mark">svg</mark> и вставку его в <mark class="mark">html</mark> файлы. Эта команда рекомендуется как первая к запуску, для генерации всех нужных файлов для разработки или обновления файлов для разработки:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp fullstart */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp fullstart */
 exports.fullstart = gulp.series(
   gulp.parallel(
     'cleanFont',
@@ -568,7 +568,7 @@ exports.fullstart = gulp.series(
       <p class="main__text">Настраиваем команду <code class="code">gulp start</code>. Эта команда запускает компиляцию стилей <mark class="mark">css</mark>,
       сервер для разработки и следит за изменениями файлов <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>. Эта команда будет использоваться часто:</p>
       <pre class="code-box">
-<code class="code-box__code">/* console command: gulp start */
+<code class="code-box__code javascript">/* console command: gulp start */
 exports.start = gulp.series(
   'cssCompil',
   'serverDev'
@@ -579,7 +579,7 @@ exports.start = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> imgstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp imgstart</code>. Эта команда запускает очистку изображений <mark class="mark">webp</mark> и их последующую
         компиляцию. Эта команда будет использоваться если мы внесли изменения в изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp imgstart */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp imgstart */
 exports.imgstart = gulp.series(
   'cleanWebp',
   'webpGen'
@@ -590,7 +590,7 @@ exports.imgstart = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gilp</span> svgstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp svgstart</code>. Эта команда запускает сжатие <mark class="mark">svg</mark>, сборку спрайта <mark class="mark">svg</mark>
        и вставку его в разметку <mark class="mark">html</mark>. Эта команда будет использоваться если мы внесли изменения в файлы <mark class="mark">svg</mark>:</p>
-<pre class="code-box"><code class="code-box__code">
+<pre class="code-box"><code class="code-box__code javascript">
 exports.svgstart = gulp.series(
   'svgMin',
   'svgSprite'
@@ -601,7 +601,7 @@ exports.svgstart = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fontstart.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp fontstart</code>. Эта команда запускает очистку шрифтов <mark class="mark">woff</mark>, <mark class="mark">woff2</mark> и
         последующую их генерацию из  <mark class="mark">ttf</mark>. Эта команда будет использоваться если мы внесли изменения в <mark class="mark">ttf</mark> шрифты:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp fontstart */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp fontstart */
 exports.fontstart = gulp.series(
   'cleanFont',
   gulp.parallel(
@@ -620,7 +620,7 @@ exports.fontstart = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> fullbuild.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp fullbuild</code>. Эта команда запускает очистку папки <mark class="mark">build</mark>,
       далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>, изображения <mark class="mark">jpg</mark>, <mark class="mark">png</mark>, <mark class="mark">gif</mark>. Команда будет использоваться для полной сборки или обновления production-версии:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp fullbuild */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp fullbuild */
 exports.fullbuild = gulp.series(
   'cleanFull',
   'copyFull',
@@ -637,7 +637,7 @@ exports.fullbuild = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulp</span> build.</h3>
       <p class="main__text">Настраиваем команду <code class="code">gulp build</code>. Эта команда запускает очистку папки <mark class="mark">build</mark> но не папки <mark class="mark">image</mark> внутри,
       далее копирует все файлы из папки <mark class="mark">source</mark>, сжимает <mark class="mark">html</mark>, <mark class="mark">css</mark>, <mark class="mark">js</mark>. Эта команда будет использоваться если мы хотим обновить production-версию, но при разработке не вносили изменений в изображения:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp build */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp build */
 exports.build = gulp.series(
   'clean',
   'copy',
@@ -654,7 +654,7 @@ exports.build = gulp.series(
       <p class="main__text">Настраиваем команду <code class="code">gulp testbuild</code>. Эта команда запускает сервер для отладки готовой сборки в <mark class="mark">build</mark>
         папке. Зачем <code class="code">gulp testbuild</code> когда можно <code class="code">gulp serverTest</code> &mdash; для симметрии,
         да это одно и тоже, если нужно будет еще что то запустить с сервером &mdash; допишем:</p>
-<pre class="code-box"><code class="code-box__code">/* console command: gulp testbuild */
+<pre class="code-box"><code class="code-box__code javascript">/* console command: gulp testbuild */
 exports.testbuild = gulp.series(
   'serverTest'
 );</code></pre>
@@ -666,7 +666,7 @@ exports.testbuild = gulp.series(
         Эта команда запускает последовательно
         команды <code class="code">gulp fullstart</code> и <code class="code">gulp fullbuild</code> &mdash; тем самым запуская
         тестирование или подготовку рабочей среды. Полностью содержимое, в корне проекта, файла <mark class="mark">package.json</mark>:</p>
-<pre class="code-box"><code class="code-box__code">{
+<pre class="code-box"><code class="code-box__code json">{
   "name": "gulp-sass-start-repository",
   "version": "1.0.0",
   "description": "gulp sass start repository",
@@ -721,7 +721,7 @@ exports.testbuild = gulp.series(
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">gulpfile.js:</span> весь код.</h3>
       <p class="main__text">Полностью содержимое конфигураций в корне проекта файла <mark class="mark">gulpfile.js</mark>:</p>
-<pre class="code-box"><code class="code-box__code">const gulp = require('gulp');
+<pre class="code-box"><code class="code-box__code javascript">const gulp = require('gulp');
 const rename = require('gulp-rename');
 const del = require('del');
 
@@ -1079,7 +1079,7 @@ exports.testbuild = gulp.series(
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">html.</span></h3>
       <p class="main__text">Для автоматической вставки в разметку <mark class="mark">html</mark> файла спрайта <mark class="mark">svg</mark>
         нам необходимо добавить следующий код:</p>
-<pre class="code-box"><code class="code-box__code">&lt;!-- html files --&gt;
+<pre class="code-box"><code class="code-box__code html">&lt;!-- html files --&gt;
 &lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
 &lt;body class=&quot;body&quot;&gt;
@@ -1097,7 +1097,7 @@ exports.testbuild = gulp.series(
         &mdash; произойдет установка всех пакетов из файла <mark class="mark">package.json</mark> в секции <mark class="mark">devDependencies</mark>.
         Выполнить <code class="code">npm run build</code> &mdash; выполнятся команды <code class="code">gulp fullstart</code> и
         <code class="code">gulp fullbuld</code>. Далее пользуемся одиночными командами которые мы настроили:</p>
-<pre class="code-box"><code class="code-box__code">daily launch
+<pre class="code-box"><code class="code-box__code plaintext">daily launch
 console command:
 
 - gulp fullstart - first start, full update for development (css, webp, svgmin, svgsprite inject in html, fontgen)
@@ -1117,7 +1117,7 @@ console command:
     <section class="main__section">
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">.gitignore.</span></h3>
       <p class="main__text">Настраиваем <mark class="mark">.gitignore</mark> файл в корне проекта. Убираем из отслеживания гита все сгенерированные файлы. Храним только исходники:</p>
-<pre class="code-box"><code class="code-box__code"># Compiled source #
+<pre class="code-box"><code class="code-box__code plaintext"># Compiled source #
 ###################
 *.com
 *.class
@@ -1169,8 +1169,6 @@ Thumbs.db
 **/source/css
 **/source/font/woff
 **/source/font/woff2
-**/source/image/sprite.svg
-**/source/image/*.webp
 **/node_modules
 **/build</code></pre>
     </section>
@@ -1179,7 +1177,7 @@ Thumbs.db
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">Структура</span> проекта.</h3>
       <p class="main__text">В зависимости от разной файловой структуры проекта, будут меняться директории в настройках пакетов.
         Структура папок при рассмотренных настройках:</p>
-<pre class="code-box"><code class="code-box__code">/* folders and files */
+<pre class="code-box"><code class="code-box__code plaintext">/* folders and files */
 Project/
   |   |
   |   build/
@@ -1211,7 +1209,7 @@ Project/
       <h3 class="main__caption" tabindex="0"><span class="main__caption-dash">browserSync:</span> remote debug.</h3>
       <p class="main__text">При запуске сервера консоль сигнализирует о том что можно в соседней вкладке
         открыть GUI <mark class="mark">browserSync</mark>, как в примере это адрес <code class="code">http://localhost:3001</code> &mdash; здесь можно включить и настроить сетку и аутлайны блоков для отладки:</p>
-<pre class="code-box"><code class="code-box__code">/* console */
+<pre class="code-box"><code class="code-box__code powershell">/* console */
 [Browsersync] Access URLs:
  --------------------------------------
        Local: http://localhost:3000

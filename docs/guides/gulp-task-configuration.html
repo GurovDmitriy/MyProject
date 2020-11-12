@@ -55,7 +55,7 @@ gulp.task('serverDev', function(done) {
   gulp.watch(['source/*.html', 'source/js/*.js']).on('change', browserSync.reload);
 });</code></pre></section><section class="main__section"><h3 class="main__caption" tabindex="0"><span class="main__caption-dash">sass:</span> сборка стилей из файла пре-процессора.</h3><p class="main__text">Регистрируем задачу <code class="code">gulp cssCompil</code> для сборки стилей из файлов <mark class="mark">scss</mark>, генерируем исходную карту, для связывания стилей пре-процессорного файла и выходного <mark class="mark">css</mark> и расставим префиксы:</p><pre class="code-box"><code class="code-box__code javascript">/* css compile, auto-prefixer, source map */
 gulp.task('cssCompil', function() {
-  return gulp.src('source/sass/**/*.scss')
+  return gulp.src('source/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -326,7 +326,7 @@ gulp.task('serverDev', function(done) {
 /* style css compile, autoprefixer, source map */
 
 gulp.task('cssCompil', function() {
-  return gulp.src('source/sass/**/*.scss')
+  return gulp.src('source/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())

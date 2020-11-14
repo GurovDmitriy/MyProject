@@ -1463,6 +1463,10 @@ _:-ms-fullscreen,
 .main__caption:last-child {
   margin-bottom: 0;
 }
+.main__caption-special {
+  font-family: 'Special-Elite', monospace;
+  text-transform: none;
+}
 h3.main__caption {
   font-family: 'Roboto-Mono', monospace;
   font-size: 1.25rem;
@@ -1832,8 +1836,8 @@ _:-ms-fullscreen::after,
   margin-bottom: calc(100vw * 5 / 100);
   background-color: #a2a1a6;
   background-color: var(--colorGrey3, #a2a1a6);
-  box-shadow: 0 2px 2px 0 #000000;
-  box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
+  box-shadow: 0 2px 4px 0 #000000;
+  box-shadow: 0 2px 4px 0 var(--colorBlack, #000000);
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
 }
@@ -1841,8 +1845,8 @@ _:-ms-fullscreen::after,
   margin-bottom: 0;
 }
 .works-list__link:hover {
-  box-shadow: -1px 4px 4px 0 #000000;
-  box-shadow: -1px 4px 4px 0 var(--colorBlack, #000000);
+  box-shadow: -1px 4px 8px 0 #000000;
+  box-shadow: -1px 4px 8px 0 var(--colorBlack, #000000);
   transform: translate(0, -2px);
 }
 .works-list__link:hover .works-list__img,
@@ -1855,8 +1859,8 @@ _:-ms-fullscreen::after,
   opacity: 1;
 }
 .works-list__link:active {
-  box-shadow: 0 2px 2px 0 #000000;
-  box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
+  box-shadow: 0 2px 4px 0 #000000;
+  box-shadow: 0 2px 4px 0 var(--colorBlack, #000000);
   transform: translate(0, 0);
 }
 @media (min-width: 600px) {
@@ -1924,11 +1928,6 @@ _:-ms-fullscreen::after,
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-@media (min-width: 600px) {
-  .skills-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media (min-width: 1100px) {
   .skills-list {
     grid-template-columns: repeat(4, 1fr);
@@ -1947,10 +1946,10 @@ _:-ms-fullscreen::after,
   background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-html, 70%), var(--colorWhite, #ffffff) var(--skill-html, 70%));
 }
-.skills-list__item-js {
-  --skill-js: 20%;
-  background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
-  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-js, 20%), var(--colorWhite, #ffffff) var(--skill-js, 20%));
+.skills-list__item-css {
+  --skill-css: 70%;
+  background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-css, 70%), var(--colorWhite, #ffffff) var(--skill-css, 70%));
 }
 .skills-list__item-bootstrap {
   --skill-bootstrap: 40%;
@@ -1962,6 +1961,21 @@ _:-ms-fullscreen::after,
   background-image: linear-gradient(90deg, #3c3b3d 70%, #ffffff 70%);
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-w3css, 70%), var(--colorWhite, #ffffff) var(--skill-w3css, 70%));
 }
+.skills-list__item-mjml {
+  --skill-mjml: 50%;
+  background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-mjml, 50%), var(--colorWhite, #ffffff) var(--skill-mjml, 50%));
+}
+.skills-list__item-foundation {
+  --skill-foundation: 50%;
+  background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-foundation, 50%), var(--colorWhite, #ffffff) var(--skill-foundation, 50%));
+}
+.skills-list__item-js {
+  --skill-js: 20%;
+  background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-js, 20%), var(--colorWhite, #ffffff) var(--skill-js, 20%));
+}
 .skills-list__item-jquery {
   --skill-jquery: 20%;
   background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
@@ -1972,10 +1986,10 @@ _:-ms-fullscreen::after,
   background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-w3js, 20%), var(--colorWhite, #ffffff) var(--skill-w3js, 20%));
 }
-.skills-list__item-mjml {
-  --skill-mjml: 20%;
-  background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
-  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-mjml, 20%), var(--colorWhite, #ffffff) var(--skill-mjml, 20%));
+.skills-list__item-bem {
+  --skill-bem: 50%;
+  background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-bem, 50%), var(--colorWhite, #ffffff) var(--skill-bem, 50%));
 }
 .skills-list__item-less {
   --skill-less: 50%;
@@ -1986,6 +2000,11 @@ _:-ms-fullscreen::after,
   --skill-sass: 50%;
   background-image: linear-gradient(90deg, #3c3b3d 50%, #ffffff 50%);
   background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-sass, 50%), var(--colorWhite, #ffffff) var(--skill-sass, 50%));
+}
+.skills-list__item-stylus {
+  --skill-stylus: 20%;
+  background-image: linear-gradient(90deg, #3c3b3d 20%, #ffffff 20%);
+  background-image: linear-gradient(90deg, var(--colorGrey, #3c3b3d) var(--skill-stylus, 20%), var(--colorWhite, #ffffff) var(--skill-stylus, 20%));
 }
 .skills-list__item-gulp {
   --skill-gulp: 50%;

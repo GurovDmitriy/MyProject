@@ -30,6 +30,21 @@
   box-shadow: 0 2px 2px 0 var(--colorBlack, #000000);
 }
 
+.customShadowWorksDefault() {
+  box-shadow: 0 2px 4px 0 #000000;
+  box-shadow: 0 2px 4px 0 var(--colorBlack, #000000);
+}
+
+.customShadowWorksHover() {
+  box-shadow: -1px 4px 8px 0 #000000;
+  box-shadow: -1px 4px 8px 0 var(--colorBlack, #000000);
+}
+
+.customShadowWorksActive() {
+  box-shadow: 0 2px 4px 0 #000000;
+  box-shadow: 0 2px 4px 0 var(--colorBlack, #000000);
+}
+
 /*тень для фокуса*/
 
 .customShadowFocus(@color2, @color3) {

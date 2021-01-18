@@ -36,7 +36,7 @@ function topFunction(element) {
 
 // tooltip
 
-const tooltipLink = document.querySelectorAll('a:not([href]):not(.menu__link)');
+const tooltipLink = document.querySelectorAll('div.logo');
 const tolltipTag = 'span';
 const tolltipClass = 'tooltip';
 
